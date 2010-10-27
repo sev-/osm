@@ -18,11 +18,14 @@ binmode STDOUT, ':utf8';
 
 my @cities = ();
 
+my $ukrname = shift or die "Usage: $0: ukraine.osm cities.csv";
+my $citiesname = shift or die "Usage: $0: ukraine.osm cities.csv";
+
 my $num = 0;
 
 my $noMatches = 0;
 
-my $addname = sub {
+my $processor = sub {
 	$place = $_[0]->{tag}->{place};
 
 	if ($place eq 'city' || $place eq 'town' || $place eq 'village' || $place eq 'hamlet') {
@@ -38,7 +41,7 @@ my $addname = sub {
 my $csv = Text::CSV->new( { binary => 1 } )  # should set binary attribute.
                  or die "Cannot use CSV: ".Text::CSV->error_diag ();
  
-open my $fh, "<:encoding(utf8)", "cities.csv" or die "cities.csv: $!";
+open my $fh, "<:encoding(utf8)", $citiesname or die "$citiesname: $!";
 
 $csv->column_names($csv->getline($fh));
 
@@ -49,8 +52,8 @@ while (my $line = $csv->getline_hr($fh)) {
 		print "$line->{num} $line->{name_ua} $line->{lat}, $line->{lon}\n";
 	}
 	$line->{orignum} = $#cities;
-	chomp $line->{name_ua};
-	chomp $line->{name_ru};
+	$line->{name_ua} =~ s/^\s+|\s+$//g;
+	$line->{name_ru} =~ s/^\s+|\s+$//g;
 
 	push @cities, $line;
 }
@@ -61,7 +64,7 @@ close $fh;
 print "Loaded $#cities cities\n";
 
 print "<osm  version='0.6'>\n";
-Geo::Parse::OSM->parse_file('ukraine.osm.bz2', $addname);
+Geo::Parse::OSM->parse_file($ukrname, $processor);
 print "</osm>\n";
 
 print "No matches: $noMatches\n";
