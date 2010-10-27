@@ -32,6 +32,7 @@ $csv->column_names($csv->getline($fh));
 my %koatuus = ();
 
 while (my $line = $csv->getline_hr($fh)) {
+	$line->{refs} = 0;
 	$koatuus{$line->{TE}} = $line;
 }
 
@@ -80,5 +81,26 @@ for $c (@cities) {
 	unless (exists $c->{name_ua} && $nm eq lc($c->{name_ua}) ||
 			exists $c->{name_ru} && $nm eq lc($c->{name_ru})) {
 		print "Name mismatch: <$nm> <$c->{name_ua}> <$c->{name_ru}> $c->{koatuu}\n";
+	} else {
+		$koatuus{$c->{koatuu}}->{refs}++;
+	}
+}
+
+print "\n";
+
+for $k (sort keys %koatuus) {
+	if ($koatuus{$k}->{refs} > 1) {
+		print "Duplicated KOATUU: $k <$koatuus{$k}->{NU}>\n";
+	}
+}
+
+print "\n";
+
+for $k (sort keys %koatuus) {
+	if ($koatuus{$k}->{refs} == 0 && ($koatuus{$k}->{NP} eq "С" || 
+										   $koatuus{$k}->{NP} eq "Щ" ||
+										   $koatuus{$k}->{NP} eq "М" ||
+										   $koatuus{$k}->{NP} eq "Т")) {
+		print "Missing KOATUU: $k <$koatuus{$k}->{NU}>\n";
 	}
 }
