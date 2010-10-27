@@ -46,7 +46,7 @@ use utf8;
 BEGIN { $| = 1; }
 
 my $file = shift(@ARGV) or die "must specify a Mediawiki dump file";
-my $outfile = shift(@ARGV) or "cities.csv";
+my $outfile = shift(@ARGV) || "cities.csv";
 my $pages = Parse::MediaWikiDump::Pages->new($file);
 my $page;
 
