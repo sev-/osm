@@ -14,6 +14,10 @@ use Text::CSV;
 
 BEGIN { $| = 1; }
 
+sub processCity($);
+sub processCoords($);
+sub calcDistances($$);
+
 binmode STDOUT, ':utf8';
 
 my @cities = ();
@@ -71,7 +75,7 @@ print "No matches: $noMatches\n";
 
 exit;
 
-sub processCoords() {
+sub processCoords($) {
 	my $str = shift;
 
 	my @arr = split /\|/, $str;
@@ -118,7 +122,7 @@ sub processCoords() {
 	return ($lat, $lon);
 }
 
-sub processCity() {
+sub processCity($) {
 	my $entry = shift;
 
 	# First we search for entry with minimal distance
@@ -185,7 +189,7 @@ sub processCity() {
 	}
 }
 
-sub calcDistances() {
+sub calcDistances($$) {
 	my $lat = shift;
 	my $lon = shift;
 
