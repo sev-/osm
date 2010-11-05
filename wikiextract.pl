@@ -68,8 +68,7 @@ sub putCol {
 	my $val = shift;
 
 	if (defined $val) {
-		chomp $val;
-		$val =~ s/^ +//;
+		$val =~ s/^\s+|\s+$//g;
 	}
 
 	push @cols, $val;
