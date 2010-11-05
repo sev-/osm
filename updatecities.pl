@@ -49,6 +49,8 @@ open my $fh, "<:encoding(utf8)", $citiesname or die "$citiesname: $!";
 
 $csv->column_names($csv->getline($fh));
 
+my @cit = ();
+
 while (my $line = $csv->getline_hr($fh)) {
 	($line->{lat}, $line->{lon}) = processCoords($line->{coords});
 
@@ -59,11 +61,13 @@ while (my $line = $csv->getline_hr($fh)) {
 	$line->{name_ua} =~ s/^\s+|\s+$//g;
 	$line->{name_ru} =~ s/^\s+|\s+$//g;
 
-	push @cities, $line;
+	push @cit, $line;
 }
 
 $csv->eof or $csv->error_diag();
 close $fh;
+
+@cities = sort {$a->{lat} <=> $b->{lat}} @cit;
 
 print "Loaded $#cities cities\n";
 
@@ -154,34 +158,41 @@ sub processCity($) {
 
 		calcDistances($entry->{lat}, $entry->{lon});
 
-		@citS = sort {$a->{dist} <=> $b->{dist}} @cities; # This is slow
+		my @citM = grep { $_->{dist} < 0.003 } @cities;
 
-		# Perhaps it is one of first three?
+		if (!$#citM) {
+			print "$entry->{tag}->{name} $entry->{lat}, $entry->{lon}\n";
+			print "No match\n";
+
+			$noMatches++;
+			
+			return;
+		}
+
+
+		my @citS = sort {$a->{dist} <=> $b->{dist}} @citM; # This is slow
+
+		# Try to find name match
 		my $match = 0;
-		my $i = 0;
 
-		while ($citS[$i]->{dist} < 0.003 || $i == 0) {
-			if ($citS[$i]->{name_ua} eq $entry->{tag}->{name} || 
-				$citS[$i]->{name_ru} eq $entry->{tag}->{name} ||
-				(exists $entry->{tag}->{"name:ua"} && $citS[$i]->{name_ua} eq $entry->{tag}->{"name:ua"}) ||
-				(exists $entry->{tag}->{"name:ru"} && $citS[$i]->{name_ru} eq $entry->{tag}->{"name:ru"}) ||
-				(exists $entry->{tag}->{koatuu} && $citS[$i]->{koatuu} eq $entry->{tag}->{koatuu})) {
+		for my $c (@citS) {
+			if ($c->{name_ua} eq $entry->{tag}->{name} || 
+				$c->{name_ru} eq $entry->{tag}->{name} ||
+				(exists $entry->{tag}->{"name:ua"} && $c->{name_ua} eq $entry->{tag}->{"name:ua"}) ||
+				(exists $entry->{tag}->{"name:ru"} && $c->{name_ru} eq $entry->{tag}->{"name:ru"}) ||
+				(exists $entry->{tag}->{koatuu} && $c->{koatuu} eq $entry->{tag}->{koatuu})) {
 				$match = 1;
 
-				$min = $citS[$i]->{orignum};
+				$min = $c->{orignum};
 			}
-			$i++;
 		}
 
 		if (!$match) {
-			# Absoultely no match. Show first three entries then
+			# Absoultely no match. Show all nearby entries then
 			print "$entry->{tag}->{name} $entry->{lat}, $entry->{lon}\n";
 	
-			my $i = 0;
-			while ($citS[$i]->{dist} < 0.003 || $i == 0) {
-				print "  $citS[$i]->{num} $citS[$i]->{name_ua} $citS[$i]->{lat}, $citS[$i]->{lon} [$citS[$i]->{dist}]\n";
-
-				$i++;
+			for my $c (@citS) {
+				print "  $c->{num} $c->{name_ua} $c->{lat}, $c->{lon} [$c->{dist}]\n";
 			}
 
 			$noMatches++;
@@ -190,8 +201,8 @@ sub processCity($) {
 }
 
 sub calcDistances($$) {
-	my $lat = shift;
-	my $lon = shift;
+	my $lat = shift || 0;
+	my $lon = shift || 0;
 
 	for $c (@cities) {
 		$c->{dist} = ($c->{lat} - $lat) * ($c->{lat} - $lat) + ($c->{lon} - $lon) * ($c->{lon} - $lon);
