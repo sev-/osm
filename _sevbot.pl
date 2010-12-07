@@ -24,7 +24,6 @@ sub checkUkrainianSyntax($);
 sub translateToponym($);
 sub transliterate($);
 
-binmode STDOUT, ':utf8';
 binmode STDERR, ':utf8';
 
 my @cities = ();
@@ -217,7 +216,7 @@ sub fixRussian($) {
 
 	# Some streets are named "Набережная Ленина улица"
 	if (/^набережная\s+/i) {
-		unless (/^набережная\s+улица$/i) {
+		unless (/^набережная\s+.*улица$/i) {
 			m/^набережная\s+(.*)/i;
 			$_ = "$1 набережная";
 		}
@@ -279,7 +278,7 @@ sub fixUkrainian($) {
 	}
 
 	if (/^набережна\s+/i) {
-		unless (/^набережна\s+вулиця$/i) {
+		unless (/^набережна\s+.*вулиця$/i) {
 			m/^набережна\s+(.*)/i;
 			$_ = "$1 набережна";
 		}
@@ -354,7 +353,7 @@ sub transliterate($) {
 	s/х/kh/g;
 	s/ц/ts/g;
 	s/ь//g;
-	s/'//g;
+	s/’//g;
 	s/ є/ ye/g;
 	s/є/ie/g;
 	s/ ї/ yi/g;
@@ -368,7 +367,7 @@ sub transliterate($) {
 	s/ю/iu/g;
 	s/ я/ ya/g;
 	s/я/ia/g;
-	tr/абвгґдезийiїклмнопрстуф/abvhgdezyiiiklmnoprstuf/;
+	tr/абвгґдезийіїклмнопрстуф/abvhgdezyiiiklmnoprstuf/;
 
 	s/зг/Zgh/g;
 	s/Х/Kh/g;
