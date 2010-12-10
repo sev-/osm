@@ -71,6 +71,17 @@ sub processHighway($) {
 
 		if ($name =~ /[АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯабвгдеёжзийклмнопрстуфхцчшщъыьэюяіІїЇґҐєЄ]/) {
 			print STDERR "WARN: Cyrillic characters in name:en ($name) $entry->{id}\n";
+
+			$new = $name;
+			$new =~ s/і/i/g;
+
+			if ($new ne $name) {
+				$entry->{tag}->{"name:en"} = $new;
+
+				print STDERR "LOG: Replaced i in name:en ($name) $entry->{id}\n";
+
+				$modified = 1;
+			}
 		}
 	}
 
@@ -151,6 +162,25 @@ sub processHighway($) {
 		}
 	}
 
+	if (exists $entry->{tag}->{"name:ru"}) {
+		my $name = $entry->{tag}->{"name:ru"};
+
+		# Fix typical errors
+		$new = fixRussian $name;
+		if ($new ne $name) {
+			print STDERR "LOG: Fixed Russian in name:ru $name -> $new\n";
+
+			$name = $new;
+			$entry->{tag}->{"name:ru"} = $new;
+
+			$modified = 1;
+		}
+
+		if (checkRussianSyntax $name) {
+			print STDERR "WARN: Illegal syntax in Russian in name:ru ($name) $entry->{id}\n";
+		}
+	}
+
 	if ($modified) {
 		return $entry;
 	} else {
@@ -222,6 +252,10 @@ sub fixRussian($) {
 		}
 	}
 
+	if ($_ eq "набережная") {
+		$_ = "Набережная улица";
+	}
+
 	# 1-й переулок Кандинского
 	if (/^([0-9]-й)\s+переулок\s+(.*)/i) {
 		$_ = "$1 $2 переулок";
@@ -282,6 +316,10 @@ sub fixUkrainian($) {
 			m/^набережна\s+(.*)/i;
 			$_ = "$1 набережна";
 		}
+	}
+
+	if ($_ eq "набережна") {
+		$_ = "Набережна вулиця";
 	}
 
 	# 1-й провулок Кандинського
