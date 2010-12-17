@@ -91,7 +91,7 @@ sub processHighway($) {
 	if (exists $entry->{tag}->{"name"}) {
 		my $name = $entry->{tag}->{"name"};
 
-		if ($name =~ /[A-Z][a-z]/) {
+		if ($name =~ /[A-Za-z]/) {
 			print STDERR "WARN: Latin characters in name ($name) $entry->{id}\n";
 		}
 	}
@@ -307,6 +307,10 @@ sub fixRussian($) {
 		return "$1 улица";
 	}
 
+	if (/^ул\.(.*)/i) {
+		return "$1 улица";
+	}
+
 	s/пр-т/проспект/i;
 	s/туп\./тупик/i;
 	s/наб\./набережная/i;
@@ -360,6 +364,10 @@ sub fixUkrainian($) {
 		return "$1 вулиця";
 	}
 
+	if (/^вул\.(.*)/i) {
+		return "$1 вулиця";
+	}
+
 	# Replace apostrophe
 	s/'/’/g;
 
@@ -376,11 +384,13 @@ sub fixUkrainian($) {
 	s/бул\./бульвар/i;
 	s/бульв\./бульвар/i;
 	s/туп\./тупик/i;
+	s/^вул\./вулиця /i;
 
 	# Russianisms
 	s/ул\./вулиця/i;
 	s/шоссе/шосе/i;
 	s/пер\./провулок/i;
+	s/Ленина/Леніна/i;
 
 	# misspellings
 	s/перевулок/провулок/i;
@@ -438,11 +448,11 @@ sub checkUkrainianSyntax($) {
 sub tryAutoAddUkrToponym($) {
 	$_ = shift;
 
-	return $_ if (/[A-Z][a-z]/); # We have Latin here. Skip
+	return $_ if (/[A-Za-z]/); # We have Latin here. Skip
 
 	return $_ if (/ /); # There is more than single word. Skip
 
-	return $_ if (/^[РМТ]-?[0-9]+$/); # Road name
+	return $_ if (/^[РМТ]-?[0-9]+/); # Road name
 
 	return "$_ вулиця";
 }
@@ -450,11 +460,11 @@ sub tryAutoAddUkrToponym($) {
 sub tryAutoAddRusToponym($) {
 	$_ = shift;
 
-	return $_ if (/[A-Z][a-z]/); # We have Latin here. Skip
+	return $_ if (/[A-Za-z]/); # We have Latin here. Skip
 
 	return $_ if (/ /); # There is more than single word. Skip
 
-	return $_ if (/^[РМТ]-?[0-9]+$/); # Road name
+	return $_ if (/^[РМТ]-?[0-9]+/); # Road name
 
 	return "$_ улица";
 }
