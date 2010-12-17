@@ -21,6 +21,8 @@ sub checkRussianSyntax($);
 sub fixRussian($);
 sub fixUkrainian($);
 sub checkUkrainianSyntax($);
+sub tryAutoAddUkrToponym($);
+sub tryAutoAddRusToponym($);
 sub translateToponym($);
 sub transliterate($);
 
@@ -54,7 +56,7 @@ print "<osm  version='0.6'>\n";
 Geo::Parse::OSM->parse_file($ukrname, $processor);
 print "</osm>\n";
 
-print STDERR "Modified $num ways\n";
+print STDERR "LOG: Modified $num ways\n";
 
 exit;
 
@@ -112,7 +114,18 @@ sub processHighway($) {
 			}
 
 			if (checkRussianSyntax $name) {
-				print STDERR "WARN: Illegal syntax in Russian ($name) $entry->{id}\n";
+				$new = tryAutoAddRusToponym($name);
+
+				if ($new ne $name) {
+					print STDERR "LOG: Autoadded Russian $name -> $new\n";
+
+					$name = $new;
+					$entry->{tag}->{"name"} = $new;
+
+					$modified = 1;
+				} else {
+					print STDERR "WARN: Illegal syntax in Russian ($name) $entry->{id}\n";
+				}
 			}
 
 			# Perhaps there is name in Ukrainian, then we may
@@ -145,7 +158,18 @@ sub processHighway($) {
 			}
 
 			if (checkUkrainianSyntax $name) {
-				print STDERR "WARN: Illegal syntax in Ukrainian ($name) $entry->{id}\n";
+				$new = tryAutoAddUkrToponym($name);
+
+				if ($new ne $name) {
+					print STDERR "LOG: Autoadded Ukrainian $name -> $new\n";
+
+					$name = $new;
+					$entry->{tag}->{"name"} = $new;
+
+					$modified = 1;
+				} else {
+					print STDERR "WARN: Illegal syntax in Ukrainian ($name) $entry->{id}\n";
+				}
 			} else {
 				# Everything seems to be OK, so add English
 				# transliteration if there were none
@@ -155,6 +179,8 @@ sub processHighway($) {
 
 					$en = transliterate $en;
 					$entry->{tag}->{"name:en"} = $en;
+
+					print STDERR "LOG: Added transliteration ($name -> $en) $entry->{id}\n";
 
 					$modified = 1;
 				}
@@ -177,9 +203,63 @@ sub processHighway($) {
 		}
 
 		if (checkRussianSyntax $name) {
-			print STDERR "WARN: Illegal syntax in Russian in name:ru ($name) $entry->{id}\n";
+			$new = tryAutoAddRusToponym($name);
+
+			if ($new ne $name) {
+				print STDERR "LOG: Autoadded Russian in name:ru $name -> $new\n";
+
+				$name = $new;
+				$entry->{tag}->{"name:ru"} = $new;
+
+				$modified = 1;
+			} else {
+				print STDERR "WARN: Illegal syntax in Russian in name:ru ($name) $entry->{id}\n";
+			}
 		}
 	}
+
+	if (exists $entry->{tag}->{"name:uk"}) {
+		my $name = $entry->{tag}->{"name:uk"};
+
+		# Fix typical errors
+		$new = fixUkrainian $name;
+		if ($new ne $name) {
+			print STDERR "LOG: Fixed Ukrainian in name:uk $name -> $new\n";
+
+			$name = $new;
+			$entry->{tag}->{"name:uk"} = $new;
+
+			$modified = 1;
+		}
+
+		if (checkUkrainianSyntax $name) {
+			$new = tryAutoAddUkrToponym($name);
+
+			if ($new ne $name) {
+				print STDERR "LOG: Autoadded Ukrainian to name:uk $name -> $new\n";
+
+				$name = $new;
+				$entry->{tag}->{"name:uk"} = $new;
+
+				$modified = 1;
+			} else {
+				print STDERR "WARN: Illegal syntax in Ukrainian in name:uk ($name) $entry->{id}\n";
+			}
+		}
+
+		
+		if (exists $entry->{tag}->{"name"}) {
+			if ($name ne $entry->{tag}->{"name"}) {
+				print STDERR "WARN: name and name:uk differ ($name <-> $entry->{tag}->{name}) $entry->{id}\n";
+			}
+		} else {
+			$entry->{tag}->{"name"} = $name;
+
+			$modified = 1;
+			print STDERR "LOG: Filled in name from name:uk\n";
+		}
+	}
+
 
 	if ($modified) {
 		return $entry;
@@ -237,6 +317,8 @@ sub fixRussian($) {
 	s/пл\./площадь/i;
 	s/дор\./дорога/i;
 	s/б-р/бульвар/i;
+	s/бул\./бульвар/i;
+	s/ш\.$/шоссе/i;
 	s/подъем/подъём/i;
 
 	# Put toponym to the end
@@ -351,6 +433,30 @@ sub checkUkrainianSyntax($) {
 	}
 
 	return 0;
+}
+
+sub tryAutoAddUkrToponym($) {
+	$_ = shift;
+
+	return $_ if (/[A-Z][a-z]/); # We have Latin here. Skip
+
+	return $_ if (/ /); # There is more than single word. Skip
+
+	return $_ if (/^[РМТ]-?[0-9]+$/); # Road name
+
+	return "$_ вулиця";
+}
+
+sub tryAutoAddRusToponym($) {
+	$_ = shift;
+
+	return $_ if (/[A-Z][a-z]/); # We have Latin here. Skip
+
+	return $_ if (/ /); # There is more than single word. Skip
+
+	return $_ if (/^[РМТ]-?[0-9]+$/); # Road name
+
+	return "$_ улица";
 }
 
 sub translateToponym($) {
