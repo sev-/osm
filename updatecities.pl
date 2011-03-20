@@ -138,8 +138,28 @@ sub processCity($) {
 	my $lat = $entry->{lat};
 	my $lon = $entry->{lon};
 
+	if (not exists $entry->{lat} or not exists $entry->{lon}) {
+		print "Wrong entry id: $entry->{id}\n";
+		return;
+	}
+
+	if (not exists $entry->{tag}->{name}) {
+		print "Weird nameless entry id: $entry->{id}\n";
+		return;
+	}
+
 	for $c (@cities) {
-		my $d = ($c->{lat} - $lat) * ($c->{lat} - $lat) + ($c->{lon} - $lon) * ($c->{lon} - $lon);
+		if (not exists $c->{lat} or not exists $c->{lon}) {
+			$c->{dist} = 1e6;
+			next;
+		}
+
+		my $d1 = abs($c->{lat} - $lat);
+		my $d2 = abs($c->{lon} - $lon);
+
+		my $d = $d1 * $d1 + $d2 * $d2;
+
+		$c->{dist} = $d;
 		
 		if ($d < $mind) {
 			$mind = $d;
@@ -154,17 +174,23 @@ sub processCity($) {
 		(exists $entry->{tag}->{"name:ua"} && $cities[$min]->{name_ua} eq $entry->{tag}->{"name:ua"}) ||
 		(exists $entry->{tag}->{"name:ru"} && $cities[$min]->{name_ru} eq $entry->{tag}->{"name:ru"}) ||
 		(exists $entry->{tag}->{koatuu} && $cities[$min]->{koatuu} eq $entry->{tag}->{koatuu})) {
-		# Sounds good
+
+		# Sounds good. Remove it
+		@cities1 = ();
+
+		for $i (0..$#cities) {
+			push @cities1, $cities[$i] unless $i == $min;
+		}
+
+		@cities = @cities1;
 	} else {
 		# Okay, we're in trouble. No match.
-
-		calcDistances($entry->{lat}, $entry->{lon});
 
 		my @citM = grep { $_->{dist} < 0.003 } @cities;
 
 		if (!$#citM) {
 			print "$entry->{tag}->{name} $entry->{lat}, $entry->{lon}\n";
-			print "No match in Wiki\n";
+			print "  No match in Wiki\n";
 
 			$noMatches++;
 			
