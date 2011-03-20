@@ -52,7 +52,7 @@ my $page;
 
 my $num = 1;
 my $art = 0;
-my $total = 520519; # Hardcoded number of articles in Ukrainian wikipedia
+my $total = 603830; # Hardcoded number of articles in Ukrainian wikipedia
 
 my @cols = ();
 
@@ -123,4 +123,4 @@ while(defined($page = $pages->next)) {
 
 close $csvf;
 
-print "\r$num " . (sprintf "%02.2f%%", ($art * 100) / $total) . "\n";
+print "\r$num " . (sprintf "%02.2f%% ($art)", ($art * 100) / $total) . "\n";
