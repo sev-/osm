@@ -30,6 +30,8 @@ my $num = 0;
 my $noMatches = 0;
 
 my $processor = sub {
+	return unless exists $_[0]->{tag}->{place};
+
 	$place = $_[0]->{tag}->{place};
 
 	if ($place eq 'city' || $place eq 'town' || $place eq 'village' || $place eq 'hamlet') {
@@ -162,7 +164,7 @@ sub processCity($) {
 
 		if (!$#citM) {
 			print "$entry->{tag}->{name} $entry->{lat}, $entry->{lon}\n";
-			print "No match\n";
+			print "No match in Wiki\n";
 
 			$noMatches++;
 			
