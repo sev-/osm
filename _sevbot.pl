@@ -4,11 +4,14 @@
 #
 # Ukraine extracts are available at
 #  http://download.geofabrik.de/osm/europe/
+#  http://downloads.cloudmade.com/europe/ukraine/
 #
 # Copyright (c) 2010, Eugene Sandulenko <sev.mail@gmail.com>
 #
 # This file is provided under GPLv2 license.
 #
+# Usage:
+#  perl -CD _sevbot.pl ukraine.osm >_sevbot.osm 2>_sevbot.log
 
 use utf8;
 use Geo::Parse::OSM;
