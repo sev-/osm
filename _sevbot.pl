@@ -19,6 +19,7 @@ use Geo::Parse::OSM;
 BEGIN { $| = 1; }
 
 sub processHighway($);
+sub processBuilding($);
 sub checkIfRussian($);
 sub checkRussianSyntax($);
 sub fixRussian($);
@@ -34,24 +35,31 @@ binmode STDERR, ':utf8';
 my @cities = ();
 
 my $num = 0;
+my $numb = 0;
 
 my $ukrname = shift or die "Usage: $0: ukraine.osm";
 
 my $processor = sub {
+	my $res = 0;
+
 	if (exists $_[0]->{tag}->{highway}) {
 		$hw = $_[0]->{tag}->{highway};
 
 		if ($hw eq 'primary' || $hw eq 'secondary' || $hw eq 'tertiary' || $hw eq 'residential') {
-			my $res = processHighway($_[0]);
+			$res = processHighway($_[0]);
 
-			if ($res != 0) {
-				$res->{action} = 'modify';
-
-				print Geo::Parse::OSM->to_xml($res);
-
-				$num++;
-			}
+			$num++ if $res != 0;
 		}
+	} elsif (exists $_[0]->{tag}->{"addr:housenumber"}) {
+		$res = processBuilding($_[0]);
+
+		$numb++ if $res != 0;
+	}
+
+	if ($res != 0) {
+		$res->{action} = 'modify';
+
+		print Geo::Parse::OSM->to_xml($res);
 	}
 };
 
@@ -60,6 +68,7 @@ Geo::Parse::OSM->parse_file($ukrname, $processor);
 print "</osm>\n";
 
 print STDERR "LOG: Modified $num ways\n";
+print STDERR "LOG: Modified $numb buildings\n";
 
 exit;
 
@@ -455,7 +464,7 @@ sub tryAutoAddUkrToponym($) {
 
 	return $_ if (/ /); # There is more than single word. Skip
 
-	return $_ if (/^[РМТ]-?[0-9]+/); # Road name
+	return $_ if (/^[РМТH]-?[0-9]+/); # Road name
 
 	return "$_ вулиця";
 }
@@ -467,7 +476,7 @@ sub tryAutoAddRusToponym($) {
 
 	return $_ if (/ /); # There is more than single word. Skip
 
-	return $_ if (/^[РМТ]-?[0-9]+/); # Road name
+	return $_ if (/^[РМТH]-?[0-9]+/); # Road name
 
 	return "$_ улица";
 }
@@ -547,4 +556,30 @@ sub transliterate($) {
 	s/V=/v=/;
 
 	return $_;
+}
+
+sub processBuilding($) {
+	my $entry = shift;
+	my $modified = 0;
+	my $housenumber = lc $entry->{tag}->{"addr:housenumber"};
+
+	$housenumber =~ tr/abki\\/авкі\//;
+	$housenumber =~ s/корпус/к/;
+	$housenumber =~ s/корп\./к/;
+
+	$housenumber =~ s/^([0-9]+)[- ]+([^0-9]+)/$1$2/;
+
+	if ($housenumber ne $entry->{tag}->{"addr:housenumber"}) {
+		print STDERR "LOG: Fixed housenumber <$entry->{tag}->{'addr:housenumber'}> --> <$housenumber>\n";
+
+		$entry->{tag}->{"addr:housenumber"} = $housenumber;
+
+		$modified = 1;
+	}
+
+	if ($modified) {
+		return $entry;
+	} else {
+		return 0;
+	}
 }
