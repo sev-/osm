@@ -512,9 +512,6 @@ sub translateToponym($) {
 sub transliterate($) {
 	$_ = shift;
 
-	s/ої/oi/g;
-	s/иї/yi/g;
-	s/ьо/yo/g;
 	s/зг/zgh/g;
 	s/х/kh/g;
 	s/ц/ts/g;
