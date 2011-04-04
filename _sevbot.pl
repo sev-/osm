@@ -59,7 +59,7 @@ my $processor = sub {
 	if ($res != 0) {
 		$res->{action} = 'modify';
 
-		print Geo::Parse::OSM->to_xml($res);
+		print Geo::Parse::OSM::object_to_xml($res);
 	}
 };
 
