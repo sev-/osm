@@ -24,8 +24,7 @@ binmode STDERR, ':utf8';
 sub purgeWay($);
 sub purgeNode($);
 sub processRelation($);
-
-my $num = 0;
+sub processWay($);
 
 my $ukrname = shift or die "Usage: $0: ukraine.osm changeset.xml";
 my $changeset = shift or die "Usage: $0: ukraine.osm changeset.xml";
@@ -40,9 +39,13 @@ my $processor = sub {
 		if ($_[0]->{version} != 1 and exists $nodes{$_[0]->{id}}) {
 			purgeNode($_[0]->{id});
 		}
-	} elsif ($_[0]->{type} eq 'way' and exists $ways{$_[0]->{id}}) {
-		if ($_[0]->{version} != 1) {
-			purgeWay($_[0]);
+	} elsif ($_[0]->{type} eq 'way') {
+		if (exists $ways{$_[0]->{id}}) {
+			if ($_[0]->{version} != 1) {
+				purgeWay($_[0]);
+			}
+		} else {
+			processWay($_[0]);
 		}
 	} elsif ($_[0]->{type} eq 'relation') {
 		processRelation($_[0]);
@@ -70,11 +73,22 @@ my $changesetprocessor = sub {
 
 Geo::Parse::OSM->parse_file($changeset, $changesetprocessor);
 
-print "<osm  version='0.6'>\n";
 Geo::Parse::OSM->parse_file($ukrname, $processor);
-print "</osm>\n";
 
-print STDERR "LOG: Modified $num ways\n";
+print "<osm  version='0.6'>\n";
+
+for my $n (sort keys %nodes) {
+	$nodes{$n}->{action} = 'delete';
+	print Geo::Parse::OSM::object_to_xml($nodes{$n});
+}
+
+for my $w (sort keys %ways) {
+	$ways{$w}->{action} = 'delete';
+	delete $ways{$w}->{tag};
+	print Geo::Parse::OSM::object_to_xml($ways{$w});
+}
+
+print "</osm>\n";
 
 exit;
 
@@ -111,14 +125,23 @@ sub processRelation($) {
 	for my $m (@{$r->{members}}) {
 		if ($m->{type} eq 'node') {
 			if (exists $nodes{$m->{ref}}) {
-				print "Need to purge node $m->{ref} ($r->{id})\n";
 				purgeNode($m->{ref});
 			}
 		} elsif ($m->{type} eq 'way') {
 			if (exists $ways{$m->{ref}}) {
-				print "Need to purge way $m->{ref} ($r->{id})\n";
 				purgeWay($ways{$m->{ref}});
 			}
+		}
+	}
+}
+
+sub processWay($) {
+	my $w = shift;
+
+	# Delete all nodes from the way
+	for my $nd (@{$w->{chain}}) {
+		if (exists $nodes{$nd}) {
+			delete $nodes{$nd};
 		}
 	}
 }
