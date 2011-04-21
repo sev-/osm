@@ -566,6 +566,8 @@ sub processBuilding($) {
 
 	$housenumber =~ s/^([0-9]+)[- ]+([^0-9]+)/$1$2/;
 
+	$housenumber =~ s/^([0-9]+)к([0-9]+)/$1 к$2/;
+
 	if ($housenumber ne $entry->{tag}->{"addr:housenumber"}) {
 		print STDERR "LOG: Fixed housenumber <$entry->{tag}->{'addr:housenumber'}> --> <$housenumber>\n";
 
