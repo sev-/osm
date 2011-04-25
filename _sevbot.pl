@@ -104,7 +104,16 @@ sub processHighway($) {
 		my $name = $entry->{tag}->{"name"};
 
 		if ($name =~ /[A-Za-z]/) {
-			print STDERR "WARN: Latin characters in name ($name) $entry->{id}\n";
+			$tmpname = $name;
+			$tmpname =~ tr/AIOPCaiopc/АІОРСаіорс/;
+
+			if ($tmpname !~ /[A-Za-z]/) {
+				$entry->{tag}->{"name"} = $tmpname;
+
+				print STDERR "LOG: Replaced latin in name ($name) $entry->{id}\n";
+			} else {
+				print STDERR "WARN: Latin characters in name ($name) $entry->{id}\n";
+			}
 		}
 	}
 
@@ -566,7 +575,7 @@ sub processBuilding($) {
 
 	$housenumber =~ s/^([0-9]+)[- ]+([^0-9]+)/$1$2/;
 
-	$housenumber =~ s/^([0-9]+)к([0-9]+)/$1 к$2/;
+	$housenumber =~ s/^([0-9]+)\s*к\s*([0-9]+)/$1 к$2/;
 
 	if ($housenumber ne $entry->{tag}->{"addr:housenumber"}) {
 		print STDERR "LOG: Fixed housenumber <$entry->{tag}->{'addr:housenumber'}> --> <$housenumber>\n";
