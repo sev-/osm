@@ -12,6 +12,10 @@
 #
 # Usage:
 #  perl -CD _sevbot.pl ukraine.osm >_sevbot.osm 2>_sevbot.log
+#
+# Since the exports on goefabrik not always match it is advised to reapply bounding polygon
+#  getbound.pl 60199 -o ukraine.poly
+#  osmosis --rx file=ukraine.osm --bp file=ukraine.poly --wx file=ukraine2.osm
 
 use utf8;
 use Geo::Parse::OSM;
@@ -109,6 +113,7 @@ sub processHighway($) {
 
 			if ($tmpname !~ /[A-Za-z]/) {
 				$entry->{tag}->{"name"} = $tmpname;
+				$modified = 1;
 
 				print STDERR "LOG: Replaced latin in name ($name) $entry->{id}\n";
 			} else {
@@ -430,6 +435,8 @@ sub fixUkrainian($) {
 			$_ = "$1 набережна";
 		}
 	}
+
+	s/^вулиця\s+вулиця/вулиця/i;
 
 	if ($_ eq "набережна") {
 		$_ = "Набережна вулиця";
