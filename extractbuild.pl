@@ -2,12 +2,6 @@
 #
 # Extract vuilding ids for nadoloni.com
 #
-# Usage:
-#  perl -CD _sevbot.pl ukraine.osm >_sevbot.osm 2>_sevbot.log
-#
-# Since the exports on goefabrik not always match it is advised to reapply bounding polygon
-#  getbound.pl 60199 -o ukraine.poly
-#  osmosis --rx file=ukraine.osm --bp file=ukraine.poly --wx file=ukraine2.osm
 
 use utf8;
 use Geo::Parse::OSM;
@@ -26,7 +20,7 @@ my $dumpname = shift or die "Usage: $0: nadoloni.osm";
 
 my @buildings = ();
 my @streets = ();
-my @streetnames = ();
+my %streetnames = ();
 
 my $processor = sub {
 	my $res = 0;
@@ -46,11 +40,12 @@ my $processor = sub {
 		}
 	} elsif (exists $_[0]->{tag}->{"nadoloni:id"}) {
 		$id = $_[0]->{tag}->{"nadoloni:id"};
-		if ($id =~ /streets:(\d+)/) {
-			push @{ $streets[$1]}, $_[0]->{id};
+		if ($id =~ /streets:(\d+)$/) {
+			$s = $1;
+			push @{ $streets[$s]}, $_[0]->{id};
 			$nums++;
 
-			$streetnames[$1] = $_[0]->{tag}->{name};
+			$streetnames{$_[0]->{id}} = $_[0]->{tag}->{name};
 
 			if (exists $_[0]->{tag}->{type}) {
 				print "street: $_[0]->{id}\n";
@@ -75,18 +70,29 @@ my @relations = ();
 open IN, "buildings1.txt";
 binmode IN, ':utf8';
 
-@buildstreets = ();
-
 while (<IN>) {
 	@s = split /;/;
 
-	$buildstreets[$s[0]] = $s[5];
+	
+	if ($s[4] eq 'drogobych') {
+		$c = 0;
+	} elsif ($s[4] eq 'truskavets') {
+		$c = 1000;
+	} elsif ($s[4] eq 'stebnyk') {
+		$c = 2000;
+	} elsif ($s[4] eq 'boryslav') {
+		$c = 3000;
+	} else {
+		print STDERR "Error: $s[4]\n";
+	}
 
+	$n = $c + $s[5];
+	
 	if (0 && not exists $relations[$s[5]]) {
 		$relations[$s[5]]->{members} = ();
 	}
 
-	push @{ $relations[$s[5]]->{members} }, { 'ref' => $buildings[$s[0]], 'type' => 'way', 'role' => 'house' };
+	push @{ $relations[$n]->{members} }, { 'ref' => $buildings[$s[0]], 'type' => 'way', 'role' => 'house' };
 }
 
 close IN;
@@ -94,23 +100,36 @@ close IN;
 open IN, "streets.txt";
 binmode IN, ':utf8';
 
-@streetstreets = ();
-
 while (<IN>) {
 	@s = split /;/;
 
-	$streetstreets[$s[0]] = $s[7];
+        if ($s[6] eq 'drogobych') {
+                $c = 0;
+		$city = 'Дрогобич';
+        } elsif ($s[6] eq 'truskavets') {
+                $c = 1000;
+		$city = 'Трускавець';
+        } elsif ($s[6] eq 'stebnyk') {
+                $c = 2000;
+		$city = 'Стебник';
+	} elsif ($s[6] eq 'boryslav') {
+		$c = 3000;
+		$city = 'Борислав';
+        } else {
+                print STDERR "Error: $s[6]\n";
+        }
+  
+	$n = $c + $s[7];
 
-	$relations[$s[7]]{tag}->{name} = $streetnames[$s[7]];
-	$relations[$s[7]]{tag}->{type} = 'street';
-	$relations[$s[7]]{tag}->{'nadoloni:id'} = "relations:$s[7]";
-	$relations[$s[7]]{tag}->{'source'} = "nadoloni.com import";
-	$relations[$s[7]]{tag}->{'source_ref'} = "http://nadoloni.com";
-	$relations[$s[7]]{type} = 'relation';
-	$relations[$s[7]]{id} = -$s[7];
+	$relations[$n]{tag}->{name} = $streetnames{$streets[$s[0]][0]};
+	$relations[$n]{tag}->{type} = 'street';
+	$relations[$n]{tag}->{'nadoloni:id'} = "relations:$n";
+	$relations[$n]{tag}->{'addr:city'} = $city;
+	$relations[$n]{type} = 'relation';
+	$relations[$n]{id} = -$n;
 
-	for $s (@{ $streets[$s[0]] }) {
-		push @{ $relations[$s[7]]->{members} }, { 'ref' => $s, 'type' => 'way', 'role' => 'street' };
+	for $st (@{ $streets[$s[0]] }) {
+		push @{ $relations[$n]->{members} }, { 'ref' => $st, 'type' => 'way', 'role' => 'street' };
 	}
 }
 
