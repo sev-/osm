@@ -1,6 +1,6 @@
 #!/usr/bin/perl -w
 #
-# Extract vuilding ids for nadoloni.com
+# Generate street relations for nadoloni.com
 #
 
 use utf8;
