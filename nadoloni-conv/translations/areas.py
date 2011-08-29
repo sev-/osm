@@ -1,0 +1,24 @@
+# -*- coding: utf-8 -*-
+"""
+Translation rules for VMap0 populated areas translation project done by GIS-Lab.info
+http://gis-lab.info/qa/vmap0-settl-rus.html
+"""
+
+def translateAttributes(attrs):
+	if not attrs: return
+	
+	tags = {}
+	
+	if attrs['title']:
+		tags.update({'name':attrs['title']})
+		tags.update({'name:uk':attrs['title']})
+		tags.update({'name:ru':attrs['title_ru']})
+		tags.update({'name:en':attrs['title_en']})
+
+	tags.update({'landuse':'unknown'})
+	tags.update({'source':'nadoloni.com import'})
+	tags.update({'source_ref':'http://nadoloni.com'})
+	id = str(int(attrs['id']));
+	tags.update({'nadoloni:id':"areas:"+id})
+	
+	return tags
