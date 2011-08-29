@@ -33,15 +33,15 @@ my %koatuus = ();
 
 while (my $line = $csv->getline_hr($fh)) {
 	$line->{refs} = 0;
-	$koatuus{$line->{TE}} = $line;
+	$koatuus{sprintf ("%010.0f", $line->{TE})} = $line;
 }
 
 $csv->eof or $csv->error_diag();
 close $fh;
 
-print "Loaded ". (scalar keys %koatuus) . " KOATUUs\n";
-
 undef $csv;
+
+print "Loaded ". (scalar keys %koatuus) . " KOATUUs\n";
 
 my @cities = ();
 
@@ -57,6 +57,10 @@ while (my $line = $csv->getline_hr($fh)) {
 	$line->{name_ua} =~ s/^\s+|\s+$//g;
 	$line->{name_ru} =~ s/^\s+|\s+$//g;
 	$line->{koatuu} =~ s/^\s+|\s+$//g;
+	$line->{name_ua} =~ s/́//g;
+	if ($line->{koatuu} =~ /^\d+$/) {
+	    $line->{koatuu} = sprintf("%010.0f", $line->{koatuu});
+	}
 
 	push @cities, $line;
 }
@@ -66,23 +70,35 @@ close $fh;
 
 print "Loaded $#cities cities\n";
 
+$unk = 0;
+$mismatch = 0;
+$missing = 0;
+$nokoatuu = 0;
+$dup = 0;
+$matches = 0;
+
 for $c (@cities) {
 	if ($c->{koatuu} eq "") {
-		#print "No KOATUU: $c->{name_ua}\n";
-		next;
+	    #print "No KOATUU: $c->{name_ua}\n";
+	    $nokoatuu++;
+	    next;
 	}
 
 	if (not exists $koatuus{$c->{koatuu}}) {
-		print "Unknown KOATUU: <$c->{name_ua}> $c->{koatuu}\n";
+		$obl = substr($c->{koatuu}, 0, 5)."00000";
+		print "Unknown KOATUU: <$c->{name_ua}> {$c->{title}} $c->{koatuu} $obl\n";
+		$unk++;
 		next;
 	}
 
 	my $nm = lc $koatuus{$c->{koatuu}}->{NU};
 	unless (exists $c->{name_ua} && $nm eq lc($c->{name_ua}) ||
 			exists $c->{name_ru} && $nm eq lc($c->{name_ru})) {
-		print "Name mismatch: <$nm> <$c->{name_ua}> <$c->{name_ru}> $c->{koatuu}\n";
+		print "Name mismatch: <$nm> <$c->{name_ua}> {$c->{title}} $c->{koatuu}\n";
+		$mismatch++;
 	} else {
 		$koatuus{$c->{koatuu}}->{refs}++;
+		$matches++;
 	}
 }
 
@@ -90,7 +106,12 @@ print "\n";
 
 for $k (sort keys %koatuus) {
 	if ($koatuus{$k}->{refs} > 1) {
-		print "Duplicated KOATUU: $k <$koatuus{$k}->{NU}>\n";
+		$raion = substr($k, 0, 8)."00";
+		$obl = substr($k, 0, 5)."00000";
+		print "Duplicated KOATUU: $k ($koatuus{$k}->{refs}) <$koatuus{$k}->{NU}> $obl <$koatuus{$raion}->{NU}> <$koatuus{$obl}->{NU}>\n";
+
+		map { print "  $_->{title}, $_->{oblast}, $_->{raion}, $_->{rada}\n" if ($_->{koatuu} eq $k); } @cities;
+		$dup++;
 	}
 }
 
@@ -98,9 +119,12 @@ print "\n";
 
 for $k (sort keys %koatuus) {
 	if ($koatuus{$k}->{refs} == 0 && ($koatuus{$k}->{NP} eq "С" || 
-										   $koatuus{$k}->{NP} eq "Щ" ||
-										   $koatuus{$k}->{NP} eq "М" ||
-										   $koatuus{$k}->{NP} eq "Т")) {
+					  $koatuus{$k}->{NP} eq "Щ" ||
+					  $koatuus{$k}->{NP} eq "М" ||
+					  $koatuus{$k}->{NP} eq "Т")) {
 		print "Missing KOATUU: $k <$koatuus{$k}->{NU}>\n";
+		$missing++;
 	}
 }
+
+print "Matches: $matches, Unknown: $unk, Mismatch: $mismatch, Missing: $missing, No KOATUU: $nokoatuu, Dup: $dup\n";
