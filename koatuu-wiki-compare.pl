@@ -6,7 +6,7 @@
 #
 # This file is provided under GPLv2 license.
 #
-# Usage: perl -CD wikiextract.pl KOATUU.csv cities.csv
+# Usage: perl -CD koatuu-wiki-compare.pl KOATUU.csv cities.csv
 #        where first parameter is CSV conversion of KOATUU.xls
 #        file taken from http://www.ukrstat.gov.ua/work/klass200n.htm
 #        second parameter is file produced by wikiextract.pl
