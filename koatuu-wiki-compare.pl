@@ -41,7 +41,7 @@ close $fh;
 
 undef $csv;
 
-print "Loaded ". (scalar keys %koatuus) . " KOATUUs\n";
+print "Loaded ". (scalar keys %koatuus) . " KOATUUs from file $koatuuname\n";
 
 my @cities = ();
 
