@@ -81,6 +81,7 @@ Geo::Parse::OSM->parse_file($ukrname, $processor);
 print "</osm>\n";
 
 print "No matches: $noMatches out of $num\n";
+print "Cities left: " . scalar @cities . "\n";
 
 exit;
 
