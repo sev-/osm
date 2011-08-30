@@ -41,7 +41,7 @@ my @cities = ();
 my $num = 0;
 my $numb = 0;
 
-my $ukrname = shift or die "Usage: $0: ukraine.osm";
+my $ukrname = shift or die "Usage: $0: ukraine.osm.bz2";
 
 my $processor = sub {
 	my $res = 0;
