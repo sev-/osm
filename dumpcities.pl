@@ -28,5 +28,8 @@ my $addname = sub {
 };
 
 print "<osm  version='0.6'>\n";
-Geo::Parse::OSM->parse_file('ukraine.osm.bz2', $addname);
+my $osm = Geo::Parse::OSM->new( 'ukraine.osm.bz2' );
+
+$osm->parse($addname,  only => 'node');
+
 print "</osm>\n";
