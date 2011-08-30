@@ -34,13 +34,15 @@ my $processor = sub {
 
 	$place = $_[0]->{tag}->{place};
 
-	if ($place eq 'city' || $place eq 'town' || $place eq 'village' || $place eq 'hamlet') {
-		$_[0]->{action} = 'modify';
+	if ($_[0]->{type} eq 'node') {
+		if ($place eq 'city' || $place eq 'town' || $place eq 'village' || $place eq 'hamlet') {
+			$_[0]->{action} = 'modify';
 
-		my $res = processCity($_[0]);
+			my $res = processCity($_[0]);
 
-		#print Geo::Parse::OSM->to_xml($res);
-		$num++;
+			#print Geo::Parse::OSM->to_xml($res);
+			$num++;
+		}
 	}
 };
 
@@ -57,10 +59,11 @@ while (my $line = $csv->getline_hr($fh)) {
 	($line->{lat}, $line->{lon}) = processCoords($line->{coords});
 
 	if ($line->{lat} == 0 || $line->{lon} == 0) {
-		print "$line->{num} $line->{name_ua} $line->{lat}, $line->{lon}\n";
+		print "$line->{num} $line->{name_ua} {$line->{title}} $line->{lat}, $line->{lon}\n";
 	}
 	$line->{orignum} = $#cities;
 	$line->{name_ua} =~ s/^\s+|\s+$//g;
+	$line->{name_ua} =~ s/́//g;
 	$line->{name_ru} =~ s/^\s+|\s+$//g;
 
 	push @cit, $line;
@@ -77,7 +80,7 @@ print "<osm  version='0.6'>\n";
 Geo::Parse::OSM->parse_file($ukrname, $processor);
 print "</osm>\n";
 
-print "No matches: $noMatches\n";
+print "No matches: $noMatches out of $num\n";
 
 exit;
 
@@ -138,6 +141,8 @@ sub processCity($) {
 	my $lat = $entry->{lat};
 	my $lon = $entry->{lon};
 
+	print STDERR substr("|/-\\", $num % 4, 1)."\r";
+
 	if (not exists $entry->{lat} or not exists $entry->{lon}) {
 		print "Wrong entry id: $entry->{id}\n";
 		return;
@@ -176,19 +181,13 @@ sub processCity($) {
 		(exists $entry->{tag}->{koatuu} && $cities[$min]->{koatuu} eq $entry->{tag}->{koatuu})) {
 
 		# Sounds good. Remove it
-		@cities1 = ();
-
-		for $i (0..$#cities) {
-			push @cities1, $cities[$i] unless $i == $min;
-		}
-
-		@cities = @cities1;
+		splice @cities, $min, 1;
 	} else {
 		# Okay, we're in trouble. No match.
 
 		my @citM = grep { $_->{dist} < 0.003 } @cities;
 
-		if (!$#citM) {
+		if (!scalar @citM) {
 			print "$entry->{tag}->{name} $entry->{lat}, $entry->{lon}\n";
 			print "  No match in Wiki\n";
 
@@ -212,6 +211,9 @@ sub processCity($) {
 				$match = 1;
 
 				$min = $c->{orignum};
+				splice @cities, $min, 1;
+
+				last;
 			}
 		}
 
