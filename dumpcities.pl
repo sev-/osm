@@ -1,4 +1,4 @@
-#!/usr/bin/perl
+#!/usr/bin/perl -w
 #
 # Dump all cities from OSM extract
 #
@@ -13,13 +13,16 @@ use Geo::Parse::OSM;
 BEGIN { $| = 1; }
 
 my $addname = sub {
-	my $place = $_[0]->{tag}->{place};
+	if (exists $_[0]->{tag}->{place}) {
 
-	if ($_[0]->{type} eq 'node') {
-		if ($place eq 'city' || $place eq 'town' || $place eq 'village' || $place eq 'hamlet') {
-			$_[0]->{action} = 'modify';
+		my $place = $_[0]->{tag}->{place};
+		
+		if ($_[0]->{type} eq 'node') {
+			if ($place eq 'city' || $place eq 'town' || $place eq 'village' || $place eq 'hamlet') {
+				$_[0]->{action} = 'modify';
 
-			print Geo::Parse::OSM->to_xml($_[0]);
+				print Geo::Parse::OSM::object_to_xml($_[0]);
+			}
 		}
 	}
 };
