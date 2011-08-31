@@ -28,6 +28,10 @@ my $citiesname = shift or die "Usage: $0: ukraine.osm cities.csv";
 my $num = 0;
 
 my $noMatches = 0;
+my $noMatchesSafe = 0;
+my $emptyname = 0;
+my $emptynameSafe = 0;
+my $renames = 0;
 
 my $processor = sub {
 	return unless exists $_[0]->{tag}->{place};
@@ -61,7 +65,6 @@ while (my $line = $csv->getline_hr($fh)) {
 	if ($line->{lat} == 0 || $line->{lon} == 0) {
 		print "$line->{num} $line->{name_ua} {$line->{title}} $line->{lat}, $line->{lon}\n";
 	}
-	$line->{orignum} = $#cities;
 	$line->{name_ua} =~ s/^\s+|\s+$//g;
 	$line->{name_ua} =~ s/́//g;
 	$line->{name_ru} =~ s/^\s+|\s+$//g;
@@ -80,7 +83,9 @@ print "<osm  version='0.6'>\n";
 Geo::Parse::OSM->parse_file($ukrname, $processor);
 print "</osm>\n";
 
-print "No matches: $noMatches out of $num\n";
+print "No matches: $noMatches out of $num ($noMatchesSafe are safe)\n";
+print "Renames: $renames\n";
+print "Empty: $emptyname ($emptynameSafe are safe)\n";
 print "Cities left: " . scalar @cities . "\n";
 
 exit;
@@ -141,6 +146,7 @@ sub processCity($) {
 	my $n = 0;
 	my $lat = $entry->{lat};
 	my $lon = $entry->{lon};
+	my $cnd;
 
 	print STDERR substr("|/-\\", $num % 4, 1)."\r";
 
@@ -149,12 +155,25 @@ sub processCity($) {
 		return;
 	}
 
+	if ($entry->{user} eq 'osm-ukraine') {
+		$cnd = "*Remove*";
+	} else {
+		$cnd = "";
+	}
+
 	if (not exists $entry->{tag}->{name}) {
-		print "Weird nameless entry id: $entry->{id}\n";
+		$emptyname++;
+		$emptynameSafe++ if $cnd ne "";
+
+		print "Weird nameless entry id: $entry->{id} $cnd\n";
 		return;
 	}
 
+	my $nn = 0;
 	for $c (@cities) {
+		$c->{orignum} = $nn;
+		$nn++;
+
 		if (not exists $c->{lat} or not exists $c->{lon}) {
 			$c->{dist} = 1e6;
 			next;
@@ -189,10 +208,11 @@ sub processCity($) {
 		my @citM = grep { $_->{dist} < 0.003 } @cities;
 
 		if (!scalar @citM) {
-			print "$entry->{tag}->{name} $entry->{lat}, $entry->{lon}\n";
+			print "$entry->{tag}->{name} $entry->{lat}, $entry->{lon} $cnd $entry->{id}\n";
 			print "  No match in Wiki\n";
 
 			$noMatches++;
+			$noMatchesSafe++ if $cnd ne "";
 			
 			return;
 		}
@@ -214,19 +234,30 @@ sub processCity($) {
 				$min = $c->{orignum};
 				splice @cities, $min, 1;
 
-				last;
+				return;
 			}
 		}
 
 		if (!$match) {
 			# Absoultely no match. Show all nearby entries then
-			print "$entry->{tag}->{name} $entry->{lat}, $entry->{lon}\n";
+			print "$entry->{tag}->{name} $entry->{lat}, $entry->{lon} $cnd\n";
+
+			if ($citS[0]->{dist} < 0.0002) {
+				print "  Rename --> $citS[0]->{name_ua}\n";
+				$renames++;
+
+				splice @cities, $citS[0]->{orignum}, 1;
+
+				return;
+			}
 	
 			for my $c (@citS) {
 				print "  $c->{num} $c->{name_ua} $c->{lat}, $c->{lon} [$c->{dist}]\n";
 			}
 
 			$noMatches++;
+
+			$noMatchesSafe++ if $cnd ne "";
 		}
 	}
 }
