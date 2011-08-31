@@ -52,7 +52,7 @@ my $page;
 
 my $num = 1;
 my $art = 0;
-my $total = 603830; # Hardcoded number of articles in Ukrainian wikipedia
+my $total = 694200; # Hardcoded number of articles in Ukrainian wikipedia
 
 my @cols = ();
 
@@ -83,7 +83,7 @@ while(defined($page = $pages->next)) {
 
 			print "\r$num " . (sprintf "%02.2f%%", ($art * 100) / $total);
 
-			putCol($num);
+			putCol($page->id);
 			putCol($page->title);
 
 			if (${ $page->text } =~ /^\s*\|?\s*назва\s*=\s*(.*)$/m) { putCol($1); } else { putCol(""); }
@@ -109,7 +109,7 @@ while(defined($page = $pages->next)) {
 			$csv->print ($csvf, \@cols);
 			@cols = ();
 		}
-		open OUT, sprintf(">%05d$pass.txt", $num);
+		open OUT, sprintf(">%05d${pass}.txt", $page->id);
 		print OUT ${ $page->text };
 		close OUT;
 
