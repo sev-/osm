@@ -12,6 +12,8 @@ use Geo::Parse::OSM;
 
 BEGIN { $| = 1; }
 
+my $ukrname = (shift or "ukraine.osm.bz2");
+
 my $addname = sub {
 	if (exists $_[0]->{tag}->{place}) {
 
@@ -19,8 +21,6 @@ my $addname = sub {
 		
 		if ($_[0]->{type} eq 'node') {
 			if ($place eq 'city' || $place eq 'town' || $place eq 'village' || $place eq 'hamlet') {
-				$_[0]->{action} = 'modify';
-
 				print Geo::Parse::OSM::object_to_xml($_[0]);
 			}
 		}
@@ -28,7 +28,7 @@ my $addname = sub {
 };
 
 print "<osm  version='0.6'>\n";
-my $osm = Geo::Parse::OSM->new( 'ukraine.osm.bz2' );
+my $osm = Geo::Parse::OSM->new($ukrname);
 
 $osm->parse($addname,  only => 'node');
 
