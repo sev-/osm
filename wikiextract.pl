@@ -78,10 +78,8 @@ while(defined($page = $pages->next)) {
 	if (${ $page->text } =~ /од\s+КОАТУУ\s*=/) {
 
 		$pass = "n";
-		if ((${ $page->text } =~ /{{([[Сс][еи]ло|[Сс]елище|[Сс]мт|[Мм]істо\s+України)\s*\|/) && ($page->title !~ /Шаблон:/)) {
+		if ((${ $page->text } =~ /{{(?:Картка:)?([[Сс][еи]ло(?:\s+України)?|[Сс]елище(?:\s+України)?|[Сс]мт(?:\s+України)?|[Мм]істо\s+України)\s*\|/) && ($page->title !~ /Шаблон:/)) {
 			$pass = "";
-
-			print "\r$num " . (sprintf "%02.2f%%", ($art * 100) / $total);
 
 			putCol($page->id);
 			putCol($page->title);
@@ -109,18 +107,25 @@ while(defined($page = $pages->next)) {
 			$csv->print ($csvf, \@cols);
 			@cols = ();
 		}
-		open OUT, sprintf(">%05d${pass}.txt", $page->id);
-		print OUT ${ $page->text };
-		close OUT;
+
+		if ($pass ne "") {
+			if (${ $page->text } =~ /^\s*\|\s*код\s*КОАТУУ\s*=(.*)$/m) {
+				$pass = "q" if $1 !~ /^\s+$/;
+			}
+
+			open OUT, sprintf(">%05d${pass}.txt", $page->id);
+			print OUT ${ $page->text };
+			close OUT;
+		}
 
 		$num++;
 
 	}
 	$art++;
 
-	print "\r$num " . (sprintf "%02.2f%%", ($art * 100) / $total) if ($art % 1000 == 0);
+	print "\r" . $page->id . (sprintf " %02.2f%%", ($art * 100) / $total) if ($art % 1000 == 0);
 }
 
 close $csvf;
 
-print "\r$num " . (sprintf "%02.2f%% ($art)", ($art * 100) / $total) . "\n";
+print "\r" . (sprintf " %02.2f%% ($art)", ($art * 100) / $total) . "\n";
