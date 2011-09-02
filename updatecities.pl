@@ -25,6 +25,7 @@ my @cities = ();
 my $ukrname = shift or die "Usage: $0: ukraine.osm cities.csv";
 my $citiesname = shift or die "Usage: $0: ukraine.osm cities.csv";
 
+my $total = 30715; # Hardcoded number of cities
 my $num = 0;
 
 my $noMatches = 0;
@@ -148,7 +149,7 @@ sub processCity($) {
 	my $lon = $entry->{lon};
 	my $cnd;
 
-	print STDERR substr("|/-\\", $num % 4, 1)."\r";
+	print STDERR "$num " . (sprintf "%02.2f%%", ($num * 100) / $total) ."\r" if ($num % 10 == 0);
 
 	if (not exists $entry->{lat} or not exists $entry->{lon}) {
 		print "Wrong entry id: $entry->{id}\n";
