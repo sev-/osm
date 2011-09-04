@@ -37,7 +37,7 @@ for my $f (@fields2) {
 
 print $csvf "\n";
 
-for my $f (<rada/*.html>) {
+for my $f (<${radadir}/*.html>) {
 	my %entry = ();
 	my $fields1num = -1;
 	my $fields2num = -1;
@@ -47,7 +47,7 @@ for my $f (<rada/*.html>) {
 
 	open $in, "<:encoding(cp1251)", $f;
 
-	$f =~ m'rada/([0-9]+).html';
+	$f =~ m"${radadir}/([0-9]+).html";
 
 	$entry{num} = $1;
 
