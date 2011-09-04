@@ -50,10 +50,6 @@ print "Loaded ". (scalar keys %koatuus) . " KOATUUs from file $koatuuname\n";
 
 buildkoatuutree();
 
-print Dumper(\%koatuutree);
-
-exit 0;
-
 my @cities = ();
 
 $csv = Text::CSV->new( { binary => 1 } )  # should set binary attribute.
