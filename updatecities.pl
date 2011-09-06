@@ -14,9 +14,10 @@ use Text::CSV;
 
 BEGIN { $| = 1; }
 
+sub latBucket($);
+sub lonBucket($);
 sub processCity($);
 sub processCoords($);
-sub calcDistances($$);
 
 binmode STDOUT, ':utf8';
 
@@ -78,7 +79,22 @@ close $fh;
 
 @cities = sort {$a->{lat} <=> $b->{lat}} @cit;
 
-print "Loaded $#cities cities\n";
+$citiesLeft = scalar @cities;
+
+print "Loaded $citiesLeft cities\n";
+
+
+my @cityBucket = ();
+
+my $nn = 0;
+for my $c (@cities) {
+	$c->{bucketX} = latBucket $c->{lat};
+	$c->{bucketY} = lonBucket $c->{lon};
+
+	push @{$cityBucket[$c->{bucketX}][$c->{bucketY}]}, $nn;
+	
+	$nn++;
+}
 
 print "<osm  version='0.6'>\n";
 Geo::Parse::OSM->parse_file($ukrname, $processor);
@@ -87,9 +103,21 @@ print "</osm>\n";
 print "No matches: $noMatches out of $num ($noMatchesSafe are safe)\n";
 print "Renames: $renames\n";
 print "Empty: $emptyname ($emptynameSafe are safe)\n";
-print "Cities left: " . scalar @cities . "\n";
+print "Cities left: $citiesLeft\n";
 
 exit;
+
+sub latBucket($) {
+	my $lat = shift;
+
+	return int(($lat - 44) * 10) + 1;
+}
+
+sub lonBucket($) {
+	my $lon = shift;
+
+	return int(($lon - 22) * 15) + 1;
+}
 
 sub processCoords($) {
 	my $str = shift;
@@ -109,6 +137,10 @@ sub processCoords($) {
 		$deg = $arr[$n] || 0;
 		$min = $arr[$n+1] || 0;
 		$sec = $arr[$n+2] || 0;
+		if ($sec > 100) {
+			print "$sec\n";
+			$sec = substr $arr[$n+2], 0, 2;
+		}
 		$lat = dms2decimal($deg, $min, $sec);
 		$n = 5;
 	} elsif ($arr[$n+2] eq "N") {
@@ -144,9 +176,12 @@ sub processCity($) {
 	# First we search for entry with minimal distance
 	my $min = 0;
 	my $mind = 1e9;
+	my ($minBpos, $minX, $minY);
 	my $n = 0;
 	my $lat = $entry->{lat};
 	my $lon = $entry->{lon};
+	my $latb = latBucket $lat;
+	my $lonb = lonBucket $lon;
 	my $cnd;
 
 	print STDERR "$num " . (sprintf "%02.2f%%", ($num * 100) / $total) ."\r" if ($num % 10 == 0);
@@ -170,29 +205,43 @@ sub processCity($) {
 		return;
 	}
 
-	my $nn = 0;
-	for $c (@cities) {
-		$c->{orignum} = $nn;
-		$nn++;
+	my $cnt = 0;
+	for my $x ($latb-1..$latb+1) {
+		for my $y ($lonb-1..$lonb+1) {
+			next if not defined $cityBucket[$x][$y];
 
-		if (not exists $c->{lat} or not exists $c->{lon}) {
-			$c->{dist} = 1e6;
-			next;
-		}
+			my $nn = -1;
+			for my $n (@{$cityBucket[$x][$y]}) {
+				$nn++;
 
-		my $d1 = abs($c->{lat} - $lat);
-		my $d2 = abs($c->{lon} - $lon);
+				next if not defined $n;
 
-		my $d = $d1 * $d1 + $d2 * $d2;
+				next if $n == -1;
 
-		$c->{dist} = $d;
+				$c = $cities[$n];
+
+				if (not exists $c->{lat} or not exists $c->{lon}) {
+					$c->{dist} = 1e6;
+					next;
+				}
+
+				my $d1 = abs($c->{lat} - $lat);
+				my $d2 = abs($c->{lon} - $lon);
+
+				my $d = $d1 * $d1 + $d2 * $d2;
+
+				$c->{dist} = $d;
 		
-		if ($d < $mind) {
-			$mind = $d;
-			$min = $n;
+				if ($d < $mind) {
+					$mind = $d;
+					$min = $n;
+					$minX = $x;
+					$minY = $y;
+					$minBpos = $nn;
+				}
+				$cnt++;
+			}
 		}
-
-		$n++;
 	}
 
 	if ($cities[$min]->{name_ua} eq $entry->{tag}->{name} || 
@@ -202,11 +251,24 @@ sub processCity($) {
 		(exists $entry->{tag}->{koatuu} && $cities[$min]->{koatuu} eq $entry->{tag}->{koatuu})) {
 
 		# Sounds good. Remove it
-		splice @cities, $min, 1;
+		splice @{$cityBucket[$minX][$minY]}, $minBpos, 1;
+		$citiesLeft--;
 	} else {
 		# Okay, we're in trouble. No match.
 
-		my @citM = grep { $_->{dist} < 0.003 } @cities;
+		my @citM = ();
+		for my $x ($latb-1..$latb+1) {
+			for my $y ($lonb-1..$lonb+1) {
+				next if not defined $cityBucket[$x][$y];
+
+				for my $n (@{$cityBucket[$x][$y]}) {
+					next if not defined $n;
+					next if $n == -1;
+
+					push @citM, $n if $cities[$n]->{dist} < 0.003;
+				}
+			}
+		}
 
 		if (!scalar @citM) {
 			print "$entry->{tag}->{name} $entry->{lat}, $entry->{lon} $cnd $entry->{id}\n";
@@ -219,12 +281,14 @@ sub processCity($) {
 		}
 
 
-		my @citS = sort {$a->{dist} <=> $b->{dist}} @citM; # This is slow
+		my @citS = sort {$cities[$a]->{dist} <=> $cities[$b]->{dist}} @citM; # This is slow
 
 		# Try to find name match
 		my $match = 0;
 
-		for my $c (@citS) {
+		for my $n (@citS) {
+			my $c = $cities[$n];
+
 			if ($c->{name_ua} eq $entry->{tag}->{name} || 
 				$c->{name_ru} eq $entry->{tag}->{name} ||
 				(exists $entry->{tag}->{"name:ua"} && $c->{name_ua} eq $entry->{tag}->{"name:ua"}) ||
@@ -232,8 +296,14 @@ sub processCity($) {
 				(exists $entry->{tag}->{koatuu} && $c->{koatuu} eq $entry->{tag}->{koatuu})) {
 				$match = 1;
 
-				$min = $c->{orignum};
-				splice @cities, $min, 1;
+				for my $x (0..scalar $cityBucket[$c->{bucketX}][$c->{bucketY}]) {
+					if ($cityBucket[$c->{bucketX}][$c->{bucketY}]->[$x] == $n) {
+						splice @{$cityBucket[$c->{bucketX}][$c->{bucketY}]}, $x, 1;
+						$citiesLeft--;
+
+						last;
+					}
+				}
 
 				return;
 			}
@@ -243,16 +313,26 @@ sub processCity($) {
 			# Absoultely no match. Show all nearby entries then
 			print "$entry->{tag}->{name} $entry->{lat}, $entry->{lon} $cnd\n";
 
-			if ($citS[0]->{dist} < 0.0002) {
-				print "  Rename --> $citS[0]->{name_ua}\n";
+			if ($cities[$citS[0]]->{dist} < 0.0002) {
+				print "  Rename --> $cities[$citS[0]]->{name_ua}\n";
 				$renames++;
 
-				splice @cities, $citS[0]->{orignum}, 1;
+				my $c = $cities[$citS[0]];
+				for my $x (0..scalar @{ $cityBucket[$c->{bucketX}][$c->{bucketY}]}) {
+					if ($cityBucket[$c->{bucketX}][$c->{bucketY}]->[$x] == $citS[0]) {
+						splice @{$cityBucket[$c->{bucketX}][$c->{bucketY}]}, $x, 1;
+						$citiesLeft--;
+
+						last;
+					}
+				}
 
 				return;
 			}
 	
-			for my $c (@citS) {
+			for my $n (@citS) {
+				my $c = $cities[$n];
+
 				print "  $c->{num} $c->{name_ua} $c->{lat}, $c->{lon} [$c->{dist}]\n";
 			}
 
@@ -260,14 +340,5 @@ sub processCity($) {
 
 			$noMatchesSafe++ if $cnd ne "";
 		}
-	}
-}
-
-sub calcDistances($$) {
-	my $lat = shift || 0;
-	my $lon = shift || 0;
-
-	for $c (@cities) {
-		$c->{dist} = ($c->{lat} - $lat) * ($c->{lat} - $lat) + ($c->{lon} - $lon) * ($c->{lon} - $lon);
 	}
 }
