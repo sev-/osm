@@ -99,11 +99,13 @@ for $c (@cities) {
 	}
 
 	my $nm = lc $koatuus{$c->{koatuu}}->{NU};
+	$nm =~ s/^м\.//;
 	unless (exists $c->{name_ua} && $nm eq lc($c->{name_ua}) ||
 			exists $c->{name_ru} && $nm eq lc($c->{name_ru})) {
 		print "Name mismatch: <$nm> <$c->{name_ua}> {$c->{title}} $c->{koatuu}\n";
 		$mismatch++;
 	} else {
+		print "Have to rename $nm -> $c->{name_ua}\n" unless $nm eq lc($c->{name_ua});
 		$koatuus{$c->{koatuu}}->{refs}++;
 		$matches++;
 	}
