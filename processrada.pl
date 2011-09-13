@@ -64,16 +64,17 @@ for my $f (<${radadir}/*.html>) {
 
 	my $fields2val = "";
 	my $fields2priynyala = 0;
-	my $inpriynyala = 0;
+	my $contd = 0;
 
 	while (<$in>) {
-		if ($fields2priynyala == 2 and $fieldspnum == 4 and $inpriynyala) {
+		if ($contd) {
 			if (/<\/td>/) {
-				$inpriynyala = 0;
-				next;
+				s/<\/td>//i;
+				$contd = 0;
 			}
+			s/&nbsp;/ /g;
 			chomp;
-			$entry{$fieldsp[$fieldspnum - 1 + 8 * $fieldspcoeff]} .= " $_";
+			$entry{$contdname} .= " $_";
 			next;
 		}
 
@@ -169,8 +170,8 @@ for my $f (<${radadir}/*.html>) {
 					die "$f:(3) $_  at $.";
 				}
 
-				if ($fields3num <= $p) {
-					die "$f: Wrong field seq: $_  at $.";
+				if ($fields3num <= $p and $p != 14) {
+					die "$f: Wrong field seq ($fields3num > $p): $_  at $.";
 				}
 				$fields2priynyala = 0;
 			}
@@ -266,10 +267,12 @@ for my $f (<${radadir}/*.html>) {
 				die "$f: Bad typedef $_ at $.";
 			}
 		} elsif (/THEAD01.*AllNews">(.*)<\/td>/) {
-			if ($fields2priynyala < 1 and $fieldspcoeff == 0) {
-				die "$f: Unexpected thead01: $_ at $.";
+			if ($fields2priynyala < 1 and $fieldspcoeff == -1) {
+				die "$f: Unexpected thead01 ($fields2priynyala $fieldspcoeff): $_ at $.";
 			} elsif ($1 =~ /^Дата<br>опубліку-<br>вання/) {
-				die "$f: Priynyala: $_ ($fieldspnum $fieldspcoeff) at $." if $fieldspnum != 4 and $fieldspcoeff == 0;
+				if ($fields2priynyala == 2) {
+					$fieldspcoeff++;
+				}
 
 				$fieldspnum = 5;
 				$fields2priynyala = 1;
@@ -281,7 +284,26 @@ for my $f (<${radadir}/*.html>) {
 			} else {
 				die "$f: Priynyala: $_ ($1) at $.";
 			}				
-		} elsif (/THEAD02.*AllNews">(.*)<\/td>/ or ($fieldspnum == 3 and /THEAD02.*AllNews">(.*)/)) {
+		} elsif ($fields2num == 4 and (m'THEAD02.*topTitle"><a href="mailto:(.*)\?subject.*">(.*)</a>'i or 
+				 m'THEAD02.*topTitle"><a href="http://(.*)">(.*)</a>'i)) {
+			my $res = $1;
+			my $res2 = $2;
+
+			if ($fields2num != 4) {
+				die "$f: Unexpected mailto: $_ at $.";
+			}
+
+			$res =~ s/&nbsp;/ /g;
+			$res =~ s/^\s+|\s+$//g;
+			$res2 =~ s/&nbsp;/ /g;
+			$res2 =~ s/^\s+|\s+$//g;
+			if ($res ne $res2) {
+				die "$f: bad mailto format: $_ at $.";
+			}
+
+			$entry{$fields2[$fields2num]} = $res;
+			$fields2num++;
+		} elsif (/THEAD02.*AllNews">(.*)<\/td>/ or (($fieldspnum == 3 or $fields2num == 3) and /THEAD02.*AllNews">(.*)/)) {
 			if ($fields2priynyala == 0) {
 				if ($fields2num > 6 || $fields2num == -1) {
 					die "$f: bad thead02 num $_ at $.";
@@ -293,6 +315,11 @@ for my $f (<${radadir}/*.html>) {
 
 				$res =~ s/&nbsp;/ /g;
 				$res =~ s/^\s+|\s+$//g;
+
+				if ($_ !~ /<\/td>/i) {
+					$contd = 1;
+					$contdname = $fields2[$fields2num];
+				}
 
 				$entry{$fields2[$fields2num]} = $res;
 				$fields2num++;
@@ -337,7 +364,8 @@ for my $f (<${radadir}/*.html>) {
 					if ($res =~ /<\/td>/i) {
 						$res =~ s/<\/td>//i;
 					} else {
-						$inpriynyala = 1;
+						$contd = 1;
+						$contdname = $fieldsp[$fieldspnum + 8 * $fieldspcoeff];
 					}
 				}
 
@@ -346,29 +374,9 @@ for my $f (<${radadir}/*.html>) {
 
 				if ($fieldspnum == 6) {
 					$fieldspnum = -1;
-					$fieldspcoeff++;
 					$fields2priynyala = 0;
 				}
 			}
-		} elsif ($fields2num == 4 and (m'THEAD02.*topTitle"><a href="mailto:(.*)\?subject.*">(.*)</a>'i or 
-				 m'THEAD02.*topTitle"><a href="http://(.*)">(.*)</a>'i)) {
-			my $res = $1;
-			my $res2 = $2;
-
-			if ($fields2num != 4) {
-				die "$f: Unexpected mailto: $_ at $.";
-			}
-
-			$res =~ s/&nbsp;/ /g;
-			$res =~ s/^\s+|\s+$//g;
-			$res2 =~ s/&nbsp;/ /g;
-			$res2 =~ s/^\s+|\s+$//g;
-			if ($res ne $res2) {
-				die "$f: bad mailto format: $_ at $.";
-			}
-
-			$entry{$fields2[$fields2num]} = $res;
-			$fields2num++;
 		} elsif (/THEAD02.*topTitle"><a href="(.*)">(.*)<\/a><\/td>/) {
 			my $res = $1;
 			my $res2 = $2;
