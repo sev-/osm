@@ -24,7 +24,7 @@ open $csvf, ">:encoding(utf8)", $outfile or die "$outfile: $!";
 my @fields1 = qw(oldname formdate categorydate zipname zip admcenter water areaga aream areakm populationt populationm populations density adminvalue distanceto distancerail distanceroad nearestrail distancenearestrail populationcity populationmiskradat populationmiskradam populationmiskradas);
 my @fields2 = qw(amts phone fax rada email site type parentname parentref);
 my @fieldsp = qw(radapriynyala priynaladate priynalanum priynyalazmist priynalavru priynyalapubdate priynyalapubstor priynyalatype radapriynyala2 priynaladate2 priynalanum2 priynyalazmist2 priynalavru2 priynyalapubdate2 priynyalapubstor2 priynyalatype2);
-my @fields3 = qw(numsil numsilw numselrad numselradw nummistray nummistrayw nummiskrad nummiskradw numsel numselw numsilrad numsilradw numsel numselw dummy dummyw numrayonsmist numrayonmistw numrayradmist numrayradmistw numrayons numrayonsw nummistobl nummistoblw numrayrad numrayradw nummistresp nummistrespw);
+my @fields3 = qw(numsil numsilw numselrad numselradw nummistray nummistrayw nummiskrad nummiskradw numsel numselw numsilrad numsilradw numsel numselw dummy dummyw numrayonsmist numrayonmistw numrayradmist numrayradmistw numrayons numrayonsw nummistobl nummistresp nummistrespw nummistoblw numrayrad numrayradw);
 
 print $csvf "\"num\",\"name\"";
 
@@ -164,8 +164,10 @@ for my $f (<${radadir}/*.html>) {
 					$fields3num = 20;
 				} elsif ($1 =~ /^&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;міст обласного значення&nbsp;/) {
 					$fields3num = 22;
-				} elsif ($1 =~ /^&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;районних рад&nbsp;/) {
+				} elsif ($1 =~ /^&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;міст республіканського значення&nbsp;/) {
 					$fields3num = 24;
+				} elsif ($1 =~ /^&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;районних рад&nbsp;/) {
+					$fields3num = 26;
 				} else {
 					die "$f:(3) $_  at $.";
 				}
@@ -203,6 +205,12 @@ for my $f (<${radadir}/*.html>) {
 			$entry{$fields3[$fields3num+1]} = $res2;
 
 			$fields3num = -1;
+		} elsif ($fields3num == 24 and /THEAD21.*topTitle">(.*)<\/td>/) {
+			my $res = $1;
+			$res =~ s/&nbsp;/ /g;
+			$res =~ s/^\s+|\s+$//g;
+
+			$entry{$fields3[$fields3num]} = $res;
 		} elsif (/THEAD21.*topTitle">/) {
 			die "$f: Bad format: $_ at $." unless $fields3num == 14;
 		} elsif (/THEAD00.*AllNews">(.*)<\/td>/) {
@@ -324,6 +332,11 @@ for my $f (<${radadir}/*.html>) {
 				$entry{$fields2[$fields2num]} = $res;
 				$fields2num++;
 			} else {
+				if ($fieldspnum == 6 and not /colspan=6/) {
+					$fields2priynyala = 2;
+					$fieldspnum = 0;
+				}
+
 				if ($fieldspnum == 6) {
 					if (/Зміна категорії \(статусу\) населеного пункту/) {
 						$entry{$fieldsp[7 + 8 * $fieldspcoeff]} = "StatusChange";
@@ -347,6 +360,26 @@ for my $f (<${radadir}/*.html>) {
 						next;
 					} elsif (/Зміна меж АТО/) {
 						$entry{$fieldsp[7 + 8 * $fieldspcoeff]} = "BorderChange";
+						$fieldspnum = 0;
+						next;
+					} elsif (/Утворення АТО/) {
+						$entry{$fieldsp[7 + 8 * $fieldspcoeff]} = "BorderCreate";
+						$fieldspnum = 0;
+						next;
+					} elsif (/Відновлення колишнього найменування/) {
+						$entry{$fieldsp[7 + 8 * $fieldspcoeff]} = "NameRestore";
+						$fieldspnum = 0;
+						next;
+					} elsif (/Уточнення найменування/) {
+						$entry{$fieldsp[7 + 8 * $fieldspcoeff]} = "NameClarification";
+						$fieldspnum = 0;
+						next;
+					} elsif (/Ліквідація ОМС/) {
+						$entry{$fieldsp[7 + 8 * $fieldspcoeff]} = "OMSRemove";
+						$fieldspnum = 0;
+						next;
+					} elsif (/Утворення ОМС/) {
+						$entry{$fieldsp[7 + 8 * $fieldspcoeff]} = "OMSCreate";
 						$fieldspnum = 0;
 						next;
 					} else {
