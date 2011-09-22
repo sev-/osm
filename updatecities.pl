@@ -133,7 +133,9 @@ sub processCoords($) {
 	my $sec;
 	my $min;
 
-	if ($arr[$n+3] eq "N") {
+	if ($arr[$n+3] eq "N" or $arr[$n+4] eq "N") {
+		$n++ if ($arr[$n+4] eq "N");
+
 		$deg = $arr[$n] || 0;
 		$min = $arr[$n+1] || 0;
 		$sec = $arr[$n+2] || 0;
@@ -142,7 +144,7 @@ sub processCoords($) {
 			$sec = substr $arr[$n+2], 0, 2;
 		}
 		$lat = dms2decimal($deg, $min, $sec);
-		$n = 5;
+		$n += 4;
 	} elsif ($arr[$n+2] eq "N") {
 		$deg = $arr[$n] || 0;
 		$min = $arr[$n+1] || 0;
@@ -164,7 +166,7 @@ sub processCoords($) {
 		$sec = 0;
 		$lon = dms2decimal($deg, $min, $sec);
 	} else {
-		print STDERR "Bad coordinates $str\n";
+		print STDERR "Bad coordinate E $str\n";
 	}
 
 	return ($lat, $lon);
