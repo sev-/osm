@@ -24,7 +24,7 @@ open $csvf, ">:encoding(utf8)", $outfile or die "$outfile: $!";
 my @fields1 = qw(oldname formdate categorydate zipname zip admcenter water areaga aream areakm populationt populationm populations density adminvalue distanceto distancerail distanceroad nearestrail distancenearestrail populationcity populationmiskradat populationmiskradam populationmiskradas);
 my @fields2 = qw(amts phone fax rada email site type parentname parentref);
 my @fieldsp = qw(radapriynyala priynaladate priynalanum priynyalazmist priynalavru priynyalapubdate priynyalapubstor priynyalatype radapriynyala2 priynaladate2 priynalanum2 priynyalazmist2 priynalavru2 priynyalapubdate2 priynyalapubstor2 priynyalatype2);
-my @fields3 = qw(numsil numsilw numselrad numselradw nummistray nummistrayw nummiskrad nummiskradw numsel numselw numsilrad numsilradw numsel numselw dummy dummyw numrayonsmist numrayonmistw numrayradmist numrayradmistw numrayons numrayonsw nummistobl nummistresp nummistrespw nummistoblw numrayrad numrayradw);
+my @fields3 = qw(numsilw numsil numselradw numselrad nummistrayw nummistray nummiskradw nummiskrad numselw numsel numsilradw numsilrad numselw numsel dummyw dummy numrayonsmistw numrayonmist numrayradmistw numrayradmist numrayonsw numrayons nummistoblw nummistres nummistrespww nummistobl numrayradw numrayrad);
 
 print $csvf "\"num\",\"name\"";
 
