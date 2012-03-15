@@ -9,17 +9,20 @@ def translateAttributes(attrs):
 	
 	tags = {}
 	
-	if attrs['title']:
-		tags = {'name':attrs['title']}
-		tags.update({'name:uk':attrs['title']})
+	if attrs['title_ua']:
+		tags = {'name':attrs['title_ua']}
+		tags.update({'name:uk':attrs['title_ua']})
 		tags.update({'name:ru':attrs['title_ru']})
 
-	if float(attrs['style']) > 30:
-		tags.update({'highway':'secondary'})
-	elif float(attrs['style']) > 25:
-		tags.update({'highway':'tertiary'})
-	else:
+	width = float(attrs['width']) * 0.2
+	tags.update({'width':str(width)})
+
+	if attrs['title_ua']:
 		tags.update({'highway':'residential'})
+	elif width <= 1.2:
+		tags.update({'highway':'path'})
+	else:
+		tags.update({'highway':'unclassified'})
 
 	tags.update({'source':'nadoloni.com import'})
 	tags.update({'source_ref':'http://nadoloni.com'})

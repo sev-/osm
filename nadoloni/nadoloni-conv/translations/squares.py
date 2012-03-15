@@ -9,9 +9,9 @@ def translateAttributes(attrs):
 	
 	tags = {}
 	
-	if attrs['title']:
-		tags = {'name':attrs['title']}
-		tags.update({'name:uk':attrs['title']})
+	if attrs['title_ua']:
+		tags = {'name':attrs['title_ua']}
+		tags.update({'name:uk':attrs['title_ua']})
 		tags.update({'name:ru':attrs['title_ru']})
 		tags.update({'name:en':attrs['title_en']})
 		tags.update({'highway':'tertiary'})

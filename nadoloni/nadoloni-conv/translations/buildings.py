@@ -9,8 +9,8 @@ def translateAttributes(attrs):
 	
 	tags = {}
 	
-	if attrs['title']:
-		tags = {'addr:housenumber':attrs['title']}
+	if attrs['title_ua']:
+		tags = {'addr:housenumber':attrs['title_ua']}
 
 	tags.update({'building':'yes'})
 	tags.update({'source':'nadoloni.com import'})

@@ -629,11 +629,11 @@ w.start("osm", version='0.6', generator='ogr2osm')
 
 # First, the nodes
 for (nodeID,(x,y)) in nodeCoords.items():
-	x1 = (x * 1.195) + 2612315.5916574903
-	y1 = (y * 1.195) + 6338780.339744797
-	(x2,y2) = _c3857t4326(x1, y1)
+	#x1 = (x * 1.195) + 2612315.5916574903
+	#y1 = (y * 1.195) + 6338780.339744797
+	#(x2,y2) = _c3857t4326(x1, y1)
 
-	w.start("node", visible="true", id=str(nodeID), lat=str(y2), lon=str(x2))
+	w.start("node", visible="true", id=str(nodeID), lat=str(y), lon=str(x))
 	for (tagKey,tagValue) in nodeTags[nodeID].items():
 		if tagValue:
 			w.element("tag", k=tagKey, v=tagValue)

@@ -9,16 +9,13 @@ def translateAttributes(attrs):
 	
 	tags = {}
 	
-	if attrs['title_ua']:
-		tags = {'name':attrs['title_ua']}
-		tags.update({'name:uk':attrs['title_ua']})
-		tags.update({'name:ru':attrs['title_ru']})
-		tags.update({'name:en':attrs['title_en']})
+	tags.update({'public_transport':'stop_position'})
+	tags.update({'bus':'yes'})
+	tags.update({'highway':'bus_stop'})
 
-	tags.update({'waterway':'river'})
 	tags.update({'source':'nadoloni.com import'})
 	tags.update({'source_ref':'http://nadoloni.com'})
 	id = str(int(attrs['id']));
-	tags.update({'nadoloni:id':"rivers:"+id})
+	tags.update({'nadoloni:id':"stops:"+id})
 	
 	return tags
