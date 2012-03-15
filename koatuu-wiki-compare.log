@@ -1,27 +1,48 @@
 Loaded 42009 KOATUUs from file KOATUU_072011.csv
-Loaded 29405 cities
-Name mismatch: <рудне> <Рудно> {Рудно} 4610165500
+Loaded 29413 cities
+Name mismatch: <острог> <Острох> {Острог} 5610900000
 Name mismatch: <ульянівка> <Улянівка> {Улянівка (Ровеньківська міськрада)} 4412391005
 Name mismatch: <виноградний> <Виноградне> {Виноградне (Ялтинська міськрада)} 0110391803
 Name mismatch: <монастирищенський район/м.монастирище> <Монастирище> {Монастирище} 7123400000
+Name mismatch: <жовнине> <Жовнино> {Жовнине} 7125182401
 Name mismatch: <щербашинці> <Щербашенці> {Щербашенці} 3220688401
 Name mismatch: <мар'янівка> <Мар'янівкa> {Мар'янівка (Горохівський район)} 0720855400
+Name mismatch: <озерщина> <Озірщина> {Озерщина} 3221081502
 Name mismatch: <берем'яни> <Берем’яни> {Берем'яни (Бучацький район)} 6121280801
 Name mismatch: <новоульянівка> <Новоульяновка> {Новоульяновка (Бахчисарайський район)} 0120455304
 Name mismatch: <богачівка> <Багачівка> {Багачівка (Звенигородський район)} 7121280401
+Unknown KOATUU: <Зеленогір'я> {Зеленогір'я} '''01&thinsp;103&thinsp;930&thinsp;02''' '''0100000
+Unknown KOATUU: <Привітне> {Привітне (Алуштинська міськрада)} '''01&thinsp;103&thinsp;930&thinsp;01''' '''0100000
 Name mismatch: <весела роша> <Весела Роща> {Весела Роща} 1222086002
 Name mismatch: <малієвське> <Маліївське> {Маліївське} 1222683305
 Name mismatch: <новопетрівське> <Новопетровське> {Новопетровське} 1222683306
 Name mismatch: <межуівка> <Межуївка> {Межуївка} 1222983406
+Name mismatch: <івано-межеріцьке> <Івано-Межиріцьке> {Івано-Межиріцьке} 1225955105
+Name mismatch: <новотимофієвське> <Новотимофіївське> {Новотимофіївське} 1225982803
+Name mismatch: <сергієвка> <Сергіївка> {Сергіївка (Юр'ївський район)} 1225980209
+Name mismatch: <новоолексієвка> <Новоолексіївка> {Новоолексіївка (Синельниківський район)} 1224881103
 Name mismatch: <гарасимівка> <Герасимівка> {Герасимівка (Новомосковський район)} 1223284503
 Name mismatch: <межеріч> <Межиріч> {Межиріч (Павлоградський район)} 1223584501
+Name mismatch: <сергієвка> <Сергіївка> {Сергіївка (Солонянський район)} 1225055106
+Name mismatch: <олексієвка> <Олексіївка> {Олексіївка (Солонянський район)} 1225084307
+Name mismatch: <волочаєвка> <Волочаївка> {Волочаївка (П'ятихатський район)} 1224583702
+Name mismatch: <червона дерієвка> <Червона Деріївка> {Червона Деріївка} 1224587508
+Name mismatch: <сергієвка> <Сергіївка> {Сергіївка (Томаківський район)} 1225455105
+Name mismatch: <олексієвка> <Олексіївка> {Олексіївка (Софіївський район)} 1225283804
+Name mismatch: <отрубок> <Одрубок> {Одрубок} 1225285207
+Name mismatch: <мотина-балка> <Мотина Балка> {Мотина Балка} 1225286607
+Name mismatch: <андрієвка> <Андріївка> {Андріївка (Софіївський район)} 1225287702
+Name mismatch: <ганно-миколаєвка> <Ганно-Миколаївка> {Ганно-Миколаївка} 1225287704
 Name mismatch: <октябрьське> <Октябрське> {Октябрське (Великоновосілківський район)} 1421284001
 Name mismatch: <октябрьське> <Октябрське> {Октябрське (Володарський район)} 1421787002
 Name mismatch: <октябрьське> <Октябрське> {Октябрське (Волноваський район)} 1421585601
 Have to rename тисалово -> Тисолове
 Name mismatch: <кузнеци> <Кузнеці> {Кузнеці} 1423686007
+Unknown KOATUU: <Івашківці> {Івашківці (Шаргородський район)} 0004325516 0004300000
+Have to rename буша -> |зображення       = Буша.jpg
 Have to rename плешкани -> Плешкані
 Name mismatch: <ромейкове> <Ромейково> {Ромейково} 7122281503
+Name mismatch: <гарасимівка> <Герасимівка> {Герасимівка (Покровський район)} 1224281204
 Name mismatch: <черненкове> <Чорненкове> {Чорненкове} 1224255119
 Name mismatch: <осикове> <Осиково> {Осиково} 1820884601
 Name mismatch: <костівці> <Костовці> {Костовці} 1820986007
@@ -46,16 +67,22 @@ Name mismatch: <мирошниківка> <Мірошниківка> {Мірош
 Name mismatch: <притульці> <Прутильці> {Прутильці} 7122586305
 Name mismatch: <паланочки> <Паланочка> {Паланочка} 7123186301
 Name mismatch: <летицівка> <Летичівка> {Летичівка} 7123480305
+Name mismatch: <маршинецька/с.маршинці> <Маршинці> {Маршинці} 7323084700
 Name mismatch: <гута межирицька> <Гута Межиріцька> {Гута Межиріцька} 7124984003
 Name mismatch: <ставківка> <Савківка> {Савківка} 7125155101
+Name mismatch: <мизове> <Мизово> {Мизове} 0725082901
+Name mismatch: <дар'ївка> <Даріївка> {Дар'ївка (Білозерський район)} 6520381001
 Name mismatch: <глибочка> <Глибічка> {Глибічка} 3220485102
 Unknown KOATUU: <Ананьїв> {Ананьїв (село)} 5120280401, 5120280501 5120200000
 Name mismatch: <заводи> <Шевченківське> {Шевченківське (Конотопський район)} 5922087803
 Name mismatch: <мостиська друга> <Мостиська Другі> {Мостиська Другі} 4622484701
-Name mismatch: <максимівка> <Лібухова> {Лібухова} 4625186103
+Name mismatch: <сірники> <СЕРНИКИ> {Сірники (село)} 4623384505
+Name mismatch: <лютовиська> <Лютовисько> {Лютовиська} 4625183101
 Unknown KOATUU: <Велика Білозерка> {Велика Білозерка} 2321180101, 2321186502, 2321187401, 2321188401 2321100000
+Have to rename поетин -> Паєти
 Name mismatch: <нечаівка> <Нечаївка> {Нечаївка (Буринський район)} 5920982403
 Name mismatch: <іздецьке> <Їздецьке> {Їздецьке} 5921280503
+Name mismatch: <поділки> <Подільки> {Поділки} 5923284401
 Name mismatch: <перетічки> <Кірове> {Кірове (Недригайлівський район)} 5923585705
 Name mismatch: <немудруі> <Немудруї> {Немудруї} 5923584404
 Name mismatch: <слиньківщина> <Слинківщина> {Слинківщина} 5321386404
@@ -69,7 +96,15 @@ Name mismatch: <уляновка> <Улянівка> {Улянівка (Мико
 Name mismatch: <журівка> <Журавка> {Журавка (Новоархангельський район)} 3523655101
 Name mismatch: <свердловка> <Свердлівка> {Свердлівка (Світловодський район)} 3525286902
 Name mismatch: <грирорівка> <Григорівка> {Григорівка (Олександрівський район)} 3520584502
+Name mismatch: <новомихайлівка> <Веселий> {Веселий (хутір)} 2325583501
+Name mismatch: <михайлівка> <Брусія> {Брусія} 5321084905
 
+Duplicated KOATUU: 0123584702 (2) <КАМ'ЯНКА> 0123500000 <ОКТЯБРСЬКА/С.ОКТЯБРСЬКЕ> <ПЕРВОМАЙСЬКИЙ РАЙОН/СМТ ПЕРВОМАЙСЬКЕ>
+  Кам'янка (Первомайський район, АРК), {{АРК}}, [[Первомайський район (АРК)|Первомайського]], [[Октябрська сільська рада]]
+  Кам'янка (Первомайський район, Харківська область), {{Хрк}}, [[Первомайський район (Харківська область)|Первомайський район]], [[Киселівська сільська рада]]
+Duplicated KOATUU: 1224856206 (2) <ТУРГЕНЄВКА> 1224800000 <СЛАВГОРОД> <СИНЕЛЬНИКІВСЬКИЙ РАЙОН/М.СИНЕЛЬНИКОВЕ>
+  Тургенєвка (Бахчисарайський район), {{АРК}}, [[Бахчисарайський район|Бахчисарайський]], Залізничненська сільська рада
+  Тургенєвка (Синельниківський район), {{Днп}}, [[Синельниківський район]], Славгородська селищна рада
 
 Missing KOATUU: 0110390903 <ВЕРХНЯ КУТУЗОВКА>
 Missing KOATUU: 0110390905 <НИЖНЯ КУТУЗОВКА>
@@ -338,7 +373,6 @@ Missing KOATUU: 0122084407 <ПРОТОЧНЕ>
 Missing KOATUU: 0122084801 <ПЕТРІВКА>
 Missing KOATUU: 0122084802 <БЛИЖНЄ>
 Missing KOATUU: 0122084803 <ІЗВЕСТКОВЕ>
-Missing KOATUU: 0122084804 <КРАСНА ПОЛЯНА>
 Missing KOATUU: 0122084805 <КРЕМНІВКА>
 Missing KOATUU: 0122084806 <МИРОЛЮБІВКА>
 Missing KOATUU: 0122084807 <НОВОЕСТОНІЯ>
@@ -436,7 +470,6 @@ Missing KOATUU: 0122784603 <ФОНТАН>
 Missing KOATUU: 0122784801 <ЛУГОВЕ>
 Missing KOATUU: 0122784802 <ЄРОФЄЄВЕ>
 Missing KOATUU: 0122785101 <МАРФІВКА>
-Missing KOATUU: 0122785103 <НОВОСЕЛІВКА>
 Missing KOATUU: 0122785104 <ПРУДНИКОВЕ>
 Missing KOATUU: 0122785401 <МАР'ЇВКА>
 Missing KOATUU: 0122785402 <БОРИСІВКА>
@@ -719,7 +752,6 @@ Missing KOATUU: 0124783803 <ГРУШЕВЕ>
 Missing KOATUU: 0124784601 <НОВОАНДРІЇВКА>
 Missing KOATUU: 0124784602 <СУХОРІЧЧЯ>
 Missing KOATUU: 0124784603 <ХАРИТОНІВКА>
-Missing KOATUU: 0124784801 <НОВОСЕЛІВКА>
 Missing KOATUU: 0124785001 <ПЕРВОМАЙСЬКЕ>
 Missing KOATUU: 0124785002 <КРАСНЕ>
 Missing KOATUU: 0124785003 <ЧАЙКИНЕ>
@@ -806,7 +838,6 @@ Missing KOATUU: 0125287702 <ПРИСИВАШНЕ>
 Missing KOATUU: 0125288201 <ЧАПАЄВКА>
 Missing KOATUU: 0125288202 <КОЛОМЕНСЬКЕ>
 Missing KOATUU: 0125288203 <МИКОЛАЇВКА>
-Missing KOATUU: 0125288204 <НОВОСЕЛІВКА>
 Missing KOATUU: 0125288205 <НОВИЙ МИР>
 Missing KOATUU: 0125288206 <ХЛІБНЕ>
 Missing KOATUU: 0125288601 <ЧОРНОЗЕМНЕ>
@@ -823,7 +854,6 @@ Missing KOATUU: 0125682201 <КІРОВСЬКЕ>
 Missing KOATUU: 0125682202 <ДОЗОРНЕ>
 Missing KOATUU: 0125682203 <ЗАДОРНЕ>
 Missing KOATUU: 0125682204 <НИЗІВКА>
-Missing KOATUU: 0125683301 <КРАСНА ПОЛЯНА>
 Missing KOATUU: 0125683302 <ВНУКОВЕ>
 Missing KOATUU: 0125683303 <КУЗНЕЦЬКЕ>
 Missing KOATUU: 0125683501 <КРАСНОЯРСЬКЕ>
@@ -925,7 +955,6 @@ Missing KOATUU: 0523083801 <КІРОВЕ>
 Missing KOATUU: 0523085601 <МЕЛЬНИКІВЦІ>
 Missing KOATUU: 0523085701 <НОВІ ОБИХОДИ>
 Missing KOATUU: 0523184302 <ОРАТІВКА>
-Missing KOATUU: 0524382901 <КИНАШІВ>
 Missing KOATUU: 0524510501 <ГРИЖИНЦІ>
 Missing KOATUU: 0524880301 <БЕРЕЗНА>
 Missing KOATUU: 0525080401 <БІЛИЙ КАМІНЬ>
@@ -950,6 +979,7 @@ Missing KOATUU: 0525086402 <АНЮТИНЕ>
 Missing KOATUU: 0525087502 <НОВОУКРАЇНКА>
 Missing KOATUU: 0525310101 <ПОЛЯНА>
 Missing KOATUU: 0525381401 <ДЖУРИН>
+Missing KOATUU: 0525382201 <ІВАШКІВЦІ>
 Missing KOATUU: 0720510402 <ЗАЛУЖЖЯ>
 Missing KOATUU: 0720510403 <ПАРХОМЕНКОВЕ>
 Missing KOATUU: 0720510404 <ТРОСТЯНКА>
@@ -1039,6 +1069,7 @@ Missing KOATUU: 0721488602 <ОСТРІВОК>
 Missing KOATUU: 0721488603 <ПІДБОРОЧЧЯ>
 Missing KOATUU: 0722881504 <ТЕРТКИ>
 Missing KOATUU: 0723387203 <ЗАМЛИННЯ>
+Missing KOATUU: 0725082901 <МИЗОВЕ>
 Missing KOATUU: 1220310300 <ЗЕЛЕНОДОЛЬСЬК>
 Missing KOATUU: 1222086002 <ВЕСЕЛА РОША>
 Missing KOATUU: 1222683305 <МАЛІЄВСЬКЕ>
@@ -1048,608 +1079,23 @@ Missing KOATUU: 1223284503 <ГАРАСИМІВКА>
 Missing KOATUU: 1223584501 <МЕЖЕРІЧ>
 Missing KOATUU: 1224255119 <ЧЕРНЕНКОВЕ>
 Missing KOATUU: 1224281204 <ГАРАСИМІВКА>
-Missing KOATUU: 1224284513 <ПЕРШОТРАВНЕВЕ>
-Missing KOATUU: 1224555301 <КУЛЯБКИНЕ>
-Missing KOATUU: 1224555601 <КОМУНАРІВКА>
-Missing KOATUU: 1224555602 <СТЕПОВЕ>
-Missing KOATUU: 1224580501 <БІЛЕНЩИНА>
-Missing KOATUU: 1224580502 <ВЕРХНЬОКАМ'ЯНИСТА>
-Missing KOATUU: 1224580503 <КАТЕРИНІВКА>
-Missing KOATUU: 1224580504 <ЛИПОВЕ>
-Missing KOATUU: 1224580505 <МИХАЙЛІВКА>
-Missing KOATUU: 1224580506 <ОЛЕКСАНДРО-ГРИГОРІВКА>
-Missing KOATUU: 1224580507 <ПЛОСКЕ>
-Missing KOATUU: 1224580508 <ПЛОСКО-ТАРАНІВКА>
-Missing KOATUU: 1224581001 <БОГДАНО-НАДЕЖДІВКА>
-Missing KOATUU: 1224581002 <КАЛИНІВКА>
-Missing KOATUU: 1224581003 <КУЛЬТУРА>
-Missing KOATUU: 1224581004 <МИРНЕ>
-Missing KOATUU: 1224581005 <МИРОЛЮБІВКА>
-Missing KOATUU: 1224581009 <ПОЛТАВО-БОГОЛЮБІВКА>
-Missing KOATUU: 1224581201 <ГРУШУВАТКА>
-Missing KOATUU: 1224581203 <КОМСОМОЛЬСЬКЕ>
-Missing KOATUU: 1224581205 <КРАСНОІВАНІВКА>
-Missing KOATUU: 1224581207 <НЕРУДСТАЛЬ>
-Missing KOATUU: 1224581209 <СЕМЕНІВКА>
-Missing KOATUU: 1224581501 <ЖОВТЕ>
-Missing KOATUU: 1224581502 <ЗЕЛЕНЕ>
 Missing KOATUU: 1224581701 <ЗОРЯ КОМУНІЗМУ>
-Missing KOATUU: 1224581703 <АВАНГАРД>
-Missing KOATUU: 1224581705 <ЗЕЛЕНИЙ ЛУГ>
-Missing KOATUU: 1224581707 <КАСИНІВКА>
-Missing KOATUU: 1224581708 <ОСИКУВАТЕ>
-Missing KOATUU: 1224581709 <ПЕТРІВКА>
-Missing KOATUU: 1224581801 <ІВАШИНІВКА>
-Missing KOATUU: 1224581803 <РАДГОСПНЕ>
-Missing KOATUU: 1224581805 <КРАСНА ВОЛЯ>
-Missing KOATUU: 1224582001 <КОМІСАРІВКА>
-Missing KOATUU: 1224583001 <ЛОЗУВАТКА>
-Missing KOATUU: 1224583002 <БАЙКІВКА>
-Missing KOATUU: 1224583003 <ІВАНІВКА>
-Missing KOATUU: 1224583004 <ЛИКОШИНЕ>
-Missing KOATUU: 1224583005 <НОВОУКРАЇНКА>
-Missing KOATUU: 1224583006 <ТЕРНО-ЛОЗУВАТКА>
-Missing KOATUU: 1224583007 <ЧЕРВОНИЙ ЯР>
-Missing KOATUU: 1224583701 <МАР'ЯНІВКА>
 Missing KOATUU: 1224583702 <ВОЛОЧАЄВКА>
-Missing KOATUU: 1224584801 <ПАЛЬМИРІВКА>
-Missing KOATUU: 1224584803 <ВЕСЕЛИЙ ПОДІЛ>
-Missing KOATUU: 1224584805 <ДМИТРІВКА>
-Missing KOATUU: 1224584807 <ЖОВТООЛЕКСАНДРІВКА>
-Missing KOATUU: 1224584809 <КРАСНИЙ ЛУГ>
-Missing KOATUU: 1224584811 <НОВОВАСИЛІВКА>
-Missing KOATUU: 1224584813 <НОВОЗАЛІССЯ>
-Missing KOATUU: 1224584815 <РОВЕНЬКИ>
-Missing KOATUU: 1224584817 <ТРУДОЛЮБІВКА>
-Missing KOATUU: 1224585901 <САВРО>
-Missing KOATUU: 1224585902 <БАЛКОВЕ>
-Missing KOATUU: 1224585903 <ВІЛЬНЕ>
-Missing KOATUU: 1224585904 <ГАЛИНА ЛОЗУВАТКА>
-Missing KOATUU: 1224585905 <ДЕМУРИНО-ВАРВАРІВКА>
-Missing KOATUU: 1224585906 <КАМ'ЯНЕ>
-Missing KOATUU: 1224585907 <НОВОІВАНІВКА>
-Missing KOATUU: 1224585909 <ЧЕРВОНА ПОЛЯНА>
-Missing KOATUU: 1224585910 <ЧИГРИНІВКА>
-Missing KOATUU: 1224586001 <САЇВКА>
-Missing KOATUU: 1224586002 <ДОЛИНСЬКЕ>
-Missing KOATUU: 1224586003 <ТЕРНУВАТЕ>
-Missing KOATUU: 1224587001 <САКСАГАНЬ>
-Missing KOATUU: 1224587002 <ЧУМАКИ>
-Missing KOATUU: 1224587501 <ТРОЇЦЬКЕ>
-Missing KOATUU: 1224587502 <БЕРЕЗНЯК>
-Missing KOATUU: 1224587503 <ЗЕЛЕНИЙ КЛИН>
-Missing KOATUU: 1224587504 <ЗОЛОТНИЦЬКЕ>
-Missing KOATUU: 1224587506 <МИКОЛАЇВКА>
-Missing KOATUU: 1224587507 <НОВОТРОЇЦЬКЕ>
 Missing KOATUU: 1224587508 <ЧЕРВОНА ДЕРІЄВКА>
-Missing KOATUU: 1224588001 <ХОЛОДІЇВКА>
-Missing KOATUU: 1224588002 <ВОЛОДИМИРІВКА>
-Missing KOATUU: 1224588003 <ГРАМІВКА>
-Missing KOATUU: 1224588004 <ГРИГОРІВКА>
-Missing KOATUU: 1224588005 <МИРОНІВКА>
-Missing KOATUU: 1224588007 <ЦВІЛЕ>
-Missing KOATUU: 1224588008 <ЧЕРВОНА ГІРКА>
-Missing KOATUU: 1224588009 <ЯКОВЛІВКА>
-Missing KOATUU: 1224588501 <ВИНОГРАДІВКА>
-Missing KOATUU: 1224588503 <ЗАПОРІЖЖЯ>
-Missing KOATUU: 1224588505 <СУХАНІВКА>
-Missing KOATUU: 1224588507 <ЧИСТОПІЛЬ>
-Missing KOATUU: 1224855301 <ЗНАМЕНІВСЬКЕ>
-Missing KOATUU: 1224855302 <ІВАНІВКА>
-Missing KOATUU: 1224855303 <ЛОЗУВАТКА>
-Missing KOATUU: 1224855304 <СТАРОЛОЗУВАТКА>
-Missing KOATUU: 1224855601 <ГОСТРИЙ КАМІНЬ>
-Missing KOATUU: 1224855605 <НОВОВОЗНЕСЕНКА>
-Missing KOATUU: 1224855608 <РОЗДОЛЛЯ>
-Missing KOATUU: 1224856201 <БЕГМА>
-Missing KOATUU: 1224856202 <НОВООЛЕКСАНДРІВСЬКЕ>
-Missing KOATUU: 1224856203 <НОВООЛЕКСАНДРОПІЛЬ>
-Missing KOATUU: 1224856204 <ПЕРШОЗВАНІВКА>
-Missing KOATUU: 1224856205 <ПОЛЬОВЕ>
-Missing KOATUU: 1224880501 <ВАРВАРІВКА>
-Missing KOATUU: 1224880502 <АНДРІЇВКА>
-Missing KOATUU: 1224880505 <ГРЯКУВАТЕ>
-Missing KOATUU: 1224880506 <ДУБО-ОСОКОРІВКА>
-Missing KOATUU: 1224880507 <ЗЕЛЕНЕ>
-Missing KOATUU: 1224880509 <МАР'ЇВСЬКЕ>
-Missing KOATUU: 1224880512 <ОБОЯНІВСЬКЕ>
-Missing KOATUU: 1224880513 <ОЛЕКСАНДРОПІЛЬ>
-Missing KOATUU: 1224880514 <ОСОКОРІВКА>
-Missing KOATUU: 1224880516 <ПОПОВЕ>
-Missing KOATUU: 1224881001 <ВЕЛИКОМИХАЙЛІВКА>
-Missing KOATUU: 1224881003 <ЗАЯЧЕ>
-Missing KOATUU: 1224881004 <КИЇВСЬКЕ>
-Missing KOATUU: 1224881005 <КОДАЦЬКЕ>
-Missing KOATUU: 1224881008 <НОСАЧІ>
-Missing KOATUU: 1224881101 <ВІЛЬНЕ>
 Missing KOATUU: 1224881103 <НОВООЛЕКСІЄВКА>
-Missing KOATUU: 1224881201 <ВОРОНОВЕ>
-Missing KOATUU: 1224881203 <ВАСИЛІВКА-НА-ДНІПРІ>
-Missing KOATUU: 1224881205 <МАР'ЇВКА>
-Missing KOATUU: 1224881207 <НЕНАСИТЕЦЬ>
-Missing KOATUU: 1224881301 <ГІРКИ>
-Missing KOATUU: 1224881302 <БУРХАНІВКА>
-Missing KOATUU: 1224881303 <ВОЛОДИМИРІВСЬКЕ>
-Missing KOATUU: 1224881305 <ЗАПОРІЗЬКЕ>
-Missing KOATUU: 1224881306 <НАДЕЖДИНЕ>
-Missing KOATUU: 1224881309 <ТРЕТЯКІВКА>
-Missing KOATUU: 1224881310 <ТРОЇЦЬКЕ>
-Missing KOATUU: 1224881501 <ДЕРЕЗУВАТЕ>
-Missing KOATUU: 1224881502 <ДОРОГЕ>
-Missing KOATUU: 1224881503 <ЛУГОВЕ>
-Missing KOATUU: 1224881504 <СТЕПОВЕ>
-Missing KOATUU: 1224881505 <ШИРОКОСМОЛЕНКА>
-Missing KOATUU: 1224881701 <ДІБРОВА>
-Missing KOATUU: 1224881702 <ВЕСЕЛЕ>
-Missing KOATUU: 1224881703 <ВОРОНІВКА>
-Missing KOATUU: 1224882001 <ЗАЙЦЕВЕ>
-Missing KOATUU: 1224882002 <КАЛИНІВКА>
-Missing KOATUU: 1224882003 <КРАСНЕ>
-Missing KOATUU: 1224882004 <ОЧЕРЕТУВАТЕ>
-Missing KOATUU: 1224882007 <ТЕРНОВЕ>
-Missing KOATUU: 1224882501 <КИСЛЯНКА>
-Missing KOATUU: 1224882503 <КАМ'ЯНУВАТКА>
-Missing KOATUU: 1224882504 <НАДЕЖДІВКА>
-Missing KOATUU: 1224882506 <ХОРОШЕВЕ>
-Missing KOATUU: 1224883001 <ЛУБ'ЯНКА>
-Missing KOATUU: 1224883002 <БЕРЕЗНУВАТКА>
-Missing KOATUU: 1224883003 <КАЛИНІВСЬКЕ>
-Missing KOATUU: 1224883004 <САДОВЕ>
-Missing KOATUU: 1224883005 <ТОКОВЕ>
-Missing KOATUU: 1224883006 <ЦИГАНІВКА>
-Missing KOATUU: 1224883007 <ЯСНЕ>
-Missing KOATUU: 1224883501 <МАЙСЬКЕ>
-Missing KOATUU: 1224883503 <КОЗАЧИЙ ГАЙ>
-Missing KOATUU: 1224883505 <НОВЕ>
-Missing KOATUU: 1224883507 <НОВОМИКОЛАЇВКА>
-Missing KOATUU: 1224883509 <ОКТЯБРСЬКЕ>
-Missing KOATUU: 1224883511 <РОМАНІВКА>
-Missing KOATUU: 1224884001 <МАР'ЇВКА>
-Missing KOATUU: 1224884005 <МАР'ЇНКА>
-Missing KOATUU: 1224884006 <ПЕРВОМАЙСЬКЕ>
-Missing KOATUU: 1224884007 <РАКОВЕ>
-Missing KOATUU: 1224884008 <ХОРОШЕВЕ>
-Missing KOATUU: 1224884009 <ШАХТАРСЬКЕ>
-Missing KOATUU: 1224884901 <МИРОЛЮБІВКА>
-Missing KOATUU: 1224884902 <АНДРІЇВКА>
-Missing KOATUU: 1224884903 <НОВИЙ ПОСЬОЛОК>
-Missing KOATUU: 1224884904 <НОВОЧЕРНІГІВСЬКЕ>
-Missing KOATUU: 1224884905 <ПАРТИЗАНИ>
-Missing KOATUU: 1224884906 <ТЕРСА>
-Missing KOATUU: 1224885001 <МИХАЙЛІВКА>
-Missing KOATUU: 1224885002 <ВАСИЛІВКА>
-Missing KOATUU: 1224885005 <ПАВЛІВКА>
-Missing KOATUU: 1224886001 <НОВООЛЕКСАНДРІВКА>
-Missing KOATUU: 1224886007 <ПАНАСІВКА>
-Missing KOATUU: 1224886008 <ПЕТРІВСЬКЕ>
-Missing KOATUU: 1224886401 <НОВОГНІДЕ>
-Missing KOATUU: 1224886402 <ВЕРБОВЕ>
-Missing KOATUU: 1224886403 <ГРУШУВАТО-КРИНИЧНЕ>
 Missing KOATUU: 1224886404 <ДУБОВЕ>
-Missing KOATUU: 1224886405 <ЗАПОРОЖЕЦЬ>
-Missing KOATUU: 1224886406 <ІВАНІВКА>
-Missing KOATUU: 1224886407 <СУХА КАЛИНА>
-Missing KOATUU: 1224886801 <ПИСАРІВКА>
-Missing KOATUU: 1224886803 <ЗЕЛЕНИЙ ГАЙ>
-Missing KOATUU: 1224886805 <МАР'ЇВКА>
-Missing KOATUU: 1224886807 <НОВОІЛАРІОНІВСЬКЕ>
-Missing KOATUU: 1224886809 <ПРИСТЕНЬ>
-Missing KOATUU: 1224887101 <РАЇВКА>
-Missing KOATUU: 1224887102 <БОГУСЛАВКА>
-Missing KOATUU: 1224887103 <ВЕСЕЛЕ>
-Missing KOATUU: 1224887104 <ГЕОРГІЇВКА>
-Missing KOATUU: 1224887105 <МОРОЗІВСЬКЕ>
-Missing KOATUU: 1224888201 <СТАРОВИШНЕВЕЦЬКЕ>
-Missing KOATUU: 1224888202 <ВОДЯНЕ>
-Missing KOATUU: 1224888203 <КАТРАЖКА>
-Missing KOATUU: 1224888204 <НОВОПАВЛОГРАДСЬКЕ>
 Missing KOATUU: 1224888205 <ПАРНЕ>
-Missing KOATUU: 1224888206 <ФРУНЗЕ>
-Missing KOATUU: 1224888501 <ШЕВЧЕНКІВСЬКЕ>
-Missing KOATUU: 1224888502 <ДНІПРОВСЬКЕ>
-Missing KOATUU: 1224888505 <КОТЛЯРІВСЬКЕ>
-Missing KOATUU: 1224888507 <МАЖАРИ>
-Missing KOATUU: 1224888509 <РУДЕВО-МИКОЛАЇВКА>
-Missing KOATUU: 1225055101 <АПОЛЛОНІВКА>
-Missing KOATUU: 1225055103 <ГОНЧАРКА>
-Missing KOATUU: 1225055105 <ЖДАНОВЕ>
 Missing KOATUU: 1225055106 <СЕРГІЄВКА>
-Missing KOATUU: 1225055401 <ДРУЖЕЛЮБІВКА>
-Missing KOATUU: 1225055402 <КОТЛЯРІВКА>
-Missing KOATUU: 1225055403 <МАЛИНОВЕ>
-Missing KOATUU: 1225080501 <ОЛЕКСАНДРОПІЛЬ>
-Missing KOATUU: 1225080503 <БУТОВИЧІВКА>
-Missing KOATUU: 1225080505 <ВІЛЕНКА>
-Missing KOATUU: 1225080507 <ГАРКУШИНЕ>
-Missing KOATUU: 1225080509 <ДОЛИНСЬКЕ>
-Missing KOATUU: 1225080511 <КРИНИЧКИ>
-Missing KOATUU: 1225080513 <МИХАЙЛІВКА>
-Missing KOATUU: 1225080515 <НОВОАНДРІЇВКА>
-Missing KOATUU: 1225080517 <ПЕТРИКІВКА>
-Missing KOATUU: 1225081003 <ЛЮБИМІВКА>
-Missing KOATUU: 1225081004 <ЛЮБОВ>
-Missing KOATUU: 1225081005 <ПЕРШЕ ТРАВНЯ>
-Missing KOATUU: 1225081006 <ШИРОКОПОЛЕ>
-Missing KOATUU: 1225081007 <ДНІПРЕЛЬСТАН>
-Missing KOATUU: 1225081201 <БЕРЕЗНУВАТІВКА>
-Missing KOATUU: 1225081202 <ГРУШІВКА>
-Missing KOATUU: 1225081203 <КОСТЯНТИНІВКА>
-Missing KOATUU: 1225081204 <ЧЕРВОНЕ>
-Missing KOATUU: 1225081501 <ВАСИЛІВКА>
-Missing KOATUU: 1225081502 <АНТОНІВКА>
-Missing KOATUU: 1225081504 <ДОРОГАНІВКА>
-Missing KOATUU: 1225081505 <КАМ'ЯНЕ>
-Missing KOATUU: 1225081506 <НОВОСЕЛІВКА>
-Missing KOATUU: 1225081507 <ЧЕРВОНОКАМ'ЯНЕ>
-Missing KOATUU: 1225081901 <ВІЙСЬКОВЕ>
-Missing KOATUU: 1225081902 <ВОВНІГИ>
-Missing KOATUU: 1225081903 <ГРОЗА>
-Missing KOATUU: 1225081904 <КАЛИНІВКА>
-Missing KOATUU: 1225081905 <ПЕТРО-СВИСТУНОВЕ>
-Missing KOATUU: 1225083001 <ДЗЕРЖИНІВКА>
-Missing KOATUU: 1225083002 <КАШКАРІВКА>
-Missing KOATUU: 1225083003 <МАЛА КАЛИНІВКА>
-Missing KOATUU: 1225083004 <МИКОЛО-МУСІЇВКА>
-Missing KOATUU: 1225083005 <МИРОПІЛЬ>
-Missing KOATUU: 1225083006 <ОЛЕКСАНДРІВКА>
-Missing KOATUU: 1225083007 <ОСИПЕНКО>
-Missing KOATUU: 1225083008 <РОЗТАННЯ>
-Missing KOATUU: 1225083009 <ЧЕРВОНОАРМІЙСЬКЕ>
-Missing KOATUU: 1225083501 <ЄЛІЗАРОВЕ>
-Missing KOATUU: 1225083502 <ОРЛОВЕ>
-Missing KOATUU: 1225083503 <РЯСНЕ>
-Missing KOATUU: 1225083504 <ЧОРНОПАРІВКА>
-Missing KOATUU: 1225083505 <ШУЛЬГІВКА>
-Missing KOATUU: 1225083701 <МАЛОЗАХАРИНЕ>
-Missing KOATUU: 1225083703 <ЛІКНЕП>
-Missing KOATUU: 1225083801 <МОПРІВСЬКЕ>
-Missing KOATUU: 1225083802 <ВОДЯНЕ>
-Missing KOATUU: 1225083803 <ГРИГОРІВКА>
-Missing KOATUU: 1225083806 <СУДАНІВКА>
-Missing KOATUU: 1225083807 <ТОВАРИСЬКИЙ ТРУД>
-Missing KOATUU: 1225083808 <ТРАКТОРНЕ>
-Missing KOATUU: 1225084001 <НАТАЛІВКА>
-Missing KOATUU: 1225084002 <БАРВІНОК>
-Missing KOATUU: 1225084007 <НЕЗАБУДИНЕ>
-Missing KOATUU: 1225084009 <ХИЖИНЕ>
-Missing KOATUU: 1225084301 <МИКІЛЬСЬКЕ-НА-ДНІПРІ>
-Missing KOATUU: 1225084303 <ЗВОНЕЦЬКЕ>
-Missing KOATUU: 1225084305 <ЗВОНЕЦЬКИЙ ХУТІР>
 Missing KOATUU: 1225084307 <ОЛЕКСІЄВКА>
-Missing KOATUU: 1225084309 <ОРІХОВЕ>
-Missing KOATUU: 1225084501 <НОВОМАР'ЇВКА>
-Missing KOATUU: 1225084504 <ТОМАКІВКА>
-Missing KOATUU: 1225084505 <ЧЕРНІГІВКА>
-Missing KOATUU: 1225085001 <ПАВЛІВКА>
-Missing KOATUU: 1225085002 <ВОЙКОВЕ>
-Missing KOATUU: 1225085003 <МИРНЕ>
-Missing KOATUU: 1225085004 <ПРОПАШНЕ>
-Missing KOATUU: 1225085501 <ПИСЬМЕЧЕВЕ>
-Missing KOATUU: 1225085502 <БЕЗБОРОДЬКОВЕ>
-Missing KOATUU: 1225085503 <КРУТЕ>
-Missing KOATUU: 1225085504 <ПШЕНИЧНЕ>
-Missing KOATUU: 1225085505 <СТАРОДНІПРОВСЬКЕ>
-Missing KOATUU: 1225086001 <ПРИВІЛЬНЕ>
-Missing KOATUU: 1225086002 <МАЛИНІВКА>
-Missing KOATUU: 1225086003 <МИКІЛЬСЬКЕ>
-Missing KOATUU: 1225086005 <НОВОТЕРНУВАТКА>
-Missing KOATUU: 1225086006 <ПЕТРІВСЬКЕ>
-Missing KOATUU: 1225086007 <ТРУДОЛЮБІВКА>
-Missing KOATUU: 1225086008 <ЧЕРВОНИЙ МАЯК>
-Missing KOATUU: 1225086009 <ЧЕРВОНИЙ ЯР>
-Missing KOATUU: 1225086201 <ПРОМІНЬ>
-Missing KOATUU: 1225086202 <ГОЛУБИНІВКА>
-Missing KOATUU: 1225086203 <ДАЛЬНЄ>
-Missing KOATUU: 1225086205 <КАРАЙКОВЕ>
-Missing KOATUU: 1225086206 <МАТРОСОВЕ>
-Missing KOATUU: 1225086210 <ЯКИМІВКА>
-Missing KOATUU: 1225087301 <СУРСЬКО-МИХАЙЛІВКА>
-Missing KOATUU: 1225087302 <ЛЕНІНСЬКЕ>
-Missing KOATUU: 1225087303 <НОВОТАРАСІВКА>
-Missing KOATUU: 1225088401 <ШИРОКЕ>
-Missing KOATUU: 1225088402 <РАДЯНСЬКЕ>
-Missing KOATUU: 1225088403 <ТРИТУЗНЕ>
-Missing KOATUU: 1225088404 <ШЕСТИПІЛЛЯ>
-Missing KOATUU: 1225255101 <МЕНЖИНКА>
-Missing KOATUU: 1225255102 <МИХАЙЛІВКА>
-Missing KOATUU: 1225255103 <ПЕТРОВЕ>
-Missing KOATUU: 1225255104 <ТАРАСІВКА>
-Missing KOATUU: 1225255107 <ЛЮБИМІВКА>
-Missing KOATUU: 1225282501 <ДЕВЛАДОВЕ>
-Missing KOATUU: 1225282502 <ВОДЯНЕ>
-Missing KOATUU: 1225282503 <ВЕСЕЛЕ ПОЛЕ>
-Missing KOATUU: 1225282504 <ГОНЧАРОВЕ>
-Missing KOATUU: 1225282505 <ГРУШКИ>
-Missing KOATUU: 1225282507 <ЗЕЛЕНИЙ ГАЙ>
-Missing KOATUU: 1225283301 <ЖОВТНЕВЕ>
-Missing KOATUU: 1225283302 <КАЛАШНИКИ>
-Missing KOATUU: 1225283303 <ЛЕНІНА>
-Missing KOATUU: 1225283304 <МАР'ЇВКА>
-Missing KOATUU: 1225283306 <ПАВЛІВКА>
-Missing KOATUU: 1225283307 <ПЕТРОПАВЛІВКА>
-Missing KOATUU: 1225283309 <САДОВЕ>
-Missing KOATUU: 1225283310 <УКРАЇНКА>
-Missing KOATUU: 1225283311 <ЯВДОХІВКА>
-Missing KOATUU: 1225283501 <ЗАПОРІЗЬКЕ>
-Missing KOATUU: 1225283502 <БРАТСЬКЕ>
-Missing KOATUU: 1225283801 <КАМ'ЯНКА>
-Missing KOATUU: 1225283802 <ВИШНЕВЕ>
-Missing KOATUU: 1225283803 <ІЗЛУЧИСТЕ>
 Missing KOATUU: 1225283804 <ОЛЕКСІЄВКА>
-Missing KOATUU: 1225283805 <НОВОХОРТИЦЯ>
-Missing KOATUU: 1225284101 <МАР'Є-ДМИТРІВКА>
-Missing KOATUU: 1225284103 <ДОВГІВКА>
-Missing KOATUU: 1225284105 <КОВАЛЕВЕ>
-Missing KOATUU: 1225284107 <КРИНИЧКИ>
-Missing KOATUU: 1225284109 <СПОКОЙСТВІЄ>
-Missing KOATUU: 1225284111 <ЧЕРВОНЕ ПОЛЕ>
-Missing KOATUU: 1225284113 <ЧЕРВОНИЙ ЯР>
-Missing KOATUU: 1225284401 <МИКОЛАЇВКА>
-Missing KOATUU: 1225284402 <ВІЛЬНЕ ЖИТТЯ>
-Missing KOATUU: 1225284403 <ВОЛОДИМИРІВКА>
-Missing KOATUU: 1225284404 <ЗЕЛЕНЕ>
-Missing KOATUU: 1225284405 <КАТЕРИНІВКА>
-Missing KOATUU: 1225284406 <КАТЕРИНО-НАТАЛІВКА>
-Missing KOATUU: 1225284407 <ЛОШКАРІВКА>
-Missing KOATUU: 1225284408 <НАЗАРІВКА>
-Missing KOATUU: 1225284409 <НЕПЕРЕМОЖНЕ>
-Missing KOATUU: 1225284410 <ОЛЕКСАНДРО-БІЛІВКА>
-Missing KOATUU: 1225284411 <ПЕТРІВКА>
-Missing KOATUU: 1225285201 <НОВОВАСИЛІВКА>
-Missing KOATUU: 1225285202 <БАЗАВЛУЧОК>
-Missing KOATUU: 1225285203 <ЖОВТЕ>
-Missing KOATUU: 1225285204 <НОВІ КОВНА>
-Missing KOATUU: 1225285205 <НОВОВІТЕБСЬКЕ>
-Missing KOATUU: 1225285206 <НОВОПОДІЛЬСЬКЕ>
 Missing KOATUU: 1225285207 <ОТРУБОК>
-Missing KOATUU: 1225285208 <ТЕРНУВАТКА>
-Missing KOATUU: 1225285301 <НОВООЛЕКСІЇВКА>
-Missing KOATUU: 1225285501 <НОВОЮЛІВКА>
-Missing KOATUU: 1225285502 <АВДОТІВКА>
-Missing KOATUU: 1225285503 <НОВОПЕТРІВКА>
-Missing KOATUU: 1225285504 <СТЕПОВЕ>
-Missing KOATUU: 1225285505 <ТРУДОЛЮБІВКА>
-Missing KOATUU: 1225286601 <ОРДО-ВАСИЛІВКА>
-Missing KOATUU: 1225286602 <ВОЛОДИМИРІВКА>
-Missing KOATUU: 1225286603 <ЗАВ'ЯЛІВКА>
-Missing KOATUU: 1225286604 <КОДАК>
-Missing KOATUU: 1225286605 <МАР'Є-КОСТЯНТИНІВКА>
-Missing KOATUU: 1225286606 <МАР'ЇВКА>
 Missing KOATUU: 1225286607 <МОТИНА-БАЛКА>
-Missing KOATUU: 1225286608 <НОВОМИХАЙЛІВКА>
-Missing KOATUU: 1225286609 <РАЙПОЛЕ>
-Missing KOATUU: 1225286610 <СЕРГІЇВКА>
-Missing KOATUU: 1225287701 <ПЕРШЕ ТРАВНЯ>
 Missing KOATUU: 1225287702 <АНДРІЄВКА>
-Missing KOATUU: 1225287703 <ВЕРБОВЕ>
 Missing KOATUU: 1225287704 <ГАННО-МИКОЛАЄВКА>
-Missing KOATUU: 1225287705 <КРИНИЧУВАТЕ>
-Missing KOATUU: 1225287706 <ЛЮБЕ>
-Missing KOATUU: 1225287707 <МАКОРТИ>
-Missing KOATUU: 1225287708 <НОВА ЗОРЯ>
-Missing KOATUU: 1225287709 <ОЛЕКСАНДРІВКА>
-Missing KOATUU: 1225287710 <ПОТОЦЬКЕ>
-Missing KOATUU: 1225287712 <ЮЖНЕ>
-Missing KOATUU: 1225455101 <КАТЬОЩИНЕ>
-Missing KOATUU: 1225455102 <ОЛЕКСАНДРІВКА>
-Missing KOATUU: 1225455103 <ПЕТРІВКА>
-Missing KOATUU: 1225455104 <СЕМЕНІВКА>
 Missing KOATUU: 1225455105 <СЕРГІЄВКА>
-Missing KOATUU: 1225481001 <ВОЛОДИМИРІВКА>
-Missing KOATUU: 1225481002 <ГАННІВКА>
-Missing KOATUU: 1225481003 <ГРУШЕВЕ>
-Missing KOATUU: 1225481004 <ЗАПОРІЗЬКА БАЛКА>
-Missing KOATUU: 1225481005 <ЗАПОРІЗЬКЕ>
-Missing KOATUU: 1225481006 <МИРОЛЮБІВКА>
-Missing KOATUU: 1225481007 <НОВОМИКОЛАЇВКА>
-Missing KOATUU: 1225481008 <НОВОУКРАЇНКА>
-Missing KOATUU: 1225481009 <САДОВЕ>
-Missing KOATUU: 1225481010 <СТЕПАНІВКА>
-Missing KOATUU: 1225481011 <УРОЖАЙНЕ>
-Missing KOATUU: 1225481012 <НОВОМИХАЙЛІВКА>
-Missing KOATUU: 1225482001 <ВИВОДОВЕ>
-Missing KOATUU: 1225482002 <ГЛУХЕ>
-Missing KOATUU: 1225482003 <ДОЛИНСЬКЕ>
-Missing KOATUU: 1225482004 <ЖМЕРИНЕ>
-Missing KOATUU: 1225482005 <НОВИЙ МИР>
-Missing KOATUU: 1225482006 <НОВОПАВЛІВКА>
-Missing KOATUU: 1225482007 <СТРЮКІВКА>
-Missing KOATUU: 1225482501 <ВИЩЕТАРАСІВКА>
-Missing KOATUU: 1225482901 <ЗОРЯ>
-Missing KOATUU: 1225482903 <МАЯК>
-Missing KOATUU: 1225482905 <ПРОГРЕС>
-Missing KOATUU: 1225483201 <ЗЕЛЕНИЙ ГАЙ>
-Missing KOATUU: 1225483203 <КРАСНОПІЛЬ>
-Missing KOATUU: 1225483205 <НОВОКРАСНОПІЛЬ>
-Missing KOATUU: 1225483207 <ТАРАСІВКА>
-Missing KOATUU: 1225483209 <ЧЕРВОНОУКРАЇНКА>
-Missing KOATUU: 1225483501 <КИСЛИЧУВАТА>
-Missing KOATUU: 1225484001 <КИТАЙГОРОДКА>
-Missing KOATUU: 1225484002 <ЗЕЛЕНИЙ КЛИН>
-Missing KOATUU: 1225485501 <МИРОВЕ>
-Missing KOATUU: 1225485502 <ВЕСЕЛА ФЕДОРІВКА>
-Missing KOATUU: 1225485504 <НАСТАСІВКА>
-Missing KOATUU: 1225485506 <ТОПИЛА>
-Missing KOATUU: 1225486601 <МИХАЙЛІВКА>
-Missing KOATUU: 1225486602 <ГАРБУЗІВКА>
-Missing KOATUU: 1225486603 <НОВОКАТЬОЩИНЕ>
-Missing KOATUU: 1225486604 <ЧАЙКИ>
-Missing KOATUU: 1225487501 <НОВОКИЇВКА>
-Missing KOATUU: 1225487502 <ВІЛЬНЕ>
-Missing KOATUU: 1225487503 <ДОБРА НАДІЯ>
-Missing KOATUU: 1225487504 <ІЛЛІНКА>
-Missing KOATUU: 1225487505 <НОВОКАМ'ЯНКА>
-Missing KOATUU: 1225488001 <ПРЕОБРАЖЕНКА>
-Missing KOATUU: 1225488002 <БАРКОВЕ>
-Missing KOATUU: 1225488801 <ЧУМАКИ>
-Missing KOATUU: 1225488802 <КІРОВЕ>
-Missing KOATUU: 1225488803 <ЧЕРВОНИЙ ЯР>
-Missing KOATUU: 1225655101 <ДРАГІВКА>
-Missing KOATUU: 1225655102 <ДУБОВЕ>
-Missing KOATUU: 1225655103 <КАЛИНІВКА>
-Missing KOATUU: 1225655104 <ЛИСКІВКА>
-Missing KOATUU: 1225655105 <ПИЛИПІВКА>
-Missing KOATUU: 1225655106 <СЕЛЯНІВКА>
-Missing KOATUU: 1225655107 <ТАРАСІВКА>
-Missing KOATUU: 1225655108 <ТУРОВЕ>
-Missing KOATUU: 1225680501 <БАБАЙКІВКА>
-Missing KOATUU: 1225680502 <ВЕРБОВЕ>
-Missing KOATUU: 1225680505 <ІВАНО-ЯРИЗІВКА>
-Missing KOATUU: 1225680506 <КУЩІВКА>
-Missing KOATUU: 1225680508 <НОВОСТРОЇВКА>
-Missing KOATUU: 1225681101 <ЗАЛЕЛІЯ>
-Missing KOATUU: 1225681102 <АНДРІЇВКА>
-Missing KOATUU: 1225681104 <ЛОЗУВАТКА>
-Missing KOATUU: 1225681105 <НЕТЕСІВКА>
-Missing KOATUU: 1225681107 <ПОМАЗАНІВКА>
-Missing KOATUU: 1225681305 <ПРОТОЧІ>
-Missing KOATUU: 1225682001 <КИТАЙГОРОД>
-Missing KOATUU: 1225683001 <ЛЯШКІВКА>
-Missing KOATUU: 1225683005 <НАЗАРЕНКИ>
-Missing KOATUU: 1225683007 <ОРЛІВКА>
-Missing KOATUU: 1225683010 <ШАРІВКА>
-Missing KOATUU: 1225683201 <МИХАЙЛІВКА>
-Missing KOATUU: 1225683203 <ГНАТІВКА>
-Missing KOATUU: 1225683204 <ЗАОРІЛЛЯ>
-Missing KOATUU: 1225683207 <ЧЕРВОНА ОРІЛЬКА>
-Missing KOATUU: 1225683601 <МОГИЛІВ>
-Missing KOATUU: 1225684001 <НОВОПІДКРЯЖ>
-Missing KOATUU: 1225684002 <СУПИНА>
-Missing KOATUU: 1225684401 <ПРЯДІВКА>
-Missing KOATUU: 1225684601 <РУДКА>
-Missing KOATUU: 1225684603 <КРАВЦІВКА>
-Missing KOATUU: 1225684605 <РИБАЛКИ>
-Missing KOATUU: 1225684607 <ЩЕРБИНІВКА>
-Missing KOATUU: 1225685001 <ЦИБУЛЬКІВКА>
-Missing KOATUU: 1225685002 <ЄГОРИНЕ>
-Missing KOATUU: 1225685003 <ЗУБКІВКА>
-Missing KOATUU: 1225685004 <КАТЕРИНІВКА>
-Missing KOATUU: 1225685005 <МОЛОДІЖНЕ>
-Missing KOATUU: 1225685006 <НОВОСЕЛІВКА>
-Missing KOATUU: 1225685007 <ПЛАВЕЩИНА>
-Missing KOATUU: 1225685008 <САЛІВКА>
-Missing KOATUU: 1225688201 <ЮР'ЇВКА>
-Missing KOATUU: 1225688203 <НЕНАДІВКА>
-Missing KOATUU: 1225688204 <ПРЕОБРАЖЕНКА>
-Missing KOATUU: 1225688205 <СЕМЕНІВКА>
-Missing KOATUU: 1225855301 <ВИШНЕВЕ>
-Missing KOATUU: 1225855303 <ЗЕЛЕНИЙ ГАЙ>
-Missing KOATUU: 1225855305 <КАРПІВКА>
-Missing KOATUU: 1225855307 <РОЗІВКА>
-Missing KOATUU: 1225855309 <ТИХИЙ СТАВ>
-Missing KOATUU: 1225855311 <ЦВІТКОВЕ>
-Missing KOATUU: 1225855313 <ШИРОКА ДАЧА>
-Missing KOATUU: 1225881101 <ОЛЕКСАНДРІВКА>
-Missing KOATUU: 1225881103 <НОВЕ ЖИТТЯ>
-Missing KOATUU: 1225882201 <АНДРІЇВКА>
-Missing KOATUU: 1225882202 <ВЕСЕЛИЙ СТАВ>
-Missing KOATUU: 1225882203 <ГОРОДУВАТКА>
-Missing KOATUU: 1225882204 <МОГИЛІВКА>
-Missing KOATUU: 1225882205 <РАДЕВИЧЕВЕ>
-Missing KOATUU: 1225883301 <ЧАПАЄВКА>
-Missing KOATUU: 1225883302 <ВЕСЕЛА ДАЧА>
-Missing KOATUU: 1225883303 <ГРИГОРІВКА>
-Missing KOATUU: 1225883304 <ДАЧНЕ>
-Missing KOATUU: 1225883305 <КОШОВЕ>
-Missing KOATUU: 1225883306 <НАДІЯ>
-Missing KOATUU: 1225883307 <НОВОУКРАЇНКА>
-Missing KOATUU: 1225883308 <ОДРАДНЕ>
-Missing KOATUU: 1225883309 <ОЛЕНІВКА>
-Missing KOATUU: 1225883310 <ПОДИДАР>
-Missing KOATUU: 1225883311 <СВЕРДЛОВСЬКЕ>
-Missing KOATUU: 1225883312 <ЗАПОРІЖЖЯ>
-Missing KOATUU: 1225884401 <ЗЕЛЕНА БАЛКА>
-Missing KOATUU: 1225884402 <КУРГАНКА>
-Missing KOATUU: 1225884403 <МАКАРІВКА>
-Missing KOATUU: 1225884404 <НОВЕ>
-Missing KOATUU: 1225884405 <ЧЕРВОНИЙ РАНОК>
-Missing KOATUU: 1225884406 <ШВЕДОВЕ>
-Missing KOATUU: 1225885501 <НОВОСЕЛІВКА>
-Missing KOATUU: 1225885502 <ІНГУЛЕЦЬ>
-Missing KOATUU: 1225885503 <ЛАТІВКА>
-Missing KOATUU: 1225885504 <НОВОЛАТІВКА>
-Missing KOATUU: 1225885506 <СТАРОДОБРОВІЛЬСЬКЕ>
-Missing KOATUU: 1225885701 <РОЗИ ЛЮКСЕМБУРГ>
-Missing KOATUU: 1225885703 <КАЛИНІВКА>
-Missing KOATUU: 1225885705 <КРАСНИЙ ПІД>
-Missing KOATUU: 1225885707 <МИРОЛЮБІВКА>
-Missing KOATUU: 1225885709 <СВИСТУНОВЕ>
-Missing KOATUU: 1225885711 <ТРУДОЛЮБІВКА>
-Missing KOATUU: 1225885901 <СТЕПОВЕ>
-Missing KOATUU: 1225885902 <ВОДЯНЕ>
-Missing KOATUU: 1225885903 <КРАВЦІ>
-Missing KOATUU: 1225885904 <КРЯЖОВЕ>
-Missing KOATUU: 1225885905 <ОЗЕРНЕ>
-Missing KOATUU: 1225885906 <ПОДОВЕ>
-Missing KOATUU: 1225885907 <ПОЛОГИ>
-Missing KOATUU: 1225886601 <НОВОМАЛИНІВКА>
-Missing KOATUU: 1225886602 <ДЕМ'ЯНІВКА>
-Missing KOATUU: 1225886603 <ЗЕЛЕНИЙ СТАВ>
-Missing KOATUU: 1225886604 <КАЗАНКІВКА>
-Missing KOATUU: 1225886605 <КОТОВСЬКЕ>
-Missing KOATUU: 1225886606 <МАЛИНІВКА>
-Missing KOATUU: 1225886607 <ЧЕРВОНЕ>
-Missing KOATUU: 1225886608 <ОЛЕКСАНДРІЯ>
-Missing KOATUU: 1225886609 <ПОЛТАВКА>
-Missing KOATUU: 1225886610 <ЧЕРВОНИЙ ПЛУГАТАР>
-Missing KOATUU: 1225886611 <ШИРОКА ДОЛИНА>
-Missing KOATUU: 1225886612 <ЯБЛУНІВКА>
-Missing KOATUU: 1225886613 <ЯВДОТІВКА>
-Missing KOATUU: 1225887701 <ШЕСТІРНЯ>
-Missing KOATUU: 1225887702 <ГАННІВКА>
-Missing KOATUU: 1225887703 <НОВОКУРСЬКЕ>
-Missing KOATUU: 1225955101 <БРАЗОЛОВЕ>
-Missing KOATUU: 1225955103 <ЖЕМЧУЖНЕ>
 Missing KOATUU: 1225955105 <ІВАНО-МЕЖЕРІЦЬКЕ>
-Missing KOATUU: 1225955107 <НОВОГРИГОРІВКА>
-Missing KOATUU: 1225955109 <УКРАЇНСЬКЕ>
-Missing KOATUU: 1225980201 <ОЛЕКСАНДРІВКА>
-Missing KOATUU: 1225980203 <КОМСОМОЛЬСЬКЕ>
-Missing KOATUU: 1225980207 <ОЛЕНІВКА>
 Missing KOATUU: 1225980209 <СЕРГІЄВКА>
-Missing KOATUU: 1225980301 <ОЛЕКСІЇВКА>
-Missing KOATUU: 1225980309 <НОВОЧОРНОГЛАЗІВСЬКЕ>
-Missing KOATUU: 1225980315 <ПШЕНИЧНЕ>
-Missing KOATUU: 1225980317 <СОКІЛЬСЬКЕ>
-Missing KOATUU: 1225980319 <УЛЯНІВКА>
-Missing KOATUU: 1225980321 <ФЕДОРІВСЬКЕ>
-Missing KOATUU: 1225980501 <ВАРВАРІВКА>
-Missing KOATUU: 1225980503 <ВЕРБСЬКЕ>
-Missing KOATUU: 1225980507 <ВЕСЕЛА ГІРКА>
-Missing KOATUU: 1225980509 <В'ЯЗІВСЬКЕ-ВОДЯНЕ>
-Missing KOATUU: 1225980515 <ПРИЗОВЕ>
-Missing KOATUU: 1225980517 <ШИРОКА БАЛКА>
-Missing KOATUU: 1225980519 <ЮР'ЇВСЬКЕ>
-Missing KOATUU: 1225980701 <ВЕРБУВАТІВКА>
-Missing KOATUU: 1225980703 <ДОЛИНА>
-Missing KOATUU: 1225980708 <НИЖНЯНКА>
-Missing KOATUU: 1225981001 <ЖЕМЧУЖНЕ>
-Missing KOATUU: 1225981003 <ВАРЛАМІВКА>
-Missing KOATUU: 1225981007 <ВАСИЛІВКА>
-Missing KOATUU: 1225981009 <ЗАТИШНЕ>
-Missing KOATUU: 1225981011 <КАТЕРИНІВКА>
-Missing KOATUU: 1225981013 <КІНДРАТІВКА>
-Missing KOATUU: 1225982501 <НОВОВ'ЯЗІВСЬКЕ>
-Missing KOATUU: 1225982503 <ВОДЯНЕ>
-Missing KOATUU: 1225982505 <ДУБОВЕ>
-Missing KOATUU: 1225982507 <ЗАРІЧНЕ>
-Missing KOATUU: 1225982508 <ОРЛІВСЬКЕ>
-Missing KOATUU: 1225982801 <НОВОІВАНІВСЬКЕ>
 Missing KOATUU: 1225982803 <НОВОТИМОФІЄВСЬКЕ>
-Missing KOATUU: 1225982807 <П'ЯТИХАТКИ>
-Missing KOATUU: 1225986301 <ПРЕОБРАЖЕНКА>
-Missing KOATUU: 1225986303 <БІЛОЗЕРСЬКЕ>
-Missing KOATUU: 1225986305 <ГОЛУБІВСЬКЕ>
-Missing KOATUU: 1225986307 <НОВОМОСКОВСЬКЕ>
-Missing KOATUU: 1225986311 <ПЕРВОМАЙСЬКЕ>
-Missing KOATUU: 1225987801 <ЧАПЛИНКА>
-Missing KOATUU: 1225987803 <НОВОСТРОЇВКА>
-Missing KOATUU: 1225988001 <ЧЕРНЯВЩИНА>
-Missing KOATUU: 1225988005 <ТЕРНИ>
-Missing KOATUU: 1225988007 <ЧОРНОГЛАЗІВКА>
-Missing KOATUU: 1225988011 <ЯБЛУНІВКА>
-Missing KOATUU: 1225988501 <ШАНДРІВКА>
-Missing KOATUU: 1225988505 <НОВОШАНДРІВКА>
 Missing KOATUU: 1410166301 <БИРЮКИ>
 Missing KOATUU: 1410166303 <ВЕРБОВА БАЛКА>
 Missing KOATUU: 1410166305 <ГРИШКИ>
@@ -1666,8 +1112,6 @@ Missing KOATUU: 1410691005 <СТАВКИ>
 Missing KOATUU: 1410691007 <ШИРОКА БАЛКА>
 Missing KOATUU: 1411245303 <ДИЛІЇВКА>
 Missing KOATUU: 1411500000 <ДОБРОПІЛЛЯ>
-Missing KOATUU: 1411570501 <БОКОВЕ>
-Missing KOATUU: 1412046501 <НОВОСЕЛІВКА>
 Missing KOATUU: 1412046503 <СТАРОПЕТРІВСЬКЕ>
 Missing KOATUU: 1412046801 <ВЕРХНЯ КРИНКА>
 Missing KOATUU: 1412046803 <ПЕТРІВСЬКЕ>
@@ -1677,7 +1121,6 @@ Missing KOATUU: 1412046809 <ЩЕБЕНКА>
 Missing KOATUU: 1412047601 <ВЕСЕЛА ДОЛИНА>
 Missing KOATUU: 1412047603 <ДАНИЛОВЕ>
 Missing KOATUU: 1412047605 <ІЛЛІНКА>
-Missing KOATUU: 1412047607 <КАМ'ЯНКА>
 Missing KOATUU: 1412047609 <РІДКОДУБ>
 Missing KOATUU: 1412070501 <БУЛАВИНЕ>
 Missing KOATUU: 1412070503 <ГРОЗНЕ>
@@ -1701,7 +1144,6 @@ Missing KOATUU: 1413591505 <КРАСНА ЗОРЯ>
 Missing KOATUU: 1413591507 <МОНАХОВЕ>
 Missing KOATUU: 1413591509 <НОВИЙ СВІТ>
 Missing KOATUU: 1413591511 <НОВОМАР'ЇВКА>
-Missing KOATUU: 1413591513 <НОВОСЕЛІВКА>
 Missing KOATUU: 1415070501 <ВОДОБУД>
 Missing KOATUU: 1415070505 <ЦУПКИ>
 Missing KOATUU: 1415070801 <ВИНОГРАДНЕ>
@@ -2135,7 +1577,6 @@ Missing KOATUU: 1824085801 <СУХОВОЛЯ>
 Missing KOATUU: 1824085803 <ПАРТИЗАНСЬКЕ>
 Missing KOATUU: 1824085901 <ТЕРНІВКА>
 Missing KOATUU: 1824086001 <ТОКАРІВ>
-Missing KOATUU: 1824086002 <КАМ'ЯНКА>
 Missing KOATUU: 1824086201 <ТУПАЛЬЦІ>
 Missing KOATUU: 1824086202 <АБРАМОК>
 Missing KOATUU: 1824086203 <КАТЮХА>
@@ -2229,7 +1670,6 @@ Missing KOATUU: 2124881201 <ВЕЛИКІ ЛАЗИ>
 Missing KOATUU: 2124881202 <ЦИГАНІВЦІ>
 Missing KOATUU: 2124881501 <ГАЛОЧ>
 Missing KOATUU: 2124881502 <БАТФА>
-Missing KOATUU: 2124881503 <ПАЛЛО>
 Missing KOATUU: 2124881801 <ГЛИБОКЕ>
 Missing KOATUU: 2124881802 <НИЖНЄ СОЛОТВИНО>
 Missing KOATUU: 2124881803 <РУСЬКІ КОМАРІВЦІ>
@@ -2243,7 +1683,6 @@ Missing KOATUU: 2124883001 <КИБЛЯРИ>
 Missing KOATUU: 2124883002 <ГАЙДОШ>
 Missing KOATUU: 2124883003 <ЛІНЦІ>
 Missing KOATUU: 2124883301 <ПАЛАДЬ-КОМАРІВЦІ>
-Missing KOATUU: 2124883302 <МАЛІ СЕЛМЕНЦІ>
 Missing KOATUU: 2124883601 <КОРИТНЯНИ>
 Missing KOATUU: 2124883602 <КІНЧЕШ>
 Missing KOATUU: 2124883901 <МАЛА ДОБРОНЬ>
@@ -2255,7 +1694,6 @@ Missing KOATUU: 2124884801 <ОНОКІВЦІ>
 Missing KOATUU: 2124884802 <ОРІХОВИЦЯ>
 Missing KOATUU: 2124885101 <ПАЦКАНЬОВО>
 Missing KOATUU: 2124885401 <РАТІВЦІ>
-Missing KOATUU: 2124885901 <СОЛОВКА>
 Missing KOATUU: 2124885902 <ПЕТРІВКА>
 Missing KOATUU: 2124886201 <СОЛОМОНОВО>
 Missing KOATUU: 2124886301 <СТОРОЖНИЦЯ>
@@ -2370,7 +1808,6 @@ Missing KOATUU: 2321586104 <ЗАДОРОЖНЄ>
 Missing KOATUU: 2321586105 <ЗЕЛЕНЕ>
 Missing KOATUU: 2321586106 <ЗНАЧКОВЕ>
 Missing KOATUU: 2321586107 <НОВОВАСИЛІВКА>
-Missing KOATUU: 2321586108 <НОВОСЕЛІВКА>
 Missing KOATUU: 2321586109 <ПОДИ>
 Missing KOATUU: 2321586110 <РЕЗЕДІВКА>
 Missing KOATUU: 2321586111 <РОЗДОЛЛЯ>
@@ -2533,7 +1970,7 @@ Missing KOATUU: 2624087401 <ЧОРНИЙ ПОТІК>
 Missing KOATUU: 2624883604 <СЛОБОДА-НЕБИЛІВСЬКА>
 Missing KOATUU: 2624884802 <СЛОБОДА-РІВНЯНСЬКА>
 Missing KOATUU: 2625680802 <ЗАГІР'Я>
-Missing KOATUU: 3211100000 <ПРИП'ЯТЬ>
+Missing KOATUU: 2625884503 <ПОГОНЯ>
 Missing KOATUU: 3211600001 <ЛЕНДИ>
 Missing KOATUU: 3211600002 <ТАЦЕНКИ>
 Missing KOATUU: 3220285701 <ПАРИШКІВ>
@@ -2558,6 +1995,7 @@ Missing KOATUU: 3220688401 <ЩЕРБАШИНЦІ>
 Missing KOATUU: 3220881303 <ПЕТРОВСЬКЕ>
 Missing KOATUU: 3220884404 <МАЛА СТАРИЦЯ>
 Missing KOATUU: 3220884801 <ЛЮБАРЦІ>
+Missing KOATUU: 3221081502 <ОЗЕРЩИНА>
 Missing KOATUU: 3221086305 <МИХАЙЛЕНКІВ>
 Missing KOATUU: 3221282009 <МАЛА ТАРАСІВКА>
 Missing KOATUU: 3221284501 <КУЛАЖИНЦІ>
@@ -2567,7 +2005,6 @@ Missing KOATUU: 3221481201 <ВІННИЦЬКІ СТАВИ>
 Missing KOATUU: 3221481501 <ГВОЗДІВ>
 Missing KOATUU: 3221482001 <ДАНИЛІВКА>
 Missing KOATUU: 3221482003 <КОЖУХІВКА>
-Missing KOATUU: 3221482201 <ДЗВІНКОВЕ>
 Missing KOATUU: 3221482801 <ЗАСТУГНА>
 Missing KOATUU: 3221483001 <ЗДОРІВКА>
 Missing KOATUU: 3221483301 <ІВАНКОВИЧІ>
@@ -2762,7 +2199,6 @@ Missing KOATUU: 4412990001 <ЛІСНА ДАЧА>
 Missing KOATUU: 4412990002 <ВОЄВОДІВКА>
 Missing KOATUU: 4412990003 <ПАВЛОГРАД>
 Missing KOATUU: 4412990005 <СИНЕЦЬКИЙ>
-Missing KOATUU: 4420382201 <ДЯКОВЕ>
 Missing KOATUU: 4420385502 <ІЛЛІНКА>
 Missing KOATUU: 4420688905 <РОЗДОЛЛЯ>
 Missing KOATUU: 4420955701 <ОЛЕКСАПІЛЬ>
@@ -2801,7 +2237,6 @@ Missing KOATUU: 4422282204 <МАЛА МАРТИНІВКА>
 Missing KOATUU: 4422282205 <МАЛА ЮР'ЇВКА>
 Missing KOATUU: 4422282206 <УШАКІВКА>
 Missing KOATUU: 4422282207 <ЯСНЕ>
-Missing KOATUU: 4422283301 <КАМ'ЯНКА>
 Missing KOATUU: 4422283302 <БОКОВЕ>
 Missing KOATUU: 4422283303 <МАКЕДОНІВКА>
 Missing KOATUU: 4422283304 <ПАЛІЇВКА>
@@ -2840,7 +2275,6 @@ Missing KOATUU: 4424882001 <ГАРАСИМІВКА>
 Missing KOATUU: 4424882501 <КОМИШНЕ>
 Missing KOATUU: 4424882502 <КОЛЕСНИКІВКА>
 Missing KOATUU: 4424882503 <ЮГАНІВКА>
-Missing KOATUU: 4424883001 <КРАСНА ТАЛІВКА>
 Missing KOATUU: 4424883003 <КРАСНИЙ ДЕРКУЛ>
 Missing KOATUU: 4424883501 <НИЖНЬОТЕПЛЕ>
 Missing KOATUU: 4424883502 <АРТЕМА>
@@ -2877,7 +2311,6 @@ Missing KOATUU: 4424887002 <КОЗАЧИЙ>
 Missing KOATUU: 4424887004 <СТЕПОВЕ>
 Missing KOATUU: 4425481001 <БАГАЧКА>
 Missing KOATUU: 4425483004 <ІЛЛІНКА>
-Missing KOATUU: 4610165500 <РУДНЕ>
 Missing KOATUU: 4620355402 <СТРИХАЛЮКИ>
 Missing KOATUU: 4620380401 <БАТЬКІВ>
 Missing KOATUU: 4620380701 <ВЕРБІВЧИК>
@@ -3177,6 +2610,7 @@ Missing KOATUU: 4623381803 <ПІДМОНАСТИР>
 Missing KOATUU: 4623382504 <МЕРЕЩІВ>
 Missing KOATUU: 4623383201 <ДУСАНІВ>
 Missing KOATUU: 4623383901 <КОРОСНЕ>
+Missing KOATUU: 4623384505 <СІРНИКИ>
 Missing KOATUU: 4623385601 <ОСТАЛОВИЧІ>
 Missing KOATUU: 4623386802 <ГАНАЧІВКА>
 Missing KOATUU: 4623388001 <УШКОВИЧІ>
@@ -3221,12 +2655,11 @@ Missing KOATUU: 4625181301 <ВЕРХНІЙ ЛУЖОК>
 Missing KOATUU: 4625181302 <БУСОВИСЬКО>
 Missing KOATUU: 4625181501 <ВОЛОШИНОВО>
 Missing KOATUU: 4625181502 <РОСОХИ>
+Missing KOATUU: 4625183101 <ЛЮТОВИСЬКА>
 Missing KOATUU: 4625184501 <СКЕЛІВКА>
 Missing KOATUU: 4625184702 <ГОРОДОВИЧІ>
 Missing KOATUU: 4625185101 <СУСІДОВИЧІ>
-Missing KOATUU: 4625186103 <МАКСИМІВКА>
 Missing KOATUU: 4625188702 <ВЕЛИКА ВОЛОСЯНКА>
-Missing KOATUU: 4625387601 <СИХІВ>
 Missing KOATUU: 4625582601 <ГОЛОВСЬКЕ>
 Missing KOATUU: 4625583401 <ІСАЇ>
 Missing KOATUU: 4625585703 <МАТКІВ>
@@ -3250,7 +2683,6 @@ Missing KOATUU: 4822082007 <НОВОБІЛОУСІВКА>
 Missing KOATUU: 4822755100 <ДОМАНІВКА>
 Missing KOATUU: 4823682705 <ЧЕРВОНА-НОВОСЕЛІВКА>
 Missing KOATUU: 4823686503 <НОВОЧУДНЕВЕ>
-Missing KOATUU: 4824282303 <НОВОСЕЛІВКА>
 Missing KOATUU: 4824284601 <УЛЯНІВКА>
 Missing KOATUU: 4824510101 <ДОБРА ВОЛЯ>
 Missing KOATUU: 4824510102 <ЖОВТНЕВЕ>
@@ -3369,14 +2801,12 @@ Missing KOATUU: 5123585001 <УЛЯНОВКА>
 Missing KOATUU: 5124582409 <НОВА ПЛАХТІЇВКА>
 Missing KOATUU: 5124585701 <СВІТЛОДОЛИНСЬКЕ>
 Missing KOATUU: 5124780701 <ВЕСЕЛА ДОЛИНА>
-Missing KOATUU: 5124782850 <НОВОСЕЛІВКА>
 Missing KOATUU: 5124784201 <КРАСНЕ>
 Missing KOATUU: 5124784430 <ЛАМБРІВКА>
 Missing KOATUU: 5124785001 <МАЛОЯРОСЛАВЕЦЬ ДРУГИЙ>
 Missing KOATUU: 5124786404 <НОВОУКРАІНКА>
 Missing KOATUU: 5124786406 <ПІДГІРНЕ>
 Missing KOATUU: 5124787201 <ПЕТРІВСЬК>
-Missing KOATUU: 5124788002 <ЛУЖАНКА>
 Missing KOATUU: 5124789402 <МАЛОЯРОСЛАВЕЦЬ ПЕРШИЙ>
 Missing KOATUU: 5125283003 <ДЕМЕНТІВКА>
 Missing KOATUU: 5125283209 <ФЕДОСІЇВКА>
@@ -3391,6 +2821,7 @@ Missing KOATUU: 5323288910 <ФУГЛІ>
 Missing KOATUU: 5324080704 <БІОЛОГІЧНЕ>
 Missing KOATUU: 5324281509 <ПОТЕРЯЙКИ ГОРОВІ>
 Missing KOATUU: 5325780803 <ПАЛАГЕЇВКА>
+Missing KOATUU: 5610900000 <ОСТРОГ>
 Missing KOATUU: 5620883401 <ДОВГОВОЛЯ>
 Missing KOATUU: 5621280401 <БАБИН>
 Missing KOATUU: 5621280402 <ПІДЛІСКИ>
@@ -3497,6 +2928,7 @@ Missing KOATUU: 5922087803 <ЗАВОДИ>
 Missing KOATUU: 5922382903 <НОВОАЛЕКСАНДРІВКА>
 Missing KOATUU: 5922687206 <АРТЮХОВО>
 Missing KOATUU: 5923280803 <БЕЄВО-КОМУНА>
+Missing KOATUU: 5923284401 <ПОДІЛКИ>
 Missing KOATUU: 5923284803 <СЛОБОДКА>
 Missing KOATUU: 5923582905 <САЄВЕ>
 Missing KOATUU: 5923583411 <ТИМОЩЕНКОВЕ>
@@ -3537,7 +2969,6 @@ Missing KOATUU: 5924481702 <КАРПЕЧЕНКОВЕ>
 Missing KOATUU: 5924481703 <КУДОЯРОВЕ>
 Missing KOATUU: 5924481704 <ЛЮБАХОВЕ>
 Missing KOATUU: 5924481705 <УЛИЦЯ>
-Missing KOATUU: 5924482201 <КАМ'ЯНКА>
 Missing KOATUU: 5924482801 <КРЕНИДІВКА>
 Missing KOATUU: 5924482802 <ВАСИЛІВСЬКЕ>
 Missing KOATUU: 5924482803 <КІМ>
@@ -3578,7 +3009,6 @@ Missing KOATUU: 5924783805 <НАДТОЧІЄВЕ>
 Missing KOATUU: 5924786906 <МАР'ЇВКА>
 Missing KOATUU: 5924786912 <СОФІЄВКА>
 Missing KOATUU: 5925081601 <ГРЕБЕНІКІВКА>
-Missing KOATUU: 5925083401 <КАМ'ЯНКА>
 Missing KOATUU: 5925610301 <ДОВЖИК>
 Missing KOATUU: 6120487005 <ПИСАРІВКА>
 Missing KOATUU: 6120487302 <ВОЛИЦЯ>
@@ -3663,7 +3093,6 @@ Missing KOATUU: 6121683701 <ЛЕЖАНІВКА>
 Missing KOATUU: 6121683702 <БІЛИНІВКА>
 Missing KOATUU: 6121683901 <ЛИЧКІВЦІ>
 Missing KOATUU: 6121683903 <ТРИБУХІВЦІ>
-Missing KOATUU: 6121684001 <МАЙДАН>
 Missing KOATUU: 6121684201 <МАЛІ БІРКИ>
 Missing KOATUU: 6121684203 <НОВОСІЛКА>
 Missing KOATUU: 6121684501 <МАЛА ЛУКА>
@@ -4332,7 +3761,6 @@ Missing KOATUU: 6125889501 <ШУМБАР>
 Missing KOATUU: 6125889502 <НОВОСТАВ>
 Missing KOATUU: 6311090101 <ДОМАХА>
 Missing KOATUU: 6311090103 <ДИМИТРОВА>
-Missing KOATUU: 6320210101 <КРЕЙДЯНКА>
 Missing KOATUU: 6320483702 <ДІБРІВНЕ>
 Missing KOATUU: 6320681507 <ОЛЕКСАНДРІВКА>
 Missing KOATUU: 6320682501 <ДОБРОВІЛЛЯ>
@@ -4382,6 +3810,7 @@ Missing KOATUU: 6510166403 <ПЕТРОВСЬКОГО>
 Missing KOATUU: 6510166405 <ПРИОЗЕРНЕ>
 Missing KOATUU: 6510192501 <СТЕПАНІВКА>
 Missing KOATUU: 6510770801 <ПЛОДОВЕ>
+Missing KOATUU: 6520381001 <ДАР'ЇВКА>
 Missing KOATUU: 6520383502 <ВИСУНЦІ>
 Missing KOATUU: 6520383503 <МІРОШНИКІВКА>
 Missing KOATUU: 6520387501 <ЧОРНОБАЇВКА>
@@ -4427,8 +3856,6 @@ Missing KOATUU: 6821287501 <СКИПЧЕ>
 Missing KOATUU: 6821589601 <ЯВТУХИ>
 Missing KOATUU: 6821810101 <МУШКУТИНЦІ>
 Missing KOATUU: 6821885001 <МАЛІЇВЦІ>
-Missing KOATUU: 6822181301 <БОРИСІВ>
-Missing KOATUU: 6822181302 <СТОРОНИЧЕ>
 Missing KOATUU: 6822182403 <ДІБРОВКА>
 Missing KOATUU: 6822455801 <ГОРАЇВКА>
 Missing KOATUU: 6822480101 <АБРИКОСІВКА>
@@ -4479,7 +3906,6 @@ Missing KOATUU: 6822483602 <ДЕМШИН>
 Missing KOATUU: 6822483603 <ПАТРИНЦІ>
 Missing KOATUU: 6822483604 <РОГІЗНА>
 Missing KOATUU: 6822483605 <СУБІЧ>
-Missing KOATUU: 6822483701 <КАМ'ЯНКА>
 Missing KOATUU: 6822483901 <КИТАЙГОРОД>
 Missing KOATUU: 6822483902 <ВИХВАТНІВЦІ>
 Missing KOATUU: 6822483903 <ЛЕНІВКА>
@@ -4593,12 +4019,15 @@ Missing KOATUU: 7122586305 <ПРИТУЛЬЦІ>
 Missing KOATUU: 7123186301 <ПАЛАНОЧКИ>
 Missing KOATUU: 7123410100 <МОНАСТИРИЩЕ>
 Missing KOATUU: 7123480305 <ЛЕТИЦІВКА>
+Missing KOATUU: 7124981001 <БІЛОЗІР'Я>
 Missing KOATUU: 7124984003 <ГУТА МЕЖИРИЦЬКА>
 Missing KOATUU: 7125155101 <СТАВКІВКА>
+Missing KOATUU: 7125182401 <ЖОВНИНЕ>
 Missing KOATUU: 7320510401 <ВОЛОКА>
 Missing KOATUU: 7321086303 <БІЛА КРИНИЦЯ>
 Missing KOATUU: 7321589101 <ЧОРНИЙ ПОТІК>
 Missing KOATUU: 7322586502 <НОВИЙ КИСЕЛІВ>
+Missing KOATUU: 7323084701 <МАРШИНЦІ>
 Missing KOATUU: 7324583201 <ЗРУБ-КОМАРІВСЬКИЙ>
 Missing KOATUU: 7324583501 <ЇЖІВЦІ>
 Missing KOATUU: 7324587003 <АРШИЦА>
@@ -4669,7 +4098,6 @@ Missing KOATUU: 7423683204 <ГАЙ>
 Missing KOATUU: 7423683205 <ДІБРОВА>
 Missing KOATUU: 7423683206 <КОЛОС>
 Missing KOATUU: 7423683207 <МУРАВ'Ї>
-Missing KOATUU: 7423683208 <НОВОСЕЛІВКА>
 Missing KOATUU: 7423683602 <ГІРКИ>
 Missing KOATUU: 7423684001 <КАМ'ЯНСЬКА СЛОБОДА>
 Missing KOATUU: 7423684002 <КАМІНЬ>
@@ -4739,6 +4167,7 @@ Missing KOATUU: 7424486802 <ГРИБОВА РУДНЯ>
 Missing KOATUU: 7424710101 <КУТИ ПЕРШІ>
 Missing KOATUU: 7424710102 <КУТИ ДРУГІ>
 Missing KOATUU: 7424982503 <МАСАЛАІВКА>
+Missing KOATUU: 7425587501 <РОЇЩЕ>
 Missing KOATUU: 7425881250 <ГУТО-СТУДЕНЕЦЬКА>
 Missing KOATUU: 8536390703 <ГОНЧАРНЕ>
 Missing KOATUU: 8536390705 <КИЗИЛОВЕ>
@@ -4765,4 +4194,4 @@ Missing KOATUU: 8536990505 <ПИРОГОВКА>
 Missing KOATUU: 8536990507 <ПОВОРТНЕ>
 Missing KOATUU: 8536990509 <ФРОНТОВЕ>
 Missing KOATUU: 8536990511 <ФРУКТОВЕ>
-Matches: 25111, Unknown: 2, Mismatch: 64, Missing: 4694, No KOATUU: 4229, Dup: 0
+Matches: 25719, Unknown: 5, Mismatch: 88, Missing: 4088, No KOATUU: 3602, Dup: 2
