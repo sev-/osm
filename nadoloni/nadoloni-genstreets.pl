@@ -28,27 +28,18 @@ my $processor = sub {
 	if (exists $_[0]->{tag}->{"addr:housenumber"}) {
 		$id = $_[0]->{tag}->{"nadoloni:id"};
 		$id =~ s/buildings://;
-		if (exists $buildings[$id]) {
-			print "$id: $_[0]->{id}\n";
-		}
 
 		$buildings[$id] = $_[0]->{id};
 		$numb++;
-
-		if (exists $_[0]->{tag}->{type}) {
-			print "building: $_[0]->{id}\n";
-		}
 	} elsif (exists $_[0]->{tag}->{"nadoloni:id"}) {
 		$id = $_[0]->{tag}->{"nadoloni:id"};
 		if ($id =~ /streets:(\d+)$/) {
-			$s = $1;
-			push @{ $streets[$s]}, $_[0]->{id};
-			$nums++;
+			if (exists $_[0]->{tag}->{name}) {
+			  $s = $1;
+			  push @{ $streets[$s]}, $_[0]->{id};
+			  $nums++;
 
-			$streetnames{$_[0]->{id}} = $_[0]->{tag}->{name};
-
-			if (exists $_[0]->{tag}->{type}) {
-				print "street: $_[0]->{id}\n";
+			  $streetnames{$_[0]->{id}} = $_[0]->{tag}->{name};
 			}
 		}
 	}
@@ -67,69 +58,70 @@ Geo::Parse::OSM->parse_file($dumpname, $processor);
 
 my @relations = ();
 
-open IN, "buildings1.txt";
+open IN, "buildings.csv";
 binmode IN, ':utf8';
 
 while (<IN>) {
 	@s = split /;/;
 
 	
-	if ($s[4] eq 'drogobych') {
-		$c = 0;
-	} elsif ($s[4] eq 'truskavets') {
-		$c = 1000;
-	} elsif ($s[4] eq 'stebnyk') {
-		$c = 2000;
-	} elsif ($s[4] eq 'boryslav') {
-		$c = 3000;
-	} else {
-		print STDERR "Error: $s[4]\n";
-	}
-
-	$n = $c + $s[5];
+	$n = "$s[2] $s[1]";
 	
-	if (0 && not exists $relations[$s[5]]) {
-		$relations[$s[5]]->{members} = ();
+	if ($buildings[$s[0]] < 10000000) {
+	  push @{ $relations{$n}->{members} }, { 'ref' => $buildings[$s[0]], 'type' => 'relation', 'role' => 'house' };
+	} else {
+	  push @{ $relations{$n}->{members} }, { 'ref' => $buildings[$s[0]], 'type' => 'way', 'role' => 'house' };
 	}
-
-	push @{ $relations[$n]->{members} }, { 'ref' => $buildings[$s[0]], 'type' => 'way', 'role' => 'house' };
 }
 
 close IN;
 
-open IN, "streets.txt";
+open IN, "streets.csv";
 binmode IN, ':utf8';
+
+$nrel = 1;
 
 while (<IN>) {
 	@s = split /;/;
 
-        if ($s[6] eq 'drogobych') {
-                $c = 0;
-		$city = 'Дрогобич';
-        } elsif ($s[6] eq 'truskavets') {
-                $c = 1000;
-		$city = 'Трускавець';
-        } elsif ($s[6] eq 'stebnyk') {
-                $c = 2000;
-		$city = 'Стебник';
-	} elsif ($s[6] eq 'boryslav') {
-		$c = 3000;
-		$city = 'Борислав';
-        } else {
-                print STDERR "Error: $s[6]\n";
-        }
-  
-	$n = $c + $s[7];
+	if ($s[2] =~ 'drogobych') {
+	  $city = 'Дрогобич';
+	} elsif ($s[2] =~ 'truskavets') {
+	  $city = 'Трускавець';
+	} elsif ($s[2] =~ 'stebnyk') {
+	  $city = 'Стебник';
+	} elsif ($s[2] =~ 'boryslav') {
+	  $city = 'Борислав';
+	} elsif ($s[2] =~ 'shidnycia') {
+	  $city = 'Східниця';
+	} elsif ($s[2] =~ 'stanylya') {
+	  $city = 'Станиля';
+	} elsif ($s[2] =~ 'dobrohostiv') {
+	  $city = 'Доброгостів';
+	} elsif ($s[2] =~ 'modrychi') {
+	  $city = 'Модричі';
+	} elsif ($s[2] =~ 'ranevychi') {
+	  $city = 'Раневичі';
+	} else {
+	  print STDERR "Error: $s[2]\n";
+	}
 
-	$relations[$n]{tag}->{name} = $streetnames{$streets[$s[0]][0]};
-	$relations[$n]{tag}->{type} = 'street';
-	$relations[$n]{tag}->{'nadoloni:id'} = "relations:$n";
-	$relations[$n]{tag}->{'addr:city'} = $city;
-	$relations[$n]{type} = 'relation';
-	$relations[$n]{id} = -$n;
+	$n = "$s[2] $s[1]";
+
+	next if not defined $streets[$s[0]];
+
+	$relations{$n}{tag}->{name} = $streetnames{$streets[$s[0]][0]};
+	$relations{$n}{tag}->{type} = 'street';
+	$relations{$n}{tag}->{'nadoloni:id'} = "relations:$nrel";
+	$relations{$n}{tag}->{'addr:city'} = $city;
+	$relations{$n}{type} = 'relation';
+	$relations{$n}{action} = 'create';
+	$relations{$n}{id} = -$nrel;
+
+	$nrel++;
 
 	for $st (@{ $streets[$s[0]] }) {
-		push @{ $relations[$n]->{members} }, { 'ref' => $st, 'type' => 'way', 'role' => 'street' };
+		push @{ $relations{$n}->{members} }, { 'ref' => $st, 'type' => 'way', 'role' => 'street' };
 	}
 }
 
@@ -137,8 +129,8 @@ close IN;
 
 print "<osm  version='0.6'>\n";
 
-for $r (@relations) {
+for $r (keys %relations) {
 	next if not defined $r;
-	print Geo::Parse::OSM::object_to_xml($r);
+	print Geo::Parse::OSM::object_to_xml($relations{$r});
 }
 print "</osm>\n";
