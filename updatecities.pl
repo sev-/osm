@@ -18,8 +18,10 @@ sub latBucket($);
 sub lonBucket($);
 sub processCity($);
 sub processCoords($);
+sub updateCity($$);
 
-binmode STDOUT, ':utf8';
+#binmode STDOUT, ':utf8';
+binmode STDERR, ':utf8';
 
 my @cities = ();
 
@@ -46,7 +48,7 @@ my $processor = sub {
 
 			my $res = processCity($_[0]);
 
-			#print Geo::Parse::OSM->to_xml($res);
+			print Geo::Parse::OSM::object_to_xml($res) if $res;
 			$num++;
 		}
 	}
@@ -65,11 +67,28 @@ while (my $line = $csv->getline_hr($fh)) {
 	($line->{lat}, $line->{lon}) = processCoords($line->{coords});
 
 	if ($line->{lat} == 0 || $line->{lon} == 0) {
-		print "$line->{num} $line->{name_ua} {$line->{title}} $line->{lat}, $line->{lon}\n";
+		print STDERR "$line->{num} $line->{name_ua} {$line->{title}} $line->{lat}, $line->{lon}\n";
 	}
 	$line->{name_ua} =~ s/^\s+|\s+$//g;
 	$line->{name_ua} =~ s/́//g;
+	$line->{name_ua} =~ s/'/’/g;
 	$line->{name_ru} =~ s/^\s+|\s+$//g;
+
+	my $ppl = $line->{population};
+
+	$line->{population} =~ s/,(\d) тис\./${1}00/;
+	$line->{population} =~ s/,(\d\d) тис\./${1}0/;
+	$line->{population} =~ s/,(\d\d\d) тис\./${1}/;
+
+	$line->{population} =~ s/{{збільшення}}|{{зменшення}}|{{стабільно}}|,|\.|&nbsp;| |бл\.|біля|>|<|місто:|~|понад|близько|^-//g;
+	$line->{population} =~ s/{{Formatnum:(\d+)}}.*/$1/gi;
+	$line->{population} =~ s/.*Останнідані-(\d+).*/$1/g;
+
+	$line->{population} =~ s/^(\d+).*/$1/;
+
+	unless ($line->{population} =~ /^\d+$/) {
+	  $line->{population} = "";
+	}
 
 	push @cit, $line;
 }
@@ -81,7 +100,7 @@ close $fh;
 
 $citiesLeft = scalar @cities;
 
-print "Loaded $citiesLeft cities\n";
+print STDERR "Loaded $citiesLeft cities\n";
 
 
 my @cityBucket = ();
@@ -100,10 +119,10 @@ print "<osm  version='0.6'>\n";
 Geo::Parse::OSM->parse_file($ukrname, $processor);
 print "</osm>\n";
 
-print "No matches: $noMatches out of $num ($noMatchesSafe are safe)\n";
-print "Renames: $renames\n";
-print "Empty: $emptyname ($emptynameSafe are safe)\n";
-print "Cities left: $citiesLeft\n";
+print STDERR "No matches: $noMatches out of $num ($noMatchesSafe are safe)\n";
+print STDERR "Renames: $renames\n";
+print STDERR "Empty: $emptyname ($emptynameSafe are safe)\n";
+print STDERR "Cities left: $citiesLeft\n";
 
 exit;
 
@@ -140,7 +159,7 @@ sub processCoords($) {
 		$min = $arr[$n+1] || 0;
 		$sec = $arr[$n+2] || 0;
 		if ($sec > 100) {
-			print "$sec\n";
+			print STDERR "$sec\n";
 			$sec = substr $arr[$n+2], 0, 2;
 		}
 		$lat = dms2decimal($deg, $min, $sec);
@@ -189,7 +208,7 @@ sub processCity($) {
 	print STDERR "$num " . (sprintf "%02.2f%%", ($num * 100) / $total) ."\r" if ($num % 10 == 0);
 
 	if (not exists $entry->{lat} or not exists $entry->{lon}) {
-		print "Wrong entry id: $entry->{id}\n";
+		print STDERR "Wrong entry id: $entry->{id}\n";
 		return;
 	}
 
@@ -203,7 +222,7 @@ sub processCity($) {
 		$emptyname++;
 		$emptynameSafe++ if $cnd ne "";
 
-		print "Weird nameless entry id: $entry->{id} $cnd\n";
+		print STDERR "Weird nameless entry id: $entry->{id} $cnd\n";
 		return;
 	}
 
@@ -246,15 +265,18 @@ sub processCity($) {
 		}
 	}
 
-	if ($cities[$min]->{name_ua} eq $entry->{tag}->{name} || 
-		$cities[$min]->{name_ru} eq $entry->{tag}->{name} ||
-		(exists $entry->{tag}->{"name:ua"} && $cities[$min]->{name_ua} eq $entry->{tag}->{"name:ua"}) ||
-		(exists $entry->{tag}->{"name:ru"} && $cities[$min]->{name_ru} eq $entry->{tag}->{"name:ru"}) ||
+	if (lc $cities[$min]->{name_ua} eq lc $entry->{tag}->{name} || 
+		lc $cities[$min]->{name_ru} eq lc $entry->{tag}->{name} ||
+		(exists $entry->{tag}->{"name:ua"} && lc $cities[$min]->{name_ua} eq lc $entry->{tag}->{"name:ua"}) ||
+		(exists $entry->{tag}->{"name:ru"} && lc $cities[$min]->{name_ru} eq lc $entry->{tag}->{"name:ru"}) ||
 		(exists $entry->{tag}->{koatuu} && $cities[$min]->{koatuu} eq $entry->{tag}->{koatuu})) {
 
 		# Sounds good. Remove it
-		splice @{$cityBucket[$minX][$minY]}, $minBpos, 1;
+		$citnum = splice @{$cityBucket[$minX][$minY]}, $minBpos, 1;
+
 		$citiesLeft--;
+
+		return updateCity $entry, $citnum;
 	} else {
 		# Okay, we're in trouble. No match.
 
@@ -273,8 +295,8 @@ sub processCity($) {
 		}
 
 		if (!scalar @citM) {
-			print "$entry->{tag}->{name} $entry->{lat}, $entry->{lon} $cnd $entry->{id}\n";
-			print "  No match in Wiki\n";
+			print STDERR "$entry->{tag}->{name} $entry->{lat}, $entry->{lon} $cnd $entry->{id}\n";
+			print STDERR "  No match in Wiki\n";
 
 			$noMatches++;
 			$noMatchesSafe++ if $cnd ne "";
@@ -291,19 +313,19 @@ sub processCity($) {
 		for my $n (@citS) {
 			my $c = $cities[$n];
 
-			if ($c->{name_ua} eq $entry->{tag}->{name} || 
-				$c->{name_ru} eq $entry->{tag}->{name} ||
-				(exists $entry->{tag}->{"name:ua"} && $c->{name_ua} eq $entry->{tag}->{"name:ua"}) ||
-				(exists $entry->{tag}->{"name:ru"} && $c->{name_ru} eq $entry->{tag}->{"name:ru"}) ||
+			if (lc $c->{name_ua} eq lc $entry->{tag}->{name} || 
+				lc $c->{name_ru} eq lc $entry->{tag}->{name} ||
+				(exists $entry->{tag}->{"name:ua"} && lc $c->{name_ua} eq lc $entry->{tag}->{"name:ua"}) ||
+				(exists $entry->{tag}->{"name:ru"} && lc $c->{name_ru} eq lc $entry->{tag}->{"name:ru"}) ||
 				(exists $entry->{tag}->{koatuu} && $c->{koatuu} eq $entry->{tag}->{koatuu})) {
 				$match = 1;
 
 				for my $x (0..scalar $cityBucket[$c->{bucketX}][$c->{bucketY}]) {
 					if ($cityBucket[$c->{bucketX}][$c->{bucketY}]->[$x] == $n) {
-						splice @{$cityBucket[$c->{bucketX}][$c->{bucketY}]}, $x, 1;
+						$citnum = splice @{$cityBucket[$c->{bucketX}][$c->{bucketY}]}, $x, 1;
 						$citiesLeft--;
 
-						last;
+						return updateCity $entry, $citnum;
 					}
 				}
 
@@ -313,19 +335,19 @@ sub processCity($) {
 
 		if (!$match) {
 			# Absoultely no match. Show all nearby entries then
-			print "$entry->{tag}->{name} $entry->{lat}, $entry->{lon} $cnd\n";
+			print STDERR "$entry->{tag}->{name} $entry->{lat}, $entry->{lon} $cnd\n";
 
 			if ($cities[$citS[0]]->{dist} < 0.0002) {
-				print "  Rename --> $cities[$citS[0]]->{name_ua}\n";
+				print STDERR "  Rename --> $cities[$citS[0]]->{name_ua}\n";
 				$renames++;
 
 				my $c = $cities[$citS[0]];
 				for my $x (0..scalar @{ $cityBucket[$c->{bucketX}][$c->{bucketY}]}) {
 					if ($cityBucket[$c->{bucketX}][$c->{bucketY}]->[$x] == $citS[0]) {
-						splice @{$cityBucket[$c->{bucketX}][$c->{bucketY}]}, $x, 1;
+						$citnum = splice @{$cityBucket[$c->{bucketX}][$c->{bucketY}]}, $x, 1;
 						$citiesLeft--;
 
-						last;
+						return updateCity $entry, $citnum;
 					}
 				}
 
@@ -335,7 +357,7 @@ sub processCity($) {
 			for my $n (@citS) {
 				my $c = $cities[$n];
 
-				print "  $c->{num} $c->{name_ua} $c->{lat}, $c->{lon} [$c->{dist}]\n";
+				print STDERR "  $c->{num} $c->{name_ua} $c->{lat}, $c->{lon} [$c->{dist}]\n";
 			}
 
 			$noMatches++;
@@ -343,4 +365,45 @@ sub processCity($) {
 			$noMatchesSafe++ if $cnd ne "";
 		}
 	}
+
+	return;
+}
+
+sub updateCity($$) {
+  my $entry = shift;
+  my $n = shift;
+
+  $entry->{tag}->{"wikipedia"} = "uk:".$cities[$n]->{title};
+  $entry->{tag}->{"name"} = $cities[$n]->{name_ua} if $cities[$n]->{name_ua} ne '';
+  $entry->{tag}->{"name:uk"} = $cities[$n]->{name_ua} if $cities[$n]->{name_ua} ne '';
+  $entry->{tag}->{"name:ru"} = $cities[$n]->{name_ru} if $cities[$n]->{name_ru} ne '';
+  if ($cities[$n]->{koatuu} ne '') {
+    if (length $cities[$n]->{koatuu} > 10) { # filter out bad data
+    } elsif (length $cities[$n]->{koatuu} == 9) {
+      $entry->{tag}->{"koatuu"} = "0".$cities[$n]->{koatuu};
+    } else {
+      $entry->{tag}->{"koatuu"} = $cities[$n]->{koatuu};
+    }
+  }
+  if ($cities[$n]->{population} ne '') {
+    $entry->{tag}->{"population"} = $cities[$n]->{population};
+
+    if ($entry->{tag}->{"population"} > 100000) {
+      $tt = 'city'
+    } elsif ($entry->{tag}->{"population"} > 10000) {
+      $tt = 'town'
+    } elsif ($entry->{tag}->{"population"} > 1000) {
+      $tt = 'village'
+    } elsif ($entry->{tag}->{"population"} != 0) {
+      $tt = 'hamlet'
+    }
+    if ($tt ne $entry->{tag}->{place}) {
+      #print STDERR "CLASS: $entry->{tag}->{name}: $entry->{tag}->{place} -> $tt ($entry->{tag}->{population})\n";
+    }
+  }
+  $entry->{tag}->{"addr:postcode"} = $cities[$n]->{zip} if $cities[$n]->{zip} ne '';
+
+  $entry->{action} = 'modify';
+
+  return $entry;
 }
