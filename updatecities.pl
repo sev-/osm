@@ -19,6 +19,7 @@ sub lonBucket($);
 sub processCity($);
 sub processCoords($);
 sub updateCity($$);
+sub transliterate($);
 
 #binmode STDOUT, ':utf8';
 binmode STDERR, ':utf8';
@@ -72,6 +73,8 @@ while (my $line = $csv->getline_hr($fh)) {
 	$line->{name_ua} =~ s/^\s+|\s+$//g;
 	$line->{name_ua} =~ s/́//g;
 	$line->{name_ua} =~ s/'/’/g;
+	$line->{wikipedia_ru} = $line->{name_ru};
+	$line->{name_ru} =~ s/\(.*\)//;
 	$line->{name_ru} =~ s/^\s+|\s+$//g;
 
 	my $ppl = $line->{population};
@@ -374,9 +377,13 @@ sub updateCity($$) {
   my $n = shift;
 
   $entry->{tag}->{"wikipedia"} = "uk:".$cities[$n]->{title};
-  $entry->{tag}->{"name"} = $cities[$n]->{name_ua} if $cities[$n]->{name_ua} ne '';
-  $entry->{tag}->{"name:uk"} = $cities[$n]->{name_ua} if $cities[$n]->{name_ua} ne '';
+  $entry->{tag}->{"wikipedia:ru"} = $cities[$n]->{wikipedia_ru};
+  $entry->{tag}->{"name"} = $cities[$n]->{name_ua};
+  $entry->{tag}->{"name:uk"} = $cities[$n]->{name_ua};
   $entry->{tag}->{"name:ru"} = $cities[$n]->{name_ru} if $cities[$n]->{name_ru} ne '';
+
+  $entry->{tag}->{"name:en"} = transliterate $cities[$n]->{name_ua};
+
   if ($cities[$n]->{koatuu} ne '') {
     if (length $cities[$n]->{koatuu} > 10) { # filter out bad data
     } elsif (length $cities[$n]->{koatuu} == 9) {
@@ -406,4 +413,50 @@ sub updateCity($$) {
   $entry->{action} = 'modify';
 
   return $entry;
+}
+
+sub transliterate($) {
+	$_ = shift;
+
+	s/зг/zgh/g;
+	s/х/kh/g;
+	s/ц/ts/g;
+	s/ь//g;
+	s/’//g;
+	s/ є/ ye/g;
+	s/є/ie/g;
+	s/ ї/ yi/g;
+	s/ й/ y/g;
+	s/ж/zh/g;
+	s/ц/ts/g;
+	s/ч/ch/g;
+	s/ш/sh/g;
+	s/щ/sch/g;
+	s/ ю/ yu/g;
+	s/ю/iu/g;
+	s/ я/ ya/g;
+	s/я/ia/g;
+	tr/абвгґдезийіїклмнопрстуф/abvhgdezyiiiklmnoprstuf/;
+
+	s/зг/Zgh/g;
+	s/Х/Kh/g;
+	s/Ц/Ts/g;
+	s/Є/Ye/g;
+	s/Ї/Yi/g;
+	s/Ж/Zh/g;
+	s/Ц/Ts/g;
+	s/Ч/Ch/g;
+	s/Ш/Sh/g;
+	s/Щ/Sch/g;
+	s/Ю/Yu/g;
+	s/Я/Ya/g;
+	tr/АБВГҐДЕЗИІЙКЛМНОПРСТУФ/ABVHGDEZYIYKLMNOPRSTUF/;
+	s/yy/y/g;
+
+	s/ ([a-z])/" ".uc($1)/ge;
+
+	s/K=/k=/;
+	s/V=/v=/;
+
+	return $_;
 }
