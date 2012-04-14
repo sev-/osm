@@ -11,7 +11,7 @@
 # This file is provided under GPLv2 license.
 #
 # Usage:
-#  perl -CD _sevbot.pl ukraine.osm >_sevbot.osm 2>_sevbot.log
+#  perl -CD _sevbot.pl ukraine.osm.bz2 >_sevbot.osm 2>_sevbot.log
 #
 # Since the exports on goefabrik not always match it is advised to reapply bounding polygon
 #  getbound.pl 60199 -o ukraine.poly
@@ -131,7 +131,7 @@ sub processHighway($) {
 			# First, fix typical errors
 			$new = fixRussian $name;
 			if ($new ne $name) {
-				print STDERR "LOG: Fixed Russian $name -> $new\n";
+				print STDERR "LOG: Fixed Russian $name -> $new $entry->{id}\n";
 
 				$name = $new;
 				$entry->{tag}->{"name"} = $new;
@@ -143,7 +143,7 @@ sub processHighway($) {
 				$new = tryAutoAddRusToponym($name);
 
 				if ($new ne $name) {
-					print STDERR "LOG: Autoadded Russian $name -> $new\n";
+					print STDERR "LOG: Autoadded Russian $name -> $new $entry->{id}\n";
 
 					$name = $new;
 					$entry->{tag}->{"name"} = $new;
@@ -163,7 +163,7 @@ sub processHighway($) {
 				}
 				$entry->{tag}->{"name"} = $entry->{tag}->{"name:uk"};
 
-				print STDERR "LOG: Overwrote name with Ukrainian ($name --> $entry->{tag}->{'name:uk'})\n";
+				print STDERR "LOG: Overwrote name with Ukrainian ($name --> $entry->{tag}->{'name:uk'}) $entry->{id}\n";
 
 				$modified = 1;
 			} else {
@@ -175,7 +175,7 @@ sub processHighway($) {
 			# Fix typical errors
 			$new = fixUkrainian $name;
 			if ($new ne $name) {
-				print STDERR "LOG: Fixed Ukrainian $name -> $new\n";
+				print STDERR "LOG: Fixed Ukrainian $name -> $new $entry->{id}\n";
 
 				$name = $new;
 				$entry->{tag}->{"name"} = $new;
@@ -187,7 +187,7 @@ sub processHighway($) {
 				$new = tryAutoAddUkrToponym($name);
 
 				if ($new ne $name) {
-					print STDERR "LOG: Autoadded Ukrainian $name -> $new\n";
+					print STDERR "LOG: Autoadded Ukrainian $name -> $new $entry->{id}\n";
 
 					$name = $new;
 					$entry->{tag}->{"name"} = $new;
@@ -220,7 +220,7 @@ sub processHighway($) {
 		# Fix typical errors
 		$new = fixRussian $name;
 		if ($new ne $name) {
-			print STDERR "LOG: Fixed Russian in name:ru $name -> $new\n";
+			print STDERR "LOG: Fixed Russian in name:ru $name -> $new $entry->{id}\n";
 
 			$name = $new;
 			$entry->{tag}->{"name:ru"} = $new;
@@ -232,7 +232,7 @@ sub processHighway($) {
 			$new = tryAutoAddRusToponym($name);
 
 			if ($new ne $name) {
-				print STDERR "LOG: Autoadded Russian in name:ru $name -> $new\n";
+				print STDERR "LOG: Autoadded Russian in name:ru $name -> $new $entry->{id}\n";
 
 				$name = $new;
 				$entry->{tag}->{"name:ru"} = $new;
@@ -250,7 +250,7 @@ sub processHighway($) {
 		# Fix typical errors
 		$new = fixUkrainian $name;
 		if ($new ne $name) {
-			print STDERR "LOG: Fixed Ukrainian in name:uk $name -> $new\n";
+			print STDERR "LOG: Fixed Ukrainian in name:uk $name -> $new $entry->{id}\n";
 
 			$name = $new;
 			$entry->{tag}->{"name:uk"} = $new;
@@ -262,7 +262,7 @@ sub processHighway($) {
 			$new = tryAutoAddUkrToponym($name);
 
 			if ($new ne $name) {
-				print STDERR "LOG: Autoadded Ukrainian to name:uk $name -> $new\n";
+				print STDERR "LOG: Autoadded Ukrainian to name:uk $name -> $new $entry->{id}\n";
 
 				$name = $new;
 				$entry->{tag}->{"name:uk"} = $new;
@@ -282,7 +282,7 @@ sub processHighway($) {
 			$entry->{tag}->{"name"} = $name;
 
 			$modified = 1;
-			print STDERR "LOG: Filled in name from name:uk\n";
+			print STDERR "LOG: Filled in name from name:uk ($entry->{tag}->{name}) $entry->{id}\n";
 		}
 	}
 
@@ -585,7 +585,7 @@ sub processBuilding($) {
 	$housenumber =~ s/^([0-9]+)\s*к\s*([0-9]+)/$1 к$2/;
 
 	if ($housenumber ne $entry->{tag}->{"addr:housenumber"}) {
-		print STDERR "LOG: Fixed housenumber <$entry->{tag}->{'addr:housenumber'}> --> <$housenumber>\n";
+		print STDERR "LOG: Fixed housenumber <$entry->{tag}->{'addr:housenumber'}> --> <$housenumber> $entry->{id}\n";
 
 		$entry->{tag}->{"addr:housenumber"} = $housenumber;
 
