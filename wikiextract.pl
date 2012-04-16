@@ -52,7 +52,7 @@ my $page;
 
 my $num = 1;
 my $art = 0;
-my $total = 694200; # Hardcoded number of articles in Ukrainian wikipedia
+my $total = 858749; # Hardcoded number of articles in Ukrainian wikipedia
 
 my @cols = ();
 
@@ -62,7 +62,7 @@ $csv->eol("\n");
 
 open $csvf, ">:encoding(utf8)", $outfile or die "$outfile: $!";
 
-print $csvf "\"num\",\"title\",\"name_ua\",\"name_ru\",\"koatuu\",\"oblast\",\"raion\",\"rada\",\"elt\",\"population\",\"coords\",\"zip\",\"card\"\n";
+print $csvf "\"num\",\"type\",\"title\",\"name_ua\",\"name_ru\",\"koatuu\",\"oblast\",\"raion\",\"rada\",\"elt\",\"population\",\"coords\",\"zip\",\"card\"\n";
 
 sub putCol {
 	my $val = shift;
@@ -82,6 +82,23 @@ while(defined($page = $pages->next)) {
 			$pass = "";
 
 			putCol($page->id);
+
+			my $type;
+			if ($1 =~ /[[Сс][еи]ло/) {
+			  $type = "село";
+			} elsif ($1 =~ /[[Сс]елище/) {
+			  $type = "селище";
+			} elsif ($1 =~ /[[Сс]мт/) {
+			  $type = "смт";
+			} elsif ($1 =~ /[[Мм]істо/) {
+			  $type = "місто";
+			} else {
+			  print STDERR "Wrong type: $1\n";
+			  exit;
+			}
+
+			putCol($type);
+
 			putCol($page->title);
 
 			if (${ $page->text } =~ /^\s*\|?\s*назва\s*=\s*(.*)$/m) { putCol($1); } else { putCol(""); }

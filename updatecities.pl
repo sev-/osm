@@ -94,6 +94,18 @@ while (my $line = $csv->getline_hr($fh)) {
 	  $line->{population} = "";
 	}
 
+	if (exists $line->{zip}) {
+	  $line->{zip} =~ s/&nbsp;/ /g;
+	  $line->{zip} =~ s/ та /, /g;
+	  $line->{zip} =~ s/—/-/g;
+	  $line->{zip} =~ s/ - /-/g;
+	  $line->{zip} =~ s/^\[\[#Зв'язок\|(.*)/$1/;
+	  $line->{zip} =~ s/^([\d ,-]+).*/$1/;
+	  $line->{zip} =~ s/^\s+|\s+$//g;
+	  $line->{zip} =~ s/^(\d\d)(\d\d\d)-(\d\d\d)$/$1$2-$1$3/g;
+	  $line->{zip} =~ s/^(\d\d\d)(\d\d)-(\d\d)$/$1$2-$1$3/g;
+	}
+
 	push @cit, $line;
 }
 
@@ -379,7 +391,7 @@ sub updateCity($$) {
   my %tags = ();
 
   $tags{"wikipedia"} = "uk:".$cities[$n]->{title};
-  $tags{"wikipedia:ru"} = $cities[$n]->{wikipedia_ru};
+  $tags{"wikipedia:ru"} = $cities[$n]->{wikipedia_ru} if $cities[$n]->{wikipedia_ru} ne '';
   $tags{"name"} = $cities[$n]->{name_ua};
   $tags{"name:uk"} = $cities[$n]->{name_ua};
   $tags{"name:ru"} = $cities[$n]->{name_ru} if $cities[$n]->{name_ru} ne '';
@@ -417,7 +429,11 @@ sub updateCity($$) {
   for my $k (keys %tags) {
 	if (not exists $entry->{tag}->{$k} or
 		$entry->{tag}->{$k} ne $tags{$k}) {
-	  print STDERR "UPD: $entry->{tag}->{name} ($entry->{id}) $k: \"$entry->{tag}->{$k}\" -> \"$tags{$k}\"\n";
+	  if (exists $entry->{tag}->{$k}) {
+		print STDERR "UPD: $entry->{tag}->{name} ($entry->{id}) $k: \"$entry->{tag}->{$k}\" -> \"$tags{$k}\"\n";
+	  } else {
+		print STDERR "UPD: $entry->{tag}->{name} ($entry->{id}) $k: \"(null)\" -> \"$tags{$k}\"\n";
+	  }
 
 	  $entry->{tag}->{$k} = $tags{$k};
 	  $modified = 1;
