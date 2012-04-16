@@ -2,7 +2,7 @@
 #
 # Update OSM data with extract from Wikipedia
 #
-# Copyright (c) 2010, Eugene Sandulenko <sev.mail@gmail.com>
+# Copyright (c) 2010-12, Eugene Sandulenko <sev.mail@gmail.com>
 #
 # This file is provided under GPLv2 license.
 #
@@ -69,6 +69,7 @@ while (my $line = $csv->getline_hr($fh)) {
 
 	if ($line->{lat} == 0 || $line->{lon} == 0) {
 		print STDERR "$line->{num} $line->{name_ua} {$line->{title}} $line->{lat}, $line->{lon}\n";
+		next;
 	}
 	$line->{name_ua} =~ s/^\s+|\s+$//g;
 	$line->{name_ua} =~ s/́//g;
@@ -208,7 +209,7 @@ sub processCity($) {
 	my $lonb = lonBucket $lon;
 	my $cnd;
 
-	print STDERR "$num " . (sprintf "%02.2f%%", ($num * 100) / $total) ."\r" if ($num % 10 == 0);
+	#print STDERR "$num " . (sprintf "%02.2f%%", ($num * 100) / $total) ."\r" if ($num % 10 == 0);
 
 	if (not exists $entry->{lat} or not exists $entry->{lon}) {
 		print STDERR "Wrong entry id: $entry->{id}\n";
@@ -375,44 +376,60 @@ sub processCity($) {
 sub updateCity($$) {
   my $entry = shift;
   my $n = shift;
+  my %tags = ();
 
-  $entry->{tag}->{"wikipedia"} = "uk:".$cities[$n]->{title};
-  $entry->{tag}->{"wikipedia:ru"} = $cities[$n]->{wikipedia_ru};
-  $entry->{tag}->{"name"} = $cities[$n]->{name_ua};
-  $entry->{tag}->{"name:uk"} = $cities[$n]->{name_ua};
-  $entry->{tag}->{"name:ru"} = $cities[$n]->{name_ru} if $cities[$n]->{name_ru} ne '';
+  $tags{"wikipedia"} = "uk:".$cities[$n]->{title};
+  $tags{"wikipedia:ru"} = $cities[$n]->{wikipedia_ru};
+  $tags{"name"} = $cities[$n]->{name_ua};
+  $tags{"name:uk"} = $cities[$n]->{name_ua};
+  $tags{"name:ru"} = $cities[$n]->{name_ru} if $cities[$n]->{name_ru} ne '';
 
-  $entry->{tag}->{"name:en"} = transliterate $cities[$n]->{name_ua};
+  $tags{"name:en"} = transliterate $cities[$n]->{name_ua};
 
   if ($cities[$n]->{koatuu} ne '') {
     if (length $cities[$n]->{koatuu} > 10) { # filter out bad data
     } elsif (length $cities[$n]->{koatuu} == 9) {
-      $entry->{tag}->{"koatuu"} = "0".$cities[$n]->{koatuu};
+      $tags{"koatuu"} = "0".$cities[$n]->{koatuu};
     } else {
-      $entry->{tag}->{"koatuu"} = $cities[$n]->{koatuu};
+      $tags{"koatuu"} = $cities[$n]->{koatuu};
     }
   }
   if ($cities[$n]->{population} ne '') {
-    $entry->{tag}->{"population"} = $cities[$n]->{population};
+    $tags{"population"} = $cities[$n]->{population};
 
-    if ($entry->{tag}->{"population"} > 100000) {
+    if ($tags{"population"} > 100000) {
       $tt = 'city'
-    } elsif ($entry->{tag}->{"population"} > 10000) {
+    } elsif ($tags{"population"} > 10000) {
       $tt = 'town'
-    } elsif ($entry->{tag}->{"population"} > 1000) {
+    } elsif ($tags{"population"} > 1000) {
       $tt = 'village'
-    } elsif ($entry->{tag}->{"population"} != 0) {
+    } elsif ($tags{"population"} != 0) {
       $tt = 'hamlet'
     }
     if ($tt ne $entry->{tag}->{place}) {
-      #print STDERR "CLASS: $entry->{tag}->{name}: $entry->{tag}->{place} -> $tt ($entry->{tag}->{population})\n";
+      #print STDERR "CLASS: $tags{name}: $tags{place} -> $tt ($tags{population})\n";
     }
   }
-  $entry->{tag}->{"addr:postcode"} = $cities[$n]->{zip} if $cities[$n]->{zip} ne '';
+  $tags{"addr:postcode"} = $cities[$n]->{zip} if $cities[$n]->{zip} ne '';
 
-  $entry->{action} = 'modify';
+  my $modified = 0;
 
-  return $entry;
+  for my $k (keys %tags) {
+	if (not exists $entry->{tag}->{$k} or
+		$entry->{tag}->{$k} ne $tags{$k}) {
+	  print STDERR "UPD: $entry->{tag}->{name} ($entry->{id}) $k: \"$entry->{tag}->{$k}\" -> \"$tags{$k}\"\n";
+
+	  $entry->{tag}->{$k} = $tags{$k};
+	  $modified = 1;
+	}
+  }
+
+  if ($modified) {
+	$entry->{action} = 'modify';
+	return $entry;
+  }
+
+  return;
 }
 
 sub transliterate($) {
