@@ -15,7 +15,7 @@
 #
 # Since the exports on goefabrik not always match it is advised to reapply bounding polygon
 #  getbound.pl 60199 -o ukraine.poly
-#  osmosis --rx file=ukraine.osm --bp file=ukraine.poly --wx file=ukraine2.osm
+#  osmconvert -v ukraine.osm.pbf -B=ukraine.poly --complete-ways --complex-ways >ukraine.osm
 
 use utf8;
 use Geo::Parse::OSM;
@@ -352,8 +352,10 @@ sub fixRussian($) {
 	s/подъем/подъём/i;
 
 	# Put toponym to the end
-	if (/^(проспект|проезд|переулок|спуск|въезд|тупик|дорога|площадь|бульвар|шоссе|подъём|линия|мост)\s+(.*)/i) {
+	if ($_ !~ /Линия железной дороги улица/i) {
+	  if (/^(проспект|проезд|переулок|спуск|въезд|тупик|дорога|площадь|бульвар|шоссе|подъём|линия|мост)\s+(.*)/i) {
 		$_ = "$2 $1";
+	  }
 	}
 
 	# Some streets are named "Набережная Ленина улица"
@@ -425,8 +427,10 @@ sub fixUkrainian($) {
 	s/([1-9])а/$1-а/;
 
 	# Put toponym to the end
-	if (/^(проспект|проїзд|провулок|узвіз|в’їзд|тупик|дорога|площа|бульвар|шосе|підйом|лінія|міст)\s+(.*)/i) {
+	if ($_ !~ /Лінія залізниці вулиця/i) {
+	  if (/^(проспект|проїзд|провулок|узвіз|в’їзд|тупик|дорога|площа|бульвар|шосе|підйом|лінія|міст)\s+(.*)/i) {
 		$_ = "$2 $1";
+	  }
 	}
 
 	if (/^набережна\s+/i) {
