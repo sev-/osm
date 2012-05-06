@@ -372,6 +372,25 @@ while (my $line = $csv->getline_hr($fh)) {
 	$poi{'tag'}->{'name:ru'} = $line->{title_ru};
 	$poi{'tag'}->{'name:en'} = $line->{title_en};
   }
+
+  if ('' ne $line->{phone_code1} or '' ne $line->{phone_number1}) {
+	$poi{'tag'}->{'phone'} = "($line->{phone_code1})$line->{phone_number1}";
+  }
+  if ('' ne $line->{phone_code2} or '' ne $line->{phone_number2}) {
+	$poi{'tag'}->{'phone2'} = "($line->{phone_code2})$line->{phone_number2}";
+  }
+  if ('' ne $line->{phone_code3} or '' ne $line->{phone_number3}) {
+	$poi{'tag'}->{'phone3'} = "($line->{phone_code3})$line->{phone_number3}";
+  }
+  if ('' ne $line->{phone_code4} or '' ne $line->{phone_number4}) {
+	$poi{'tag'}->{'phone4'} = "($line->{phone_code4})$line->{phone_number4}";
+  }
+  if ('' ne $line->{url}) {
+	$poi{'tag'}->{'website'} = "$line->{url}";
+  }
+  if ('' ne $line->{email}) {
+	$poi{'tag'}->{'contact:email'} = "$line->{email}";
+  }
   
   print Geo::Parse::OSM::object_to_xml(\%poi);
   
