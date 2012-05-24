@@ -94,6 +94,10 @@ while (my $line = $csv->getline_hr($fh)) {
 	  $line->{population} = "";
 	}
 
+	if ($line->{koatuu} =~ /був /) {
+	  $line->{koatuu} = "";
+	}
+
 	if (exists $line->{zip}) {
 	  $line->{zip} =~ s/&nbsp;/ /g;
 	  $line->{zip} =~ s/ та /, /g;
