@@ -315,6 +315,10 @@ sub checkIfRussian($) {
 	return 1 if /ная$/;
 	return 1 if /яя$/;
 	return 1 if /cкий$/;
+	return 1 if /ского\s+/;
+	return 1 if /ской\s+/;
+	return 1 if /ского$/;
+	return 1 if /ской$/;
 	return 1 if /кое$/;
 
 	return 1 if /(улица|спуск|набережная|шоссе|переулок|площадь|пер\.|линия|мост|проезд)/i;
