@@ -142,7 +142,7 @@ sub processHighway($) {
 			if (checkRussianSyntax $name) {
 				$new = tryAutoAddRusToponym($name);
 
-				if ($new ne $name) {
+				if (0 && $new ne $name) {
 					print STDERR "LOG: Autoadded Russian $name -> $new $entry->{id}\n";
 
 					$name = $new;
@@ -156,7 +156,7 @@ sub processHighway($) {
 
 			# Perhaps there is name in Ukrainian, then we may
 			# swap it
-			if (exists $entry->{tag}->{"name:uk"}) {
+			if (0 && exists $entry->{tag}->{"name:uk"}) {
 				# Do not overwrite existing tag
 				if (not exists $entry->{tag}->{"name:ru"}) {
 					$entry->{tag}->{"name:ru"} = $name;
@@ -186,7 +186,7 @@ sub processHighway($) {
 			if (checkUkrainianSyntax $name) {
 				$new = tryAutoAddUkrToponym($name);
 
-				if ($new ne $name) {
+				if (0 && $new ne $name) {
 					print STDERR "LOG: Autoadded Ukrainian $name -> $new $entry->{id}\n";
 
 					$name = $new;
