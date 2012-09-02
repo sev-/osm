@@ -549,7 +549,7 @@ sub transliterate($) {
 	s/ц/ts/g;
 	s/ч/ch/g;
 	s/ш/sh/g;
-	s/щ/sch/g;
+	s/щ/shch/g;
 	s/ ю/ yu/g;
 	s/ю/iu/g;
 	s/ я/ ya/g;
@@ -565,7 +565,7 @@ sub transliterate($) {
 	s/Ц/Ts/g;
 	s/Ч/Ch/g;
 	s/Ш/Sh/g;
-	s/Щ/Sch/g;
+	s/Щ/Shch/g;
 	s/Ю/Yu/g;
 	s/Я/Ya/g;
 	tr/АБВГҐДЕЗИІЙКЛМНОПРСТУФ/ABVHGDEZYIYKLMNOPRSTUF/;
