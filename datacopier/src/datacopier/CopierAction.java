@@ -12,6 +12,7 @@ import org.openstreetmap.josm.Main;
 import org.openstreetmap.josm.actions.mapmode.MapMode;
 import org.openstreetmap.josm.gui.MapFrame;
 import org.openstreetmap.josm.data.coor.LatLon;
+import org.openstreetmap.josm.data.osm.PrimitiveDeepCopy;
 import org.openstreetmap.josm.gui.layer.Layer;
 import org.openstreetmap.josm.gui.layer.OsmDataLayer;
 import org.openstreetmap.josm.data.osm.*;
@@ -106,7 +107,7 @@ public class CopierAction extends MapMode implements MouseListener {
             }
         }
 
-        if (w1 != null && w2 != null) {
+        if (w1 != null && w2 != null) { // Merging tags
             // Copy over tags
             List<Command> commands = new ArrayList<Command>();
 
@@ -119,8 +120,100 @@ public class CopierAction extends MapMode implements MouseListener {
                     tr("Merge tags for way {0}", w1.getDisplayName(DefaultNameFormatter.getInstance())),
                     commands));
             }
+        } else if (w1 == null && w2 != null) { // We need to copy over the way
+			Collection<OsmPrimitive> ways = new LinkedList<OsmPrimitive> ();
 
-         }
+			ways.add(w2);
+
+			pasteData(new PrimitiveDeepCopy(ways));
+		}
+    }
+
+    public  void pasteData(PrimitiveDeepCopy pasteBuffer) {
+        // Make a copy of pasteBuffer and map from old id to copied data id
+        List<PrimitiveData> bufferCopy = new ArrayList<PrimitiveData>();
+        Map<Long, Long> newNodeIds = new HashMap<Long, Long>();
+        Map<Long, Long> newWayIds = new HashMap<Long, Long>();
+        Map<Long, Long> newRelationIds = new HashMap<Long, Long>();
+        for (PrimitiveData data: pasteBuffer.getAll()) {
+            if (data.isIncomplete()) {
+                continue;
+            }
+            PrimitiveData copy = data.makeCopy();
+            copy.clearOsmId();
+            if (data instanceof NodeData) {
+                newNodeIds.put(data.getUniqueId(), copy.getUniqueId());
+            } else if (data instanceof WayData) {
+                newWayIds.put(data.getUniqueId(), copy.getUniqueId());
+            } else if (data instanceof RelationData) {
+                newRelationIds.put(data.getUniqueId(), copy.getUniqueId());
+            }
+            bufferCopy.add(copy);
+        }
+
+        // Update references in copied buffer
+        for (PrimitiveData data:bufferCopy) {
+            if (data instanceof NodeData) {
+                NodeData nodeData = (NodeData)data;
+				nodeData.setEastNorth(nodeData.getEastNorth());
+            } else if (data instanceof WayData) {
+                List<Long> newNodes = new ArrayList<Long>();
+                for (Long oldNodeId: ((WayData)data).getNodes()) {
+                    Long newNodeId = newNodeIds.get(oldNodeId);
+                    if (newNodeId != null) {
+                        newNodes.add(newNodeId);
+                    }
+                }
+                ((WayData)data).setNodes(newNodes);
+            } else if (data instanceof RelationData) {
+                List<RelationMemberData> newMembers = new ArrayList<RelationMemberData>();
+                for (RelationMemberData member: ((RelationData)data).getMembers()) {
+                    OsmPrimitiveType memberType = member.getMemberType();
+                    Long newId = null;
+                    switch (memberType) {
+                    case NODE:
+                        newId = newNodeIds.get(member.getMemberId());
+                        break;
+                    case WAY:
+                        newId = newWayIds.get(member.getMemberId());
+                        break;
+                    case RELATION:
+                        newId = newRelationIds.get(member.getMemberId());
+                        break;
+                    }
+                    if (newId != null) {
+                        newMembers.add(new RelationMemberData(member.getRole(), memberType, newId));
+                    }
+                }
+                ((RelationData)data).setMembers(newMembers);
+            }
+        }
+
+        /* Now execute the commands to add the duplicated contents of the paste buffer to the map */
+
+        Main.main.undoRedo.add(new AddPrimitivesCommand(bufferCopy));
+        Main.map.mapView.repaint();
+    }
+
+    protected static List<Node> getUnimportantNodes(Way way) {
+        List<Node> nodePool = new LinkedList<Node>();
+        for (Node n : way.getNodes()) {
+            List<OsmPrimitive> referrers = n.getReferrers();
+            if (!n.isDeleted() && referrers.size() == 1 && referrers.get(0).equals(way)
+                    && !hasInterestingKey(n) && !nodePool.contains(n)) {
+                nodePool.add(n);
+            }
+        }
+        return nodePool;
+    }
+
+    protected static boolean hasInterestingKey(OsmPrimitive object) {
+        for (String key : object.getKeys().keySet()) {
+            if (!OsmPrimitive.isUninterestingKey(key)) {
+                return true;
+            }
+        }
+        return false;
     }
 
     @Override
