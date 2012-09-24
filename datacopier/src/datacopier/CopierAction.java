@@ -118,8 +118,6 @@ public class CopierAction extends MapMode implements MouseListener {
 				SequenceCommand replaceGeometryCommands = buildReplaceWayCommand(w1, w2);
 
 				if (replaceGeometryCommands != null) {
-					//commands.addAll(replaceGeometryCommands);
-
 					Main.main.undoRedo.add(new SequenceCommand(
 											   tr("Replace way {0}", w1.getDisplayName(DefaultNameFormatter.getInstance())),
 											   replaceGeometryCommands));
@@ -287,7 +285,7 @@ public class CopierAction extends MapMode implements MouseListener {
             for (Way w : searchWays) {
                 if (ctrl || Geometry.nodeInsidePolygon(new Node(coor), w.getNodes()))
 
-                        if (w.get("building") == "yes")
+                        if (w.get("building") != null)
                             return w;
             }
         }
@@ -358,9 +356,6 @@ public class CopierAction extends MapMode implements MouseListener {
 
         // Remove geometry way from selection
         Main.main.getCurrentDataSet().clearSelection(referenceWay);
-
-        // And delete old geometry way
-        commands.add(new DeleteCommand(referenceWay));
 
         // Delete nodes that are not used anymore
         if( !nodePool.isEmpty() )
