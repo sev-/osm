@@ -12,6 +12,8 @@ BEGIN { $| = 1; }
 binmode STDERR, ':utf8';
 
 my $numb = 0;
+my $numr = 0;
+my $numnr = 0;
 
 my $dumpname = shift or die "Usage: $0: nadoloni.osm";
 
@@ -26,11 +28,12 @@ my $processor = sub {
 
 	if (exists $_[0]->{tag}->{"building"}) {
 	  push @{ $buildings[$_[0]->{tag}->{"street:id"}]}, $_[0]->{id};
-	  $numb++;
 
 	  unless (defined $streets[$_[0]->{tag}->{"street:id"}]) {
 		return;
 	  }
+
+	  $numb++;
 
 	  delete $_[0]->{tag}->{"street:id"};
 
@@ -49,12 +52,15 @@ my $processor = sub {
 	  if (exists $_[0]->{tag}->{"street:id"}) {
 		my $sId = $_[0]->{tag}->{"street:id"};
 
+		if ($streets[$sId]->{"replace"} eq "t") {
+			if ($_[0]->{tag}->{'name'} ne $streets[$sId]->{"name"}) {
+		 	  $_[0]->{'action'} = 'modify';
+			  $_[0]->{tag}->{'name'} = $streets[$sId]->{"name"};
+			}
+		}
+
 		if (defined $buildings[$sId]) {
 		  $_[0]->{'action'} = 'modify';
-
-		  if ($streets[$sId]->{"replace"} eq "t") {
-			$_[0]->{tag}->{'name'} = $streets[$sId]->{"name"};
-		  }
 
 		  for my $bld (@{ $buildings[$sId] }) {
 			unless (grep { $_->{ref} eq $bld} @{ $_[0]->{members} }) { # Do not put duplicates
@@ -65,9 +71,10 @@ my $processor = sub {
 		  undef $buildings[$sId];
 		}
 
-		if (exists $_[0]->{action}) {
-		  print Geo::Parse::OSM::object_to_xml($_[0]);
-		}
+	  }
+	  if (exists $_[0]->{action}) {
+		print Geo::Parse::OSM::object_to_xml($_[0]);
+		$numr++;
 	  }
 	}
 };
@@ -119,8 +126,16 @@ for $b (0..$#buildings) {
   }
 
   print Geo::Parse::OSM::object_to_xml(\%relation);
+
+  $numnr++;
 }
 
 close IN;
 
 print "</osm>\n";
+
+print STDERR "
+Buildings: $numb
+Relations: $numr, new: $numnr
+";
+
