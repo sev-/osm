@@ -3,19 +3,19 @@
 # Bot for automatic processing of Ukraine territory
 #
 # Ukraine extracts are available at
-#  http://download.geofabrik.de/osm/europe/
+#  http://download.geofabrik.de/openstreetmap/europe/ukraine.osm.pbf
 #  http://downloads.cloudmade.com/europe/ukraine/
 #
-# Copyright (c) 2010, Eugene Sandulenko <sev.mail@gmail.com>
+# Copyright (c) 2010-2012, Eugene Sandulenko <sev.mail@gmail.com>
 #
 # This file is provided under GPLv2 license.
 #
 # Usage:
-#  perl -CD _sevbot.pl ukraine.osm.bz2 >_sevbot.osm 2>_sevbot.log
+#  perl -CD _sevbot.pl ukraine.osm >_sevbot.osm 2>_sevbot.log
 #
 # Since the exports on goefabrik not always match it is advised to reapply bounding polygon
 #  getbound.pl 60199 -o ukraine.poly
-#  osmconvert -v ukraine.osm.pbf -B=ukraine.poly --complete-ways --complex-ways >ukraine.osm
+#  osmconvert ukraine.osm.pbf -B=ukraine.poly --complete-ways --complex-ways >ukraine.osm
 
 use utf8;
 use Geo::Parse::OSM;
@@ -356,7 +356,7 @@ sub fixRussian($) {
 	s/подъем/подъём/i;
 
 	# Put toponym to the end
-	unless (/(проспект|проезд|переулок|спуск|въезд|тупик|дорога|площадь|бульвар|шоссе|подъём|линия|мост)$/i) {
+	unless (/(проспект|проезд|переулок|спуск|въезд|тупик|дорога|площадь|бульвар|шоссе|подъём|линия|мост|улица)$/i) {
 	  if (/^(проспект|проезд|переулок|спуск|въезд|тупик|дорога|площадь|бульвар|шоссе|подъём|линия|мост)\s+(.*)/i) {
 		$_ = "$2 $1";
 	  }
@@ -431,7 +431,7 @@ sub fixUkrainian($) {
 	s/([1-9])а/$1-а/;
 
 	# Put toponym to the end
-	unless (/(проспект|проїзд|провулок|узвіз|в’їзд|тупик|дорога|площа|бульвар|шосе|підйом|лінія|міст)$/i) {
+	unless (/(проспект|проїзд|провулок|узвіз|в’їзд|тупик|дорога|площа|бульвар|шосе|підйом|лінія|міст|вулиця)$/i) {
 	  if (/^(проспект|проїзд|провулок|узвіз|в’їзд|тупик|дорога|площа|бульвар|шосе|підйом|лінія|міст)\s+(.*)/i) {
 		$_ = "$2 $1";
 	  }
