@@ -110,7 +110,8 @@ sub processHighway($) {
 		if ($name =~ /[A-Za-z]/) {
 			$tmpname = $name;
 			$tmpname =~ tr/AIOPCaiopc/АІОРСаіорс/;
-
+			$tmpname =~ s/ІІІ/III/; # Replace latin numbers back
+			
 			if ($tmpname !~ /[A-Za-z]/) {
 				$entry->{tag}->{"name"} = $tmpname;
 				$modified = 1;
