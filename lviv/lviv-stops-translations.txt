@@ -128,9 +128,9 @@ Car market,uk,Авторинок
 Chekhova,en,Chekhova
 Chekhova,ru,Чехова
 Chekhova,uk,Чехова
-Cemetery(Bilogorshcha),en,Cemetery(Bilogorshcha)
-Cemetery(Bilogorshcha),uk,Кладовище(Білогорща)
-Cemetery(Bilohorshcha),ru,Кладбище (Белогорща)
+Cemetery (Bilohorshcha),en,Cemetery(Bilogorshcha)
+Cemetery (Bilohorshcha),uk,Кладовище (Білогорща)
+Cemetery (Bilohorshcha),ru,Кладбище (Белогорща)
 Cemetery,en,Cemetry
 Cemetery,ru,Кладбище
 Cemetery,uk,Кладовище
@@ -311,6 +311,8 @@ Horodotska-Kylparkivska,uk,Городоцька-Кульпарківська
 Hostels,en,Hostels
 Hostels,ru,Общежития
 Hostels,uk,Гуртожитки
+House of Culture named Hnat Khotkevych,ru,Дом культуры имени Гната Хоткевича
+House of Culture named Hnat Khotkevych,uk,Будинок культури імені Гната Хоткевича
 Hrinchenka- Bohdana Hmelnytskoho,en,Hrinchenka- Bohdana Hmelnytskoho
 Hrinchenka- Bohdana Hmelnytskoho,ru,Гринченко - Богдана Хмельницкого
 Hrinchenka- Bohdana Hmelnytskoho,uk,Грінченка-Богдана Хмельницького
@@ -855,9 +857,9 @@ Riashivska,uk,Ряшівська
 Riashivska-Patona,en,Riashivska-Patona
 Riashivska-Patona,ru,Ряшевская-Патона
 Riashivska-Patona,uk,Ряшівська-Патона
-Riasne 1,en,Riasne 1
-Riasne 1,ru,Рясное-1
-Riasne 1,uk,Рясне-1
+Riasne-1,en,Riasne 1
+Riasne-1,ru,Рясное-1
+Riasne-1,uk,Рясне-1
 Riasne-2,en,Riasne-2
 Riasne-2,ru,Рясное-2
 Riasne-2,uk,Рясне-2
@@ -885,9 +887,9 @@ Riasne-2-Sykhiv,uk,Рясне-2-Сихів
 Rizni sqr,en,Rizni sqr
 Rizni sqr,ru,Площадь Резни
 Rizni sqr,uk,пл. Різні
-Roksolany,en,Roksolany
-Roksolany,ru,Роксоланы
-Roksolany,uk,Роксаляни
+Roksoliany,en,Roksolany
+Roksoliany,ru,Роксоланы
+Roksoliany,uk,Роксоляни
 Rukavychka,en,Rukavychka
 Rukavychka,ru,ТЦ Рукавичка
 Rukavychka,uk,ТЦ Рукавичка

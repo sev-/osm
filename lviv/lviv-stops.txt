@@ -89,7 +89,7 @@ stop_id,stop_name,stop_lat,stop_lon
 88,Turianskоho,49.847256,24.002686
 89,Eroshenka,49.847946,24.000095
 90,Briukhovetska,49.859863,23.970774
-91,Riasne 1,49.868416,23.950817
+91,Riasne-1,49.868416,23.950817
 92,Stelmakha,49.870396,23.946247
 93,Riasne-2,49.875504,23.937948
 94,Tatarbunarska,49.854191,23.986460
@@ -252,7 +252,7 @@ stop_id,stop_name,stop_lat,stop_lon
 251,Clinic,49.874874,24.041416
 252,Lenona,49.879608,24.039240
 253,Shchurata,49.879356,24.035748
-254,Mykulaichuka,49.876202,24.040838
+254,Mykolaichuka,49.876202,24.040838
 255,Epicentr,49.82448739755525,23.910434246063232
 256,Pylypa Orlyka,49.870472,24.032389
 257,Pylypa Orlyka,49.870552,24.031477
@@ -314,7 +314,7 @@ stop_id,stop_name,stop_lat,stop_lon
 314,Zaliznychnyi Vokzal (Railway Station),49.839539,23.995884
 315,Doroshenka str.,49.840176,24.027176
 316,Rynok sqr.,49.841423,24.032169
-317,Ruska str.,49.841888,24.034321
+317,Ruska str,49.841888,24.034321
 318,Tserkva Olhy i Yelyzavety,49.837639,24.005444
 319,Halytska(Vynnyky),49.817940,24.157986
 320,Velychkovskoho,49.875229,23.932632

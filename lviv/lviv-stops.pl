@@ -9,7 +9,6 @@
 
 use utf8;
 use Geo::Parse::OSM;
-use Geo::Coordinates::DecimalDegrees;
 use Text::CSV;
 
 BEGIN { $| = 1; }
