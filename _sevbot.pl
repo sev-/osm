@@ -330,6 +330,8 @@ sub checkIfRussian($) {
 sub fixRussian($) {
 	$_ = shift;
 
+	s/\s+/ /g;
+
 	if (/^(?:ул\.|улица|у\.|ул)\s+(.*)/i) {
 		return "$1 улица";
 	}
@@ -388,6 +390,8 @@ sub fixRussian($) {
 
 sub fixUkrainian($) {
 	$_ = shift;
+
+	s/\s+/ /g;
 
 	if (/^(?:вул\.|вулица|вулиця|в\.|вул)\s+(.*)/i) {
 		return "$1 вулиця";
