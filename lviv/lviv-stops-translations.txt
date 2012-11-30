@@ -1,0 +1,1369 @@
+trans_id,lang,translation
+700 richchia sqr,en,700 richchia sqr
+700 richchia sqr,ru,пл. 700 летия
+700 richchia sqr,uk,Площа 700 річчя
+Academy Of Veterinary Medicine,en,Academy Of Veterinary Medicine
+Academy Of Veterinary Medicine,ru,Академия ветеринарной медицины
+Academy Of Veterinary Medicine,uk,Академія ветеренарної медицини
+Akademika Sakharova,en,Akademika Sakharova
+Akademika Sakharova,ru,Академика Сахарова
+Akademika Sakharova,uk,Академіка Сахарова
+Akvapark,en,Akvapark
+Akvapark,ru,Аквапарк
+Akvapark,uk,Аквапарк
+Airport,en,Airport
+Airport,ru,Аеропорт
+Airport,uk,Аеропорт
+Airport-Cene,en,Airport-Cene
+Airport-Cene,ru,Аеропорт-Центр
+Airport-Cene,uk,Аеропорт-Центр
+Akademiya Mystetstv (Art Academy),en,Akademiya Mystetstv (Art Academy)
+Akademiya Mystetstv (Art Academy),ru,Академия искусств
+Akademiya Mystetstv (Art Academy),uk,Академія Мистецтв
+Akademiya Sukhoputnykh Viysk (Army Academy),en,Akademiya Sukhoputnykh Viysk (Army Academy)
+Akademiya Sukhoputnykh Viysk (Army Academy),ru,Академия сухопутных войск
+Akademiya Sukhoputnykh Viysk (Army Academy),uk,Академія сухопутних військ
+Antonovycha,en,Antonovycha
+Antonovycha,ru,Антоновыча
+Antonovycha,uk,Антоновича
+Antonycha,en,Antonycha
+Antonycha,ru,Антонича
+Antonycha,uk,Антонича
+Arctychna,en,Arctychna
+Arctychna,ru,Арктическая
+Arctychna,uk,Арктична
+Arkasa,en,Arkasa
+Arkasa,ru,Аркаса
+Arkasa,uk,Аркаса
+asylum,en,asylum
+asylum,ru,Психиатрическая больница
+asylum,uk,Психіатрична лікарня
+At the request,en,At the request
+At the request,ru,По требованию
+At the request,uk,На вимогу
+ATP 14630,en,ATP 14630
+ATP 14630,ru,АТП 14630
+ATP 14630,uk,АТП 14630
+Aviaciina,en,Aviaciina
+Aviaciina,ru,Авиационная
+Aviaciina,uk,Авіаційна
+Avtobusnyi zavod (Bus Factory),en,Bus Factory
+Avtobusnyi zavod (Bus Factory),ru,Автобусный завод
+Avtobusnyi zavod (Bus Factory),uk,Автобусний завод
+Avtovokzal (Central Bus Station),en,Central Bus Station
+Avtovokzal (Central Bus Station),ru,Автовокзал
+Avtovokzal (Central Bus Station),uk,Автовокзал
+Beethovena,en,Beethovena
+Beethovena,ru,Бетховина
+Beethovena,uk,Бетховина
+Beresteiskoi Unii sqr.,en,Beresteiskoi Unii sqr.
+Beresteiskoi Unii sqr.,ru,Площадь Берестейской Унии
+Beresteiskoi Unii sqr.,uk,Площа Берестейської Унії
+Biberovycha,en,Biberovycha
+Biberovycha,ru,Биберовича
+Biberovycha,uk,Біберовича
+Bilogorshcha-Zernova,en,Bilogorshcha-Zernova
+Bilogorshcha-Zernova,ru,Белогорща-Зернова
+Bilogorshcha-Zernova,uk,Білогорща-Зернова
+Bilohorshcha,en,Bilohorshcha
+Bilohorshcha,ru,Белогорща
+Bilohorshcha,uk,Білогорща
+Bohdanivska 161,en,Bogdanivska 161
+Bohdanivska 161,ru,Богдановская 161
+Bohdanivska 161,uk,Богданівська 161
+Bohdana Khmelnyckoho-Center(Sunday),en,Bohdana Khmelnyckoho-Center(Sunday)
+Bohdana Khmelnyckoho-Center(Sunday),ru,Богдана Хмельницкого-Центр (Восресенье)
+Bohdana Khmelnyckoho-Center(Sunday),uk,Богдана Хмельницького-Центр (Неділя)
+Bohdana Khmelnyckoho,en,Bohdana Khmelnyckoho
+Bohdana Khmelnyckoho,ru,Богдана Хмельницкого
+Bohdana Khmelnyckoho,uk,Богдана Хмельницького
+Bohdana Khmelnyckoho-Center,en,Bohdana Khmelnyckoho-Center
+Bohdana Khmelnyckoho-Center,ru,Богдана Хмельницкого-Центр
+Bohdana Khmelnyckoho-Center,uk,Богдана Хмельницького-Центр
+Bohdanivska 192,en,Bohdanivska 192
+Bohdanivska 192,ru,Богдановская 192
+Bohdanivska 192,uk,Богданівська 192
+Bohdanivska,en,Bohdanivska
+Bohdanivska,ru,Богдановская
+Bohdanivska,uk,Богданівська
+Boichuka,en,Boichuka
+Boichuka,ru,Бойчука
+Boichuka,uk,Бойчука
+Briuhovychi,en,Briuhovychi
+Briuhovychi,ru,Брюховичи
+Briuhovychi,uk,Брюховичі
+Briuhovychi-Zernova,en,Briuhovychi-Zernova
+Briuhovychi-Zernova,ru,Брюховичи-Зернова
+Briuhovychi-Zernova,uk,Брюховичі-Зернова
+Briukhovetska,en,Briukhovetska
+Briukhovetska,ru,Брюховецкая
+Briukhovetska,uk,Брюховецька
+BTI,en,BTI
+BTI,ru,БТИ
+BTI,uk,БТІ
+Bus Station №2,en,Bus Station №2
+Bus Station №2,ru,Автостанция № 2
+Bus Station №2,uk,Автостанція №2
+Bus Station,en,Bus Station
+Bus Station,ru,Автовокзал
+Bus Station,uk,Автовокзал
+Bus station-Riashivska,en,Bus station-Riashivska
+Bus station-Riashivska,ru,Автовокзал-Ряшевская
+Bus station-Riashivska,uk,Автовокзал-Ряшівська
+Bus Stations №2,en,Bus Stations №2
+Bus Stations №2,ru,Автобусная Станция № 2
+Bus Stations №2,uk,Автобусна Станція № 2
+Bus Stations №5,en,Bus Stations №5
+Bus Stations №5,ru,Автостанция № 5
+Bus Stations №5,uk,Автостанція № 5
+Bus Stations №6,en,Bus Stations №6
+Bus Stations №6,ru,Автобсная станция №6
+Bus Stations №6,uk,Автобусна станція №6
+Business center,en,Business center
+Business center,ru,Бизнес-центр
+Business center,uk,Бізнес-центр
+Car market,en,Car market
+Car market,ru,Авторынок
+Car market,uk,Авторинок
+Chekhova,en,Chekhova
+Chekhova,ru,Чехова
+Chekhova,uk,Чехова
+Cemetery(Bilogorshcha),en,Cemetery(Bilogorshcha)
+Cemetery(Bilogorshcha),uk,Кладовище(Білогорща)
+Cemetery(Bilohorshcha),ru,Кладбище (Белогорща)
+Cemetery,en,Cemetry
+Cemetery,ru,Кладбище
+Cemetery,uk,Кладовище
+Center,en,Center
+Center,ru,Центр
+Center,uk,Центр
+Center-Airport,en,Center-Airport
+Center-Airport,ru,Центр-Аеропорт
+Center-Airport,uk,Центр-Аеропорт
+Center-Naukova,en,Center-Naukova
+Center-Naukova,ru,Центр-Наукова
+Center-Naukova,uk,Центр-Наукова
+Center-Riashivska,en,Center-Riashivska
+Center-Riashivska,ru,Цетр-Ряшевская
+Center-Riashivska,uk,Центр-Ряшівська
+Center-Subotivska,en,Center-Subotivska
+Center-Subotivska,ru,Центр-Субботовская
+Center-Subotivska,uk,Центр-Суботівська
+Chervonoi Kalyny avenu,ru,Проспект Красной Калины
+Chervonoi Kalyny avenu-Kropyvnytskoho,en,Chervonoi Kalyny avenu-Kropyvnytskoho
+Chervonoi Kalyny avenu-Kropyvnytskoho,ru,пр. Красной Калины-Кропывницкого
+Chervonoi Kalyny avenu-Kropyvnytskoho,uk,Червоної Калини-Кропивницького
+Chervonoi Kalyny avenu-Mykolaichuka,en,Chervonoi Kalyny avenu-Mykolaichuka
+Chervonoi Kalyny avenu-Mykolaichuka,ru,пр. Красной Калины-Мыколайчука
+Chervonoi Kalyny avenu-Mykolaichuka,uk,Червоної Калини-Миколайчука
+Chervonoi Kalyny,en,Chervonoi Kalyny
+Chervonoi Kalyny,ru,Проспект Красной Калины
+Chervonoi Kalyny,uk,Проспект Червоної Калини
+Chervonoi Kalyny-Bohdana Khmelnyckoho,en,Chervonoi Kalyny-Bohdana Khmelnyckoho
+Chervonoi Kalyny-Bohdana Khmelnyckoho,ru,пр. Красной Калины-Богдана Хмельницкого
+Chervonoi Kalyny-Bohdana Khmelnyckoho,uk,Червоної Калини-Богдана Хмельницького
+Chervonoi Kalyny-Center(Sunday),en,Chervonoi Kalyny-Center(Sunday)
+Chervonoi Kalyny-Center(Sunday),ru,пр. Красной Калины-Центр (Восресенье)
+Chervonoi Kalyny-Center(Sunday),uk,Червоної Калини-Центр (Неділя)
+Chervonoi Kalyny-Center,en,Chervonoi Kalyny-Center
+Chervonoi Kalyny-Center,ru,пр. Красной Калины-Центр
+Chervonoi Kalyny-Center,uk,пр.Червоної Калини-Центр
+Chervonoyi Kalyny avenu,en,Chervonoyi Kalyny avenu
+Chervonoi Kalyny avenu,uk,Проспект Червоної Калини
+Chornovola avenu,en,Chornovola avenu
+Chornovola avenu,ru,пр. Чорновола
+Chornovola avenu,uk,пр. Чорновола
+Chornovola-Lypynskoho,en,Chornovola-Lypynskoho
+Chornovola-Lypynskoho,ru,Черновола-Липинского
+Chornovola-Lypynskoho,uk,Чорновола-Липинського
+Chornovola-Varshavska,en,Chornovola-Varshavska
+Chornovola-Varshavska,ru,Черновола-Варшавская
+Chornovola-Varshavska,uk,Чорновола-Варшавська
+Chukarina,en,Chukarina
+Chukarina,ru,Чукарина
+Chukarina,uk,Чукаріна
+Chyhyrynska,en,Chyhyrynska
+Chyhyrynska,ru,Чигиринская
+Chyhyrynska,uk,Чигиринська
+Clinic,en,Clinic
+Clinic,ru,Больница скорой помощи
+Clinic,uk,Лікарня Швидкої Допомоги
+College of Communication,en,College of Communication
+College of Communication,ru,Техникум связи
+College of Communication,uk,Технікум зв'язку
+Collehe of Technology,en,Collehe of Technology
+Collehe of Technology,ru,Технологический колледж
+Collehe of Technology,uk,Технологічний коледж
+DBK,en,DBK
+DBK,ru,ДБК
+DBK,uk,ДБК
+Demianska,en,Demianska
+Demianska,ru,Демянська
+Demianska,uk,Демянська
+Dnisterovska,en,Dnisterovska
+Dnisterovska,ru,Днестровская
+Dnisterovska,uk,Дністровська
+Doroshenka str.,en,Doroshenka str.
+Doroshenka str.,ru,Дорошенко
+Doroshenka str.,uk,Дорошенка
+Doroshenka,en,Doroshenka
+Doroshenka,ru,Дорошенка
+Doroshenka,uk,Дорошенка
+Drahana,en,Drahana
+Drahana,ru,Драгана
+Drahana,uk,Драгана
+Drizh zavod,en,Drizh zavod
+Drizh zavod,ru,Дрожзавод
+Drizh zavod,uk,Дріжь завод
+Dukhovna Seminariya (Seminary),en,Seminary
+Dukhovna Seminariya (Seminary),ru,Духовная семинария
+Dukhovna Seminariya (Seminary),uk,Духовна Семінарія
+Dunaiska,en,Dunaiska
+Dunaiska,ru,Дунайская
+Dunaiska,uk,Дунайська
+Dytiacha Poliklinika (Children's Health Centre),en,Children's Health Centre
+Dytiacha Poliklinika (Children's Health Centre),ru,Детская поликлиника
+Dytiacha Poliklinika (Children's Health Centre),uk,Дитяча поліклініка
+Dytiacha Poliklinika No. 4 (Children's Health Centre No.4),en,Children's Health Centre No.4
+Dytiacha Poliklinika No. 4 (Children's Health Centre No.4),ru,Детская поликлиника № 4
+Dytiacha Poliklinika No. 4 (Children's Health Centre No.4),uk,Дитяча Поліклініка №4
+Dytiacha Zaliznytsia,en,Dytiacha Zaliznytsia (Children's Railway)
+Dytiacha Zaliznytsia,ru,Детская Железная Дорога
+Dytiacha Zaliznytsia,uk,Дитяча Залізниця
+Dzherelna,en,Dzherelna
+Dzherelna,ru,Джерельна
+Dzherelna,uk,Джерельна
+Epicentr,en,Epicentr
+Epicentr,ru,Эпицентр
+Epicentr,uk,Епіцентр
+Eroshenka,en,Eroshenka
+Eroshenka,ru,Ерошенка
+Eroshenka,uk,Ерошенка
+fabryka Dynamo,en,fabryka Dynamo
+fabryka Dynamo,ru,Фабрика Динамо
+fabryka Dynamo,uk,Фабрика Динамо
+Factory Svitnok,en,Factory Svitnok
+Factory Svitnok,ru,Фабрика Свитанок
+Factory Svitnok,uk,Фабрика Світанок
+Fanernyi zavod,en,Fanernyi zavod
+Fanernyi zavod,ru,Фанерный завод
+Fanernyi zavod,uk,Фанерний завод
+Fiakr Lviv,en,Fiakr Lviv
+Fiakr Lviv,ru,Фиакр Львов
+Fiakr Lviv,uk,Фіакр Львів
+G.Washingtona,en,G.Washingtona
+G.Washingtona,ru,Джорджа Вашингтона
+G.Washingtona,uk,Джорджа Вашингтона
+Gorodotska-Bohdana Khmelnyckoho,en,Gorodotska-Bohdana Khmelnyckoho
+Gorodotska-Bohdana Khmelnyckoho,ru,Городцкая-Богдана Хмельницкого
+Gorodotska-Bohdana Khmelnyckoho,uk,Городоцька-Богдана Хмельницького
+Haevskoi,en,Haevskoi
+Haevskoi,ru,Гаевської
+Haevskoi,uk,Гаевської
+Haidamatska,en,Haidamatska
+Haidamatska,ru,Гайдамацкая
+Haidamatska,uk,Гайдамацька
+Halytska sqr.,en,Halytska sqr.
+Halytska sqr.,ru,Площадь Галицкая
+Halytska sqr.,uk,Площа Галицька
+Halytska(Vynnyky),en,Halytska(Vynnyky)
+Halytska(Vynnyky),ru,Галицкая (Вынныки)
+Halytska(Vynnyky),uk,Галицька (Винники)
+Halytske perekhrestia,en,Halytske perekhrestia
+Halytske perekhrestia,ru,Галицкий перекресток
+Halytske perekhrestia,uk,Галицьке Перехрестя
+Heroyiv Krut,en,Heroyiv Krut
+Heroyiv Krut,ru,Героев Крут
+Heroyiv Krut,uk,Героїв Крут
+Hippodrome,en,Hippodrome
+Hippodrome,ru,Ипподром
+Hippodrome,uk,Іподром
+Hnata Khotkevycha,en,Hnata Khotkevycha
+Hnata Khotkevycha,ru,Хоткевича
+Hnata Khotkevycha,uk,Хоткевича
+Holovna Poshta (Central Post Office),en,Central Post Office
+Holovna Poshta (Central Post Office),ru,Главная почта
+Holovna Poshta (Central Post Office),uk,Головна пошта
+Horbachevskoho,en,Horbachevskoho
+Horbachevskoho,ru,Горбачевского
+Horbachevskoho,uk,Горбачевського
+Hordynskykh,en,Hordynskykh
+Hordynskykh,ru,Гординских
+Hordynskykh,uk,Гординських
+Horodnytska,en,Horodnytska
+Horodnytska,ru,Городницкая
+Horodnytska,uk,Городницька
+Horodocka-Center,en,Horodocka-Center
+Horodocka-Center,ru,Городоцкая-Центр
+Horodocka-Center,uk,Городоцька-Центр
+Horodotska,en,Horodotska
+Horodotska,ru,Городоцкая
+Horodotska,uk,Городоцька
+Horodotska-Center(Sunday),en,Horodotska-Center(Sunday)
+Horodotska-Center(Sunday),ru,Городоцкая-Центр (Восресенье)
+Horodotska-Center(Sunday),uk,Городоцька-Центр (неділя)
+Horodotska-Kopernyka,en,Horodotska-Kopernyka
+Horodotska-Kopernyka,ru,Городоцкая-Коперника
+Horodotska-Kopernyka,uk,Городоцька-Коперника
+Horodotska-Kylparkivska,en,Horodotska-Kylparkivska
+Horodotska-Kylparkivska,ru,Городоцкая-Кульпарковская
+Horodotska-Kylparkivska,uk,Городоцька-Кульпарківська
+Hostels,en,Hostels
+Hostels,ru,Общежития
+Hostels,uk,Гуртожитки
+Hrinchenka- Bohdana Hmelnytskoho,en,Hrinchenka- Bohdana Hmelnytskoho
+Hrinchenka- Bohdana Hmelnytskoho,ru,Гринченко - Богдана Хмельницкого
+Hrinchenka- Bohdana Hmelnytskoho,uk,Грінченка-Богдана Хмельницького
+Hrinchenka,en,Hrinchenka
+Hrinchenka,ru,Гринченко
+Hrinchenka,uk,Грінченка
+Ivan Franko sqr.,en,Ivan Franko sqr.
+Ivan Franko sqr.,ru,Площадь Ивана Франко
+Ivan Franko sqr.,uk,Площа Івана Франка
+Ivan Franko str.,en,Ivan Franko str.
+Ivan Franko str.,ru,Улица Ивана Франко
+Ivan Franko str.,uk,Вулиця Івана Франка
+Ivana Franka (Vynnyky),en,Ivana Franka (Vynnyky)
+Ivana Franka (Vynnyky),ru,Ивана Франко (Винники)
+Ivana Franka (Vynnyky),uk,Івана Франка (Винники)
+Ivana Franka,en,Ivana Franka
+Ivana Franka,ru,Ивана Франко
+Ivana Franka,uk,Івана Франка
+Ivana Franko (Murovane),en,Ivana Franko (Murovane)
+Ivana Franko (Murovane),ru,Ивана Франко (Мурованое)
+Ivana Franko (Murovane),uk,Івана Франка (Муроване)
+Ivana Vyhovskoho,en,Ivana Vyhovskoho
+Ivana Vyhovskoho,ru,Ивана Выговского
+Ivana Vyhovskoho,uk,Івана Виговського
+Ivasiuka(Vynnyky),en,Ivasiuka(Vynnyky)
+Ivasiuka(Vynnyky),ru,Ивасюка (Винники)
+Ivasiuka(Vynnyky),uk,вул.Івасюка (Винники)
+Ivasiuka,en,Ivasiuka
+Ivasiuka,ru,Ивасюка
+Ivasiuka,uk,Івасюка
+Izoliatornyi zavod,en,Izoliatornyi zavod
+Izoliatornyi zavod,ru,Изоляторный завод
+Izoliatornyi zavod,uk,Ізоляторний завод
+Karadzhycha,en,Karadzhycha
+Karadzhycha,ru,Караджича
+Karadzhycha,uk,Караджича
+Karbysheva,en,Karbysheva
+Karbysheva,ru,Карбышева
+Karbysheva,uk,Карбишева
+Kashtanova,en,Kashtanova
+Kashtanova,ru,Каштановая
+Kashtanova,uk,Каштанова
+Kavaleridze,en,Kavaleridze
+Kavaleridze,ru,Кавалеридзе
+Kavaleridze,uk,Кавалерідзе
+Keramichnyi zavod,en,Keramichnyi zavod
+Keramichnyi zavod,ru,Керамический завод
+Keramichnyi zavod,uk,Керамічний завод
+Khimichna,en,Khimichna
+Khimichna,ru,Химическая
+Khimichna,uk,Хімічна
+Kiltseva,en,Kiltseva
+Kiltseva,ru,Кольцевая дорога (Вынныки)
+Kiltseva,uk,Кільцева дорога (Винники)
+King Cross Leopolis,ru,Кинг Кросс Леополис
+King Cross,en,King Cross
+King Cross,ru,ТРЦ Кинг Кросс Леополис
+King Cross,uk,ТРЦ Кінг Кросс Леополіс
+King Сross-Cener(Sunday),en,King Сross-Cener(Sunday)
+King Сross-Cener(Sunday),ru,King Сross-Центр (Восресенье)
+King Сross-Cener(Sunday),uk,King Сross-Центр (Неділя)
+King Сross-Cener,en,King Сross-Cener
+King Сross-Cener,ru,King Cross-Центр
+King Сross-Cener,uk,King Cross-Центр
+King Сross-Railway Station,en,King Сross-Railway Station
+King Сross-Railway Station,ru,King Сross-Железнодорожный вокзал
+King Сross-Railway Station,uk,King Сross-Залізничний вокзал
+King Сross-Vynnyky,en,King Сross-Vynnyky
+King Сross-Vynnyky,ru,King Сross-Вынныки
+King Сross-Vynnyky,uk,King Сross-Винники
+King Cross Leopolis,en,Kinh Cross Leopolis
+King Cross Leopolis,uk,Кінг Кросс Леополіс
+Kinoteatr im. Dovzhenka (Dovzhenko Cinema),en,Dovzhenko Cinema
+Kinoteatr im. Dovzhenka (Dovzhenko Cinema),ru,Кинотеатр им. А. Довженко
+Kinoteatr im. Dovzhenka (Dovzhenko Cinema),uk,Кінотеатр ім. О. Довженка
+Kniahyni Olhy,en,Kniahyni Olhy
+Kniahyni Olhy,ru,Княгини Ольги
+Kniahyni Olhy,uk,Княгині Ольги
+Kniahyni Olhy-Center,en,Kniahyni Olhy-Center
+Kniahyni Olhy-Center,ru,Княгини Ольги-Центр
+Kniahyni Olhy-Center,uk,Княгині Ольги-Центр
+Kniazia Romana,en,Kniazia Romana
+Kniazia Romana,ru,Княза Романа
+Kniazia Romana,uk,Князя Романа
+Kolodiazna,en,Kolodiazna
+Kolodiazna,ru,Колодязна
+Kolodiazna,uk,Колодязна
+Kolomyiska,en,Kolomyiska
+Kolomyiska,ru,Коломыйская
+Kolomyiska,uk,Коломийська
+Konovaltsia,en,Konovaltsia
+Konovaltsia,ru,Коновальца
+Konovaltsia,uk,Коновальця
+Kopernyka,en,Kopernyka
+Kopernyka,ru,Коперника
+Kopernyka,uk,Коперника
+Kopytynskoho,en,Kopytynskoho
+Kopytynskoho,ru,Копистинского
+Kopytynskoho,uk,Копистинського
+Korduby,en,Korduby
+Korduby,ru,Кордубы
+Korduby,uk,Кордуби
+Korduby-King Сross,en,Korduby-King Сross
+Korduby-King Сross,ru,Кордубы-King Сross
+Korduby-King Сross,uk,Кордуби-King Сross
+Koreiska,en,Koreiska
+Koreiska,ru,Корейська
+Koreiska,uk,Корейська
+Kotyka,en,Kotyka
+Kotyka,ru,Котика
+Kotyka,uk,Котика
+Kovelska,en,Kovelska
+Kovelska,ru,Ковельська
+Kovelska,uk,Ковельська
+Kovelska-Subotivska,en,Kovelska-Subotivska
+Kovelska-Subotivska,ru,Ковельска-Субботовская
+Kovelska-Subotivska,uk,Ковельська-Суботівська
+Kozelnytska,en,Kozelnytska
+Kozelnytska,ru,Козельницкая
+Kozelnytska,uk,Козельницька
+Kropyvnytskogo,en,Kropyvnytskogo
+Kropyvnytskogo,ru,Кропивницкого
+Kropyvnytskogo,uk,Кропивницького
+Kropyvnytskoho sqr,en,Kropyvnytskoho sqr.
+Kropyvnytskoho sqr,ru,Площадь Кропивницкого
+Kropyvnytskoho sqr,uk,Площа Кропивницького 
+Kruhla,en,Kruhla
+Kruhla,ru,Кругла
+Kruhla,uk,Кругла
+Krychevskoho,en,Krychevskoho
+Krychevskoho,ru,Кричевского
+Krychevskoho,uk,Кричевського
+Krymska,en,Krymska
+Krymska,ru,Крымская
+Krymska,uk,Кримська
+Krypzavod,en,Krypzavod
+Krypzavod,ru,Крупзавод
+Krypzavod,uk,Крупзавод
+Kryvchytska doroha,en,Kryvchytska doroha
+Kryvchytska doroha,ru,Крывчицкая дорога
+Kryvchytska doroha,uk,Кривчицька Дорога
+Kryvonosa,en,Kryvonosa
+Kryvonosa,ru,Крывоноса
+Kryvonosa,uk,Кривоноса
+Kulchytskoi,en,Kulchytskoi
+Kulchytskoi,ru,Кульчицкой
+Kulchytskoi,uk,Кульчицької
+Kulisha,en,Kulisha
+Kulisha,ru,Кулиша
+Kulisha,uk,Куліша
+Kulparkiv,en,Kulparkiv
+Kulparkiv,ru,Кульпарков
+Kulparkiv,uk,Кульпарків
+Kulparkivska,en,Kulparkivska
+Kulparkivska,ru,Кульпарковская
+Kulparkivska,uk,Кульпарківська
+Kulykivska,en,Kulykivska
+Kulykivska,ru,Кулыковская
+Kulykivska,uk,Куликівська
+Kurortna,en,Kurortna
+Kurortna,ru,Курортная
+Kurortna,uk,Курортна
+Kyivska,en,Kyivska
+Kyivska,ru,Киевская
+Kyivska,uk,Київська
+Lavrivskoho,en,Lavrivskoho
+Lavrivskoho,ru,Лавривского
+Lavrivskoho,uk,Лаврівського
+Lenona,en,Lenona
+Lenona,ru,Ленона
+Lenona,uk,Ленона
+Levandivska-Shyroka,en,Levandivska-Shyroka
+Levandivska-Shyroka,ru,Левандовская-Широкая
+Levandivska-Shyroka,uk,Левандівська-Широка
+Levytskoho str,en,Levytskoho str
+Levytskoho str,ru,Левицкого
+Levytskoho str,uk,Левицького
+Likarnia No. 5 (Hospital No.5),en,Hospital No.5
+Likarnia No. 5 (Hospital No.5),ru,5-я городская больница
+Likarnia No. 5 (Hospital No.5),uk,5-та міська лікарня
+Likarnia No. 8 (Hospital No.8),en,Hospital No.8
+Likarnia No. 8 (Hospital No.8),ru,Больница № 8
+Likarnia No. 8 (Hospital No.8),uk,Лікарня № 8
+Linkolna,en,Linkolna
+Linkolna,ru,Авраама Линкольна
+Linkolna,uk,Авраама Лінкольна
+Liubinska,en,Liubinska
+Liubinska,ru,Любинская
+Liubinska,uk,Любінська
+LK ATP №1,en,LK ATP №1
+LK ATP №1,ru,ЛК АТП № 1
+LK ATP №1,uk,ЛК АТП № 1
+Lomonosova,en,Lomonosova
+Lomonosova,ru,Ломоносова
+Lomonosova,uk,Ломоносова
+Lotne Pole,en,Lotne Pole
+Lotne Pole,ru,Летное поле
+Lotne Pole,uk,Льотне Поле
+Luhanska,en,Luhanska
+Luhanska,ru,Луганская
+Luhanska,uk,Луганська
+Lviv Politechnic University,en,Lviv Politechnic University
+Lviv Politechnic University,ru,Университет Львовская Политехника
+Lviv Politechnic University,uk,Університет Львівська Політехніка
+Lvivelektrotrans,en,Lvivelektrotrans
+Lvivelektrotrans,ru,ЛьвовЭлектротранс
+Lvivelektrotrans,uk,Львівелектротранс
+Lvovska,en,Lvovska
+Lvovska,ru,Львовская
+Lvovska,uk,Львівська
+Lyceum named heroes of Kruty,en,Lyceum named heroes of Kruty
+Lyceum named heroes of Kruty,ru,Лицей им. Героев Крут
+Lyceum named heroes of Kruty,uk,Ліцей ім. Героїв Крут
+Lychakivska,en,Lychakivska
+Lychakivska,ru,Лычаковская
+Lychakivska,uk,Личаківська
+Lychakivska-Trakt Hlynianskyi,en,Lychakivska-Trakt Hlynianskyi
+Lychakivska-Trakt Hlynianskyi,ru,Лычаковская-Глинянский тракт
+Lychakivska-Trakt Hlynianskyi,uk,Личаківська-Глинянський тракт
+Lychakivskyi Tsvyntar (Lychakiv Cemetry),en,Lychakiv Cemetry
+Lychakivskyi Tsvyntar (Lychakiv Cemetry),ru,Лычаковское кладбище
+Lychakivskyi Tsvyntar (Lychakiv Cemetry),uk,Личаківський цвинтар
+Lypova Aleia,en,Lypova Aleia
+Lypova Aleia,ru,Липовая аллея
+Lypova Aleia,uk,Липова Алея
+Lypynskoho,en,Lypynskoho
+Lypynskoho,ru,Липинского
+Lypynskoho,uk,Липинського
+Lypynskoho-Mykolaichuka,en,Lypynskoho-Mykolaichuka
+Lypynskoho-Mykolaichuka,ru,Лыпынского-Мыколайчука
+Lypynskoho-Mykolaichuka,uk,Липинського-Миколайчука
+Lypynskoho-Zamarstynivska,en,Lypynskoho-Zamarstynivska
+Lypynskoho-Zamarstynivska,ru,Липинского-Замарстыновская
+Lypynskoho-Zamarstynivska,uk,Липинського-Замарстинівська
+Lystopadovho Сhynu,en,Lystopadovho Сhynu
+Lystopadovho Сhynu,ru,Листопадового Чина
+Lystopadovho Сhynu,uk,Листопадового Чину
+Lysynetska,en,Lysynetska
+Lysynetska,ru,Лисеницкая
+Lysynetska,uk,Лисинецька
+Lysynychi,en,Lysynychi
+Lysynychi,ru,Лисиничи
+Lysynychi,uk,Лисиничі
+Lysynychi-Railway Station,en,Lysynychi-Railway Station
+Lysynychi-Railway Station,ru,Лысынычи-Железнодорожный вокзал
+Lysynychi-Railway Station,uk,Лисиниці-Залізничний вокзал
+Lytvynenko,en,Lytvynenko
+Lytvynenko,ru,Литвиненко
+Lytvynenko,uk,Литвиненка
+Lyvarna,en,Lyvarna
+Lyvarna,ru,Литейная
+Lyvarna,uk,Ливарна
+Mahazin,en,Mahazin
+Mahazin,ru,Магазин
+Mahazin,uk,Магазин
+Mahnus,en,Shputalna (Mahnus)
+Mahnus,ru,Шпытальна (ТЦ Магнус)
+Mahnus,uk,Шпитальна (ТЦ Магнус)
+Maksymovycha,en,Maksymovycha
+Maksymovycha,ru,Максимовича
+Maksymovycha,uk,Максимовича
+Maksymovycha-Murovane,en,Maksymovycha-Murovane
+Maksymovycha-Murovane,ru,Максымовыча-Муроване
+Maksymovycha-Murovane,uk,Максимовича-Муроване
+Mall Arsen,en,Mall Arsen
+Mall Arsen,ru,ТЦ Арсен
+Mall Arsen,uk,ТЦ Арсен
+Mall Furshet,en,Mall Furshet
+Mall Furshet,ru,ТЦ Фуршет
+Mall Furshet,uk,ТЦ Фуршет
+Mall Iskra,en,Mall Iskra
+Mall Iskra,ru,ТЦ Искра
+Mall Iskra,uk,ТЦ Іскра
+Mall Srynia,en,Mall Srynia
+Mall Srynia,ru,ТЦ Скрыня
+Mall Srynia,uk,ТЦ Скриня
+Mall VAM,en,Mall VAM
+Mall VAM,ru,ТЦ ВАМ
+Mall VAM,uk,ТЦ ВАМ
+market Pivdenyi,en,market Pivdenyi
+market Pivdenyi,ru,Рынок Пивденный
+market Pivdenyi,uk,Ринок Південний
+market Shuvar,en,market Shuvar
+market Shuvar,ru,Рынок Шувар
+market Shuvar,uk,Ринок Шувар
+Maiorivka,en,Mayorivka
+Maiorivka,ru,Майоровка
+Maiorivka,uk,Майорівка
+Mazepy,en,Mazepy
+Mazepy,ru,Гетмана Мазепы
+Mazepy,uk,Гетьмана Мазепи
+Meblevyi Kombinat,en,Meblevyi Kombinat
+Meblevyi Kombinat,ru,Мебельный Комбинат
+Meblevyi Kombinat,uk,Меблевий Комбінат
+Mechnikova,en,Mechnikova
+Mechnikova,ru,Мечникова
+Mechnikova,uk,Мечнікова
+Medical University,en,Medical University
+Medical University,ru,Медицинский университет
+Medical University,uk,Медичний університет
+Medovoi Pechery,en,Medovoi Pechery
+Medovoi Pechery,ru,Медовой Печеры
+Medovoi Pechery,uk,Медової Печери
+Medovoi Pechery-Symonenka,en,Medovoi Pechery-Symonenka
+Medovoi Pechery-Symonenka,ru,Медовои Печеры-Симоненка
+Medovoi Pechery-Symonenka,uk,Медової Печери-Симоненка
+Melnyka,en,Melnyka
+Melnyka,ru,Мельника
+Melnyka,uk,Мельника
+Metro,en,Metro
+Metro,ru,Метро
+Metro,uk,Метро
+Mira i K,en,Mira i K
+Mira i K,ru,Мира и К
+Mira i K,uk,Міра і К
+monument Bandery,en,monument Bandery
+monument Bandery,ru,Памятник Бандере
+monument Bandery,uk,Пам'ятник Бандері
+Motozavod (Moto Factory),en,Moto Factory
+Motozavod (Moto Factory),ru,Мотозавод
+Motozavod (Moto Factory),uk,Мотозавод
+Murovane,en,Murovane
+Murovane,ru,Мурованое
+Murovane,uk,Муроване Муроване
+Museum of Ivan Franko,en,Museum of Ivan Franko
+Museum of Ivan Franko,ru,Музей Ивана Франко
+Museum of Ivan Franko,uk,Музей Івана Франка
+Mushaka,en,Mushaka
+Mushaka,ru,Мушака
+Mushaka,uk,Мушака
+Mushaka-Zamarstynivska,en,Mushaka-Zamarstynivska
+Mushaka-Zamarstynivska,ru,Мушака-Замарстыновская
+Mushaka-Zamarstynivska,uk,Мушака-Замарстинівська
+Mykolaichuka,en,Mykolaichuka
+Mykolaichuka,ru,Миколайчука
+Mykolaichuka,uk,Миколайчука
+Mytna sqr.,en,Mytna sqr.
+Mytna sqr.,ru,Площадь Таможенная
+Mytna sqr.,uk,Площа Митна
+Narodna,en,Narodna
+Narodna,ru,Народная
+Narodna,uk,Народна
+Naukova,en,Naukova
+Naukova,ru,Научная
+Naukova,uk,Наукова
+Naukova-Bohdana Khmelnyckoho,en,Naukova-Bohdana Khmelnyckoho
+Naukova-Bohdana Khmelnyckoho,ru,Наукова-Богдана Хмельницкого
+Naukova-Bohdana Khmelnyckoho,uk,Наукова-Богдана Хмельницького
+Naukova-Petrushevycha sqr.,en,Naukova-Petrushevycha sqr.
+Naukova-Petrushevycha sqr.,ru,Наукова-пл.Петрушевыча
+Naukova-Petrushevycha sqr.,uk,Наукова-пл.Петрушевича
+Naukova-Srtyiska,ru,Наукова-Стрийская
+Naukova-Srtyiska,uk,Наукова-Стрийська
+Navrotskoho,en,Navrotskoho
+Navrotskoho,ru,Навроцького
+Navrotskoho,uk,Навроцького
+Neptun,en,Neptun
+Neptun,ru,Нептун
+Neptun,uk,Нептун
+Nezalezhnosti,en,Nezalezhnosti
+Nezalezhnosti,ru,Независимости
+Nezalezhnosti,uk,Незалежності
+New Terminal,en,Airport (New Terminal)
+New Terminal,ru,Аэропорт (Новый Терминал)
+New Terminal,uk,Аеропорт (Новий Термінал)
+Nishchynskoho,en,Nishchynskoho
+Nishchynskoho,ru,Нищинского
+Nishchynskoho,uk,Ніщинського
+Nova Vulytsia(Murovane),en,Nova Vulytsia(Murovane)
+Nova Vulytsia(Murovane),ru,Новая улица (Мурованое)
+Nova Vulytsia(Murovane),uk,Нова вулиця (Муроване)
+Novoznesenska,en,Novoznesenska
+Novoznesenska,ru,Новознесенская
+Novoznesenska,uk,Новознесенська
+Nyzynna,en, Nyzynna
+Nyzynna,ru,Нызынная
+Nyzynna,uk,Низинна
+Oblasna Klinichna Likarnia,en,Oblasna Klinichna Likarnia (Regional Clinic Hospital) 
+Oblasna Klinichna Likarnia,ru,Областная клиническая больница
+Oblasna Klinichna Likarnia,uk,Обласна клінічна лікарня 
+Okean,en,Okean
+Okean,ru,Магазин Океан
+Okean,uk,Магазин Океан
+Okruzhna,en,Okruzhna
+Okruzhna,ru,Окружная
+Okruzhna,uk,Окружна
+Old Sykhiv,en,Old Sykhiv
+Old Sykhiv,ru,Старый Сыхов
+Old Sykhiv,uk,Старий Сихів
+Oleshkivska,en,Oleshkivska
+Oleshkivska,ru,Олешковская
+Oleshkivska,uk,Олешківська
+Opera,en,Opera
+Opera,ru,Оперный театр
+Opera,uk,Оперний театр
+Opryshkivska,en,Opryshkivska
+Opryshkivska,ru,Опришковская
+Opryshkivska,uk,Опришківська
+Ostrianytsi,en,Ostrianytsi
+Ostrianytsi,ru,Якова Остряницы
+Ostrianytsi,uk,Якова Остряниці
+Ovocheva fabryka,en,Ovocheva fabryka
+Ovocheva fabryka,ru,Овощная фабрика
+Ovocheva fabryka,uk,Овочева фабрика
+Ovochevi bazy,en,Ovochevi bazy
+Ovochevi bazy,ru,Овощные базы
+Ovochevi bazy,uk,Овочеві бази
+Palats Kultury im. Hnata Khotkevycha (H. Khotkevych Palace of Culture),en,H. Khotkevych Palace of Culture
+Palats Kultury im. Hnata Khotkevycha (H. Khotkevych Palace of Culture),ru,Дворец культуры им. Г. Хоткевича
+Palats Kultury im. Hnata Khotkevycha (H. Khotkevych Palace of Culture),uk,Палац культури ім. Гната Хоткевича
+Panasa Myrnoho,en,Panasa Myrnoho
+Panasa Myrnoho,ru,Панаса Мирного
+Panasa Myrnoho,uk,Панаса Мирного
+Panasa Sotnyka,en,Panasa Sotnyka
+Panasa Sotnyka,ru,Панаса Сотника
+Panasa Sotnyka,uk,Панаса Сотника
+Pansionat Lviv,en,Pansionat Lviv
+Pansionat Lviv,ru,Пансионат Львов
+Pansionat Lviv,uk,Пансіонат Львів
+Park Kultury (Park of Culture),en,Park of Culture
+Park Kultury (Park of Culture),ru,Парк культуры
+Park Kultury (Park of Culture),uk,Парк Культури
+Pasichna,en,Pasichna
+Pasichna,ru,Пасечная
+Pasichna,uk,Пасічна
+Pasichna-Colleg,en,Pasichna-Colleg
+Pasichna-Colleg,ru,Коледж (Пасичная)
+Pasichna-Colleg,uk,Коледж-Пасічна
+Pasichna-Konovaltsia,en,Pasichna-Konovaltsia
+Pasichna-Konovaltsia,ru,Пасечная-Коновальца
+Pasichna-Konovaltsia,uk,Пасічна-Коновальця
+Pasiky Zubretski,en,Pasiky Zubretski
+Pasiky Zubretski,ru,Пасеки-Зубрицкие
+Pasiky Zubretski,uk,Пасіки-Зубрицькі
+Patona,en,Patona
+Patona,ru,Патона
+Patona,uk,Патона
+Pekarska,en,Pekarska
+Pekarska,ru,Пекарская
+Pekarska,uk,Пекарська
+Persenkivka stantion,en,Persenkivka stantion
+Persenkivka stantion,ru,Станция Персенковка
+Persenkivka stantion,uk,Станція Персенківка
+Perynatalnyi Tsentr (Perinatal Centre),en,Perinatal Centre
+Perynatalnyi Tsentr (Perinatal Centre),ru,Перенатальный центр
+Perynatalnyi Tsentr (Perinatal Centre),uk,Перенатальний центр
+Petliury,en,Petliury
+Petliury,ru,Петлюры
+Petliury,uk,Петлюри
+Petra Pancha,en,Petra Pancha
+Petra Pancha,ru,Панча
+Petra Pancha,uk,Панча
+Petrushevycha sqr.,en,Petrushevycha sqr.
+Petrushevycha sqr.,ru,пл.Петрушевыча
+Petrushevycha sqr.,uk,пл.Петрушевича
+Pid Dubom,en,Pid Dubom
+Pid Dubom,ru,Под Дубом
+Pid Dubom,uk,Під Дубом
+Pid Holoskom,en,Pid Holoskom
+Pid Holoskom,ru,Под Голоском
+Pid Holoskom,uk,Під Голоском
+Pid Holoskom-Sykhiv,en,Pid Holoskom-Sykhiv
+Pid Holoskom-Sykhiv,ru,Под Голоском-Сыхов
+Pid Holoskom-Sykhiv,uk,Під Голоском-Сихів
+Pidvalna str.,en,Pidvalna str.
+Pidvalna str.,ru,Подвальная
+Pidvalna str.,uk,Підвальна
+Plastova,en,Plastova
+Plastova,ru,Пластовая
+Plastova,uk,Пластова
+Pliazhna,en,Pliazhna
+Pliazhna,ru,Пляжная
+Pliazhna,uk,Пляжна
+Pluhova,en,Pluhova
+Pluhova,ru,Плугова
+Pluhova,uk,Плугова
+Pohulianka,en,Pohulianka
+Pohulianka,ru,Погулянка
+Pohulianka,uk,Погулянка
+Poliklinika MVS (Policlinic of the Internal Affiars Ministry),en,PPoliclinic of the Internal Affiars Ministry
+Poliklinika MVS (Policlinic of the Internal Affiars Ministry),ru,Поликлиника УМВД
+Poliklinika MVS (Policlinic of the Internal Affiars Ministry),uk,Поліклініка УМВС
+Poliklinika No. 4 (Policlinic No.4),en,Policlinic No.4
+Poliklinika No. 4 (Policlinic No.4),ru,Поликлиника № 4
+Poliklinika No. 4 (Policlinic No.4),uk,Поліклініка №4
+Poliklinika No.5 (Policlinic No.5),en,Policlinic No.5
+Poliklinika No.5 (Policlinic No.5),ru,Поликлиника № 5
+Poliklinika No.5 (Policlinic No.5),uk,Поліклініка № 5
+Poliklinika,ru,Поликлиника
+Poliklinika,uk,Поліклініка
+Pulmolohichnyi center,en,Pulmolohichnyi center
+Pulmolohichnyi center,ru,Пульмологический центер
+Pulmolohichnyi center,uk,Пульмологічний центер
+Polova,en,Polova
+Polova,ru,Полевая
+Polova,uk,Польова
+Polova-Sykhiv,en,Polova-Sykhiv
+Polova-Sykhiv,ru,Полова-Сыхов
+Polova-Sykhiv,uk,Польова-Сихів
+Povitiana,en,Povitiana
+Povitiana,ru,Воздушная
+Povitiana,uk,Повітряна
+Promyslova,en,Promyslova
+Promyslova,ru,Промышленная
+Promyslova,uk,Промислова
+Provesin,en,Provesin
+Provesin,ru,Провесна
+Provesin,uk,Провесінь
+Prymiskyi Vokzal (Suburban Train Station),en,Suburban Train Station
+Prymiskyi Vokzal (Suburban Train Station),ru,Пригородный вокзал
+Prymiskyi Vokzal (Suburban Train Station),uk,Приміський вокзал
+Puliuia,en,Puliuia
+Puliuia,ru,Пулюя
+Puliuia,uk,Пулюя
+Pylypa Orlyka,en,Pylypa Orlyka
+Pylypa Orlyka,ru,Филиппа Орлика
+Pylypa Orlyka,uk,Пилипа Орлика
+Railway Station,en,Railway Station
+Railway Station,ru,Железнодорожный вокзал
+Railway Station,uk,Залізничний вокзал
+Railway station-Bohdana Khmelnyckoho,en,Railway station-Bohdana Khmelnyckoho
+Railway station-Bohdana Khmelnyckoho,ru,Железнодорожный вокзал-Богдана Хмельницкого
+Railway station-Bohdana Khmelnyckoho,uk,Залізничний вокзал-Богдана Хмельницького
+Railway Station-Center,en,Railway Station-Center
+Railway Station-Center,ru,Железнодорожный вокзал-Центр
+Railway Station-Center,uk,Залізничний вокзал-Центр
+Railway station-Chervonoi Kalyny avenu,en,Railway station-Chervonoi Kalyny avenu
+Railway station-Chervonoi Kalyny avenu,ru,Железнодорожный вокзал-пр. Красной Калины
+Railway station-Chervonoi Kalyny avenu,uk,Залізничний вокзал-Червоної Калини
+Railway Station-Lypynskoho,en,Railway Station-Lypynskoho
+Railway Station-Lypynskoho,ru,Железнодорожный вокзал-Липинского
+Railway Station-Lypynskoho,uk,Залізничний вокзал-Липинського
+Rakhivska,en,Rakhivska
+Rakhivska,ru,Ряховска
+Rakhivska,uk,Ряхівськая
+Riasanska,en,Riasanska
+Riasanska,ru,Ряснянская
+Riasanska,uk,Рясанська
+Riashivska,en,Riashivska
+Riashivska,ru,Ряшевская
+Riashivska,uk,Ряшівська
+Riashivska-Patona,en,Riashivska-Patona
+Riashivska-Patona,ru,Ряшевская-Патона
+Riashivska-Patona,uk,Ряшівська-Патона
+Riasne 1,en,Riasne 1
+Riasne 1,ru,Рясное-1
+Riasne 1,uk,Рясне-1
+Riasne-2,en,Riasne-2
+Riasne-2,ru,Рясное-2
+Riasne-2,uk,Рясне-2
+Riasne-2-Center(Sunday),en,Riasne-2-Center(Sunday)
+Riasne-2-Center(Sunday),ru,Рясне-2-Центр (Восресенье)
+Riasne-2-Center(Sunday),uk,Рясне-2-Центр (Неділя)
+Riasne-2-Center,en,Riasne-2-Center
+Riasne-2-Center,ru, Рясне-2-Центр
+Riasne-2-Center,uk,Рясне-2-Центр
+Riasne-2-Ivana Franka,en,Riasne-2-Ivana Franka
+Riasne-2-Ivana Franka,ru,Рясне-2-Ивана Франка
+Riasne-2-Ivana Franka,uk,Рясне-2-Івана Франка
+Riasne-2-Perynatalnyi Tsentr,en,Riasne-2-Perinatal Centre
+Riasne-2-Perynatalnyi Tsentr,ru,Рясне-2-Перенатальный центр
+Riasne-2-Perynatalnyi Tsentr,uk,Рясне-2-Перенатальний центр
+Riasne-2-Mykolaichuka,en,Riasne-2-Mykolaichuka
+Riasne-2-Mykolaichuka,ru,Рясне-2-Мыколайчука
+Riasne-2-Mykolaichuka,uk,Рясне-2-Миколайчука
+Riasne-2-Suburban station,en,Riasne-2-Suburban station
+Riasne-2-Suburban station,ru,Рясне-2-Пригородный вокзал
+Riasne-2-Suburban station,uk,Рясне-2-Приміський вокзал
+Riasne-2-Sykhiv,en,Riasne-2-Sykhiv
+Riasne-2-Sykhiv,ru,Рясне-2-Сыхов
+Riasne-2-Sykhiv,uk,Рясне-2-Сихів
+Rizni sqr,en,Rizni sqr
+Rizni sqr,ru,Площадь Резни
+Rizni sqr,uk,пл. Різні
+Roksolany,en,Roksolany
+Roksolany,ru,Роксоланы
+Roksolany,uk,Роксаляни
+Rukavychka,en,Rukavychka
+Rukavychka,ru,ТЦ Рукавичка
+Rukavychka,uk,ТЦ Рукавичка
+Rusalka Dnistrova,en,Rusalka Dnistrova
+Rusalka Dnistrova,ru,Русалка Днистрова
+Rusalka Dnistrova,uk,Русалка Дністрова
+Ruska str,en,Ruska str.
+Ruska str,ru,Русская
+Ruska str,uk,Руська
+Rusovykh,en,Rusovykh
+Rusovykh,ru,Русовых
+Rusovykh,uk,Русових
+Rybchakа,en,Rybchakа
+Rybchaka,ru,Рыбчака
+Rybchaka,uk,Рибчака
+Rynok sqr.,en,Rynok sqr.
+Rynok sqr.,ru,Площадь Рынок
+Rynok sqr.,uk,Площа Ринок
+Sadova,en,Sadova
+Sadova,ru,Садовая
+Sadova,uk,Садова
+Sahaidachnoho,en,Sahaidachnoho
+Sahaidachnoho,ru,Сагайдачного
+Sahaidachnoho,uk,Сагайдачного
+Sakharova,en,Sakharova
+Sakharova,ru,Сахарова
+Sakharova,uk,Сахарова
+Saksaganskogo,en,Saksaganskogo
+Saksaganskogo,ru,Саксаганского
+Saksaganskogo,uk,Саксаганського
+Sepana Bandery str.,en,Sepana Bandery str.
+Sepana Bandery str.,ru,Бандеры
+Sepana Bandery str.,uk,Бандери
+Shchurata,en,Shchurata
+Shchurata,ru,Щурата
+Shchurata,uk,Щурата
+Shevchenka 250-1,en,Shevchenka 250-1
+Shevchenka 250-1,ru,Шевченка 250-1
+Shevchenka 250-1,uk,Шевченка 250-1
+Shevchenka 262,en,Shevchenka 262
+Shevchenka 262,ru,Шевченко 262
+Shevchenka 262,uk,Шевченка 262
+Shevchenka(Vynnyky),en,Shevchenka(Vynnyky)
+Shevchenka(Vynnyky),ru,Шевченко (Вынныкы)
+Shevchenka(Vynnyky),uk,Шевченка (Винники)
+Shevchenka,en,Shevchenka
+Shevchenka,ru,Шевченка
+Shevchenka,uk,Шевченка 
+Shevchenka-Levandivska,en,Shevchenka-Levandivska
+Shevchenka-Levandivska,ru,Шевченко-Левандовская
+Shevchenka-Levandivska,uk,Шевченка-Левандівська
+Shevchenka-Vakhnianyna,en,Shevchenka-Vakhnianyna
+Shevchenka-Vakhnianyna,ru,Шевченка-Вахнянына
+Shevchenka-Vakhnianyna,uk,Шевченка-Вахнянина
+Shevchenkivska Administratsiya (Shevchenkivsky District Administration),en,Shevchenkivsky District Administration
+Shevchenkivska Administratsiya (Shevchenkivsky District Administration),ru,Шевченковская администрация
+Shevchenkivska Administratsiya (Shevchenkivsky District Administration),uk,Шевченківська адміністрація
+Shevchenkivskyi Hay,en,Shevchenkivskyi Hay
+Shevchenkivskyi Hay,ru,Шевченковский Гай
+Shevchenkivskyi Hay,uk,Шевченківський гай
+Shevchenkа,en,Shevchenkа
+Shevchenkа,ru,Шевченко
+Shevchenkа,uk,Шевченка
+Shota Rustaveli,en,Shota Rustaveli
+Shota Rustaveli,ru,Шота Руставели
+Shota Rustaveli,uk,Шота Руставелі
+Shota Rustaveli-Bus station,en,Shota Rustaveli-Bus station
+Shota Rustaveli-Bus station,ru,Шота Руставели-Автовокзал
+Shota Rustaveli-Bus station,uk,Шота Руставелі-Автовокзал
+Shota Rustaveli-Chervonoi Kalyny,en,Shota Rustaveli-Chervonoi Kalyny
+Shota Rustaveli-Chervonoi Kalyny,ru,Шота Руставели-пр. Красной Калины
+Shota Rustaveli-Chervonoi Kalyny,uk,Шота Руставелі-пр.Червоної Калини
+Shota Rustaveli-Sykhiv cemetery,en,Shota Rustaveli-Sykhiv cemetery
+Shota Rustaveli-Sykhiv cemetery,ru,Шота Руставели-Сыховское кладбище
+Shota Rustaveli-Sykhiv cemetery,uk,Шота Руставелі-Сихівське кладовище
+Shumskoho,en,Shumskoho
+Shumskoho,ru,Шумского
+Shumskoho,uk,Шумського
+Shyroka,en,Shyroka
+Shyroka,ru,Широкая
+Shyroka,uk,Широка
+Shyroka-Sykhiv,en,Shyroka-Sykhiv
+Shyroka-Sykhiv,ru,Широка-Сыхов
+Shyroka-Sykhiv,uk,Широка-Сихів
+Shukhevycha,en,Shukhevycha
+Shukhevycha,ru,Шухевыча	
+Shukhevycha,uk,Шухевича
+Siaivo,en,Siaivo
+Siaivo,ru,Сяйво
+Siaivo,uk,Сяйво
+Sichovykh Striltsiv-Zelena,en,Sichovykh Striltsiv Stiltsiv-Zelena
+Sichovykh Striltsiv-Zelena,ru,Сечевых Стрельцов-Зеленая
+Sichovykh Striltsiv-Zelena,uk,Січових Стрільців-Зелена
+Sichovykh Striltsiv-Vygovskoho,en,Sichovykh Striltsiv-Vygovskoho
+Sichovykh Striltsiv-Vygovskoho,ru,Сечевых Стрельцов-Выговского
+Sichovykh Striltsiv-Vygovskoho,uk,Січових Стрільців-Виговського
+Sichovykh Striltsiv,en,Sichovykh Striltsiv
+Sichovykh Striltsiv,ru,Сечевых Стрельцов
+Sichovykh Striltsiv,uk,Січових Стрільців
+Mahnus-Briuhovychi,en,Mahnus-Briuhovychi
+Mahnus-Briuhovychi,ru,Магнус-Брюховычи
+Mahnus-Briuhovychi,uk,Магнус-Брюховичі
+Sknyliv station,en,Sknyliv station
+Sknyliv station,ru,Станция Скнилов
+Sknyliv station,uk,Станція Скнилів
+Sknyliv station-Medovoi Pechery,en,Sknyliv station-Medovoi Pechery
+Sknyliv station-Medovoi Pechery,ru,ст.Скнылов-Медовои Печеры
+Sknyliv station-Medovoi Pechery,uk,станція Скнилів-Медової Печери
+Sknylivok,en,Sknylivok
+Sknylivok,ru,Скниловок
+Sknylivok,uk,Скнилівок
+Skoryny,en,Skoryny
+Skoryny,ru,Скорины
+Skoryny,uk,Скорини
+Skrypnyka,en,Skrypnyka
+Skrypnyka,ru,Скрипника
+Skrypnyka,uk,Скрипника
+Petra Pancha-Epicenter,en,Petra Pancha-Epicenter
+Petra Pancha-Epicenter,ru,Петра Панча-Епицентр
+Petra Pancha-Epicenter,uk,Петра Панча-Епіцентр
+Shcheretska,en,Shcheretska
+Shcheretska,ru,Щирецька
+Shcheretska,uk,Щирецька
+Skrypnyka-Pid Holoskom,en,Skrypnyka-Pid Holoskom
+Skrypnyka-Pid Holoskom,ru,Скрипника-Под Голоска
+Skrypnyka-Pid Holoskom,uk,Скрипника-Під Голоском
+Skyliv station,en,Skyliv station
+Skyliv station,ru,Станция Скнилов
+Skyliv station,uk,Станція Скнилів
+Smal-Stotskoho,en,Smal-Stotskoho
+Smal-Stotskoho,ru,Смаль-Стоцкого
+Smal-Stotskoho,uk,Смаль-Стоцького
+Smolyna,en,Smolyna
+Smolyna,ru,Смолына
+Smolyna,uk,Смолина
+Smolystaia,en,Smolystaia
+Smolystaia,ru,Смолистая
+Smolystaia,uk,Смолиста
+Soborna sqr.,en,Soborna sqr.
+Soborna sqr.,ru,Площадь Соборная
+Soborna sqr.,uk,Площа Соборна
+Sokilnytska,en,Sokilnytska
+Sokilnytska,ru,Сокольская
+Sokilnytska,uk,Сокільницька
+Sosnova,en,Sosnova
+Sosnova,ru,Сосновая
+Sosnova,uk,Соснова
+St.George sqr.,en,St.George sqr.
+St.George sqr.,ru,Площадь Святого Юра
+St.George sqr.,uk,площа Святого Юра
+Stadion Ukrayina (Ukraine Stadium),en,Ukraine Stadium
+Stadion Ukrayina (Ukraine Stadium),ru,Стадион Украина
+Stadion Ukrayina (Ukraine Stadium),uk,Стадіон Україна
+Staryi rynok sqr.,en,Staryi rynok sqr.
+Staryi rynok sqr.,ru,Старый рынок
+Staryi rynok sqr.,uk,Старий Ринок
+Staryi Terminal (Old Terminal),en,Old Terminal
+Staryi Terminal (Old Terminal),ru,Старый терминал
+Staryi Terminal (Old Terminal),uk,Старий Термінал
+station Pidzamche,en,station Pidzamche
+station Pidzamche,ru,Подзамче
+station Pidzamche,uk,Підзамче
+station Sykhiv,en,station Sykhiv
+station Sykhiv,ru,Станция Сыхов
+station Sykhiv,uk,Станція Сихів
+Stelmakha,en,Stelmakha
+Stelmakha,ru,Стельмаха
+Stelmakha,uk,Стельмаха
+Stryiskyi Park,en,Stryiskyi Park
+Stryiskyi Park,ru,Стрыйский парк
+Stryiskyi Park,uk,Стрийський Парк
+Stryiskyi Rynok (Stryisky Market),en,Stryisky Market
+Stryiskyi Rynok (Stryisky Market),ru,Стрыйский рынок
+Stryiskyi Rynok (Stryisky Market),uk,Стрийський ринок
+Styiska-Khutorivka,en,Styiska-Khutorivka
+Styiska-Khutorivka,ru,Стрийская-Хуторивка
+Styiska-Khutorivka,uk,Стрийська-Хуторівка
+Styiska-Naukova,en,Styiska-Naukova
+Styiska-Naukova,ru,Стрийская-Науковая
+Styiska-Naukova,uk,Стрийська-Наукова
+Subotivska,en,Subotivska
+Subotivska,ru,Субботовская
+Subotivska,uk,Суботівська
+Subotivska-Lychakivska,en,Subotivska-Lychakivska
+Subotivska-Lychakivska,ru,Суботовская-Лычаковская
+Subotivska-Lychakivska,uk,Суботівська-Личаківськаі
+Subotivska-Dnisterovska,en,Subotivska-Dnisterovska
+Subotivska-Dnisterovska,ru,Субботовская-Днестровская
+Subotivska-Dnisterovska,uk,Суботівська-Дністровська
+Subotivska-Hlynyanskyi Trakt,en,Subotivska-Hlynyanskyi Trakt
+Subotivska-Hlynyanskyi Trakt,ru,Субботовская-Глинянский тракт
+Subotivska-Hlynyanskyi Trakt,uk,Суботівська-Тракт Глинянський
+Suburban Train Station-Lychakivska-Medovoi Pechery-Zelena-Suburban station,en,Suburban Train Station-Lychakivska-Medovoi Pechery-Zelena-Suburban station
+Suburban Train Station-Lychakivska-Medovoi Pechery-Zelena-Suburban station,ru,Пригородный вокзал-Лычаковская-Медовои Печеры-Зеленая-Пригородный вокзал
+Suburban Train Station-Lychakivska-Medovoi Pechery-Zelena-Suburban station,uk,Приміський Вокзал-Личаківська-Модової Печери-Зелена-Приміський Вокзал
+Suburban Train Station-Zelena-Medovoi Pechery-Lychakivska-Suburban station,en,Suburban Train Station-Zelena-Medovoi Pechery-Lychakivska-Suburban station
+Suburban Train Station-Zelena-Medovoi Pechery-Lychakivska-Suburban station,ru,Пригородный вокзал-Зеленая-Медовои Печеры-Лычаковская-Пригородный вокзал
+Suburban Train Station-Zelena-Medovoi Pechery-Lychakivska-Suburban station,uk,Приміський Вокзал-Зелена-Модової Печери-Личаківська-Приміський Вокзал
+Svobody avenue,en,Svobody avenue
+Svobody avenue,ru,Проспект Свободы
+Svobody avenue,uk,Проспект Свободи
+Sykhiv cemetery,en,Sykhiv cemetery
+Sykhiv cemetery,ru,Сыховское кладбище
+Sykhiv cemetery,uk,Сихівський цвинтар
+Sykhiv,en,Sykhiv
+Sykhiv,ru,Сыхов
+Sykhiv,uk,Сихів
+Sykhiv-Mykolaichuka,en,Sykhiv-Mykolaichuka
+Sykhiv-Mykolaichuka,ru,Сыхов-Мыколайчука
+Sykhiv-Mykolaichuka,uk,Сихів-Миколайчука
+Sykhiv-Shchurata,en,Sykhiv-Shchurata
+Sykhiv-Shchurata,ru,Сыхов-Щурата
+Sykhiv-Shchurata,uk,Сихів-Щурата
+Sykhivska,en,Sykhivska
+Sykhivska,ru,Сыховская
+Sykhivska,uk,Сихівська
+Sykhivska-Bohdana Khmelnyckoho,en,Sykhivska-Bohdana Khmelnyckoho
+Sykhivska-Bohdana Khmelnyckoho,ru,Сыховская-Богдана Хмельницкого
+Sykhivska-Bohdana Khmelnyckoho,uk,Сихівська-Богдана Хмельницького
+Sykhivska-Railway station,en,Sykhivska-Railway station
+Sykhivska-Railway station,ru,Сыховская-Железнодорожный вокзал
+Sykhivska-Railway station,uk,Сихівська-Залізничний вокзал
+Symonenka,en,Symonenka
+Symonenka,ru,Симоненко
+Symonenka,uk,Симоненка
+Tadzhytska,en,Tadzhytska
+Tadzhytska,ru,Таджикская
+Tadzhytska,uk,Таджицька
+Tatarbunarska,en,Tatarbunarska
+Tatarbunarska,ru,Татарбунарська
+Tatarbunarska,uk,Татарбунарська
+Tax Administration,en,Tax Administration
+Tax Administration,ru,Налоговая администрация
+Tax Administration,uk,Податкова адміністрація
+Tserkva Voznesinnia,en,Tserkva Voznesinnia (Church of the Ascension)
+Tserkva Voznesinnia,ru,Церква Вознесения
+Tserkva Voznesinnia,uk,Церква Вознесіння
+Teatr Lialiok (Puppet Theatre),en,Puppet Theatre
+Teatr Lialiok (Puppet Theatre),ru,Театр кукол
+Teatr Lialiok (Puppet Theatre),uk,Театр ляльок
+Teatr Lesi Ukrayinky,en,Teatr Lesi Ukrayinky (Lesia Ukrayinka Theatre)
+Teatr Lesi Ukrayinky,ru,Театр Леси Украинки
+Teatr Lesi Ukrayinky,uk,Театр Лесі Українки
+Teatralna,en,Teatralna
+Teatralna,ru,Театральная
+Teatralna,uk,Театральна
+Ternopilska,en,Ternopilska
+Ternopilska,ru,Тернопольская
+Ternopilska,uk,Тернопільська
+Tobilevycha,en,Tobilevycha
+Tobilevycha,ru,Тобилевича
+Tobilevycha,uk,Тобілевича
+Topolna,en,Topolna
+Topolna,ru,Улица Топольная
+Topolna,uk,вул.Топольна
+Torfiana,en,Torfiana
+Torfiana,ru,Торфяная
+Torfiana,uk,Торф'яна
+Torhovii tsentr (Trading Centre),en,Trading Centre
+Torhovii tsentr (Trading Centre),ru,Торговый Центр
+Torhovii tsentr (Trading Centre),uk,Торговий Центр
+Trakt Hlynianskyi,en,Trakt Hlynianskyi
+Trakt Hlynianskyi,ru,Глинянский тракт
+Trakt Hlynianskyi,uk,Глинянський тракт
+Troleibusna,en,Troleibusna
+Troleibusna,ru,Троллейбусная
+Troleibusna,uk,Тролейбусна
+Troleibusne Depo,ru,Троллейбусное депо
+Troleibusne Depo,uk,Тролейбусне депо
+Trylovskoho,en,Trylovskoho
+Trylovskoho,ru,Трыльвоского
+Trylovskoho,uk,Трильовського
+Try Slony,en,Mall Try Slony
+Try Slony,ru,ТЦ Три Слона 
+Try Slony,uk,ТЦ Три Слони
+Tsenter zainiatosti,en,Tsenter zainiatosti
+Tsenter zainiatosti,ru,Центер Зайнятости
+Tsenter zainiatosti,uk,Центер Зайнятості
+Tserkva Anny (St. Anna Church),en,St. Anna Church
+Tserkva Anny (St. Anna Church),ru,Церковь Анны
+Tserkva Anny (St. Anna Church),uk,Церква Анни
+Tserkva Blahovishchennia (Church of the Annunciation),en,Church of the Annunciation
+Tserkva Blahovishchennia (Church of the Annunciation),ru,Церковь Благовещения
+Tserkva Blahovishchennia (Church of the Annunciation),uk,Церква Благовіщення
+Tserkva Olhy i Yelyzavety,en,Tserkva Olhy i Yelyzavety ( St. Olga and Elizabeth Church) 
+Tserkva Olhy i Yelyzavety,ru,Церковь Ольги и Елизаветы 
+Tserkva Olhy i Yelyzavety,uk,Церква Ольги і Єлизавети
+Tserkva Pokrovy,en,Tserkva Pokrovy
+Tserkva Pokrovy,ru,Церква Покровы
+Tserkva Pokrovy,uk,Церква Покрови
+Tsyrk (Circus),en,Circus
+Tsyrk (Circus),ru,Цирк
+Tsyrk (Circus),uk,Цирк
+Tsytadel,en,Tsytadel
+Tsytadel,ru,Цытадель
+Tsytadel,uk,Цитадель
+Tuberculosis Hospital,en,Tuberculosis Hospital
+Tuberculosis Hospital,ru,Туберкулезная больница
+Tuberculosis Hospital,uk,Туберкульозна лікарня
+Tunelna,en,Tunelna
+Tunelna,ru,Тунельна
+Tunelna,uk,Тунеальна
+Turianskоho,en,Turianskоho
+Turianskоho,ru,Турянского
+Turianskоho,uk,Турянського
+Tychyny,en,Tychyny
+Tychyny,ru,Течины
+Tychyny,uk,Тичини
+Uchylyshche,en,Uchylyshche
+Uchylyshche,ru,Училище
+Uchylyshche,uk,Училище
+Uhorska,en,Uhorska
+Uhorska,ru,Венгерская
+Uhorska,uk,Угорська
+Ukrposhta,en,Ukrposhta
+Ukrposhta,ru,Укрпочта
+Ukrposhta,uk,Укрпошта
+University,en,University
+University,ru,Университет
+University,uk,Університет
+Uspih BM,en,Uspih BM
+Uspih BM,ru,Успех БМ
+Uspih BM,uk,Успіб БМ
+Ustianovycha,en,Ustianovycha
+Ustianovycha,ru,Устяновыча
+Ustianovycha,uk,Устяновича
+Vahnyanyna,en,Vahnyanyna
+Vahnyanyna,ru,Вахнянына
+Vahnyanyna,uk,Вахнянина
+Varshavska,en,Varshavska
+Varshavska,ru,Варшавская
+Varshavska,uk,Варшавська
+Varshavska-Pancha,en,Varshavska-Pancha
+Varshavska-Pancha,ru,Варшавская-Панча
+Varshavska-Pancha,uk,Варшавська-Панча
+Velychkovskoho,en,Velychkovskoho
+Velychkovskoho,ru,Величковского
+Velychkovskoho,uk,Величковського
+Verbytskogo,en,Verbytskogo
+Verbytskogo,ru,Вербицкого
+Verbytskogo,uk,Вербицького
+Vesna,en,Vesna
+Vesna,ru,Весна
+Vesna,uk,Весна
+Vilkhova,en,Vilkhova
+Vilkhova,ru,Ольховая
+Vilkhova,uk,Вільхова
+Vitovskoho,en,Vitovskoho
+Vitovskoho,ru,Витовского
+Vitovskoho,uk,Вітовского
+Vivsiana,en,Vivsiana
+Vivsiana,ru,Овсяная
+Vivsiana,uk,Вівсяна
+Vodohinna,en,Vodohinna
+Vodohinna,ru,Водогонная
+Vodohinna,uk,Водогінна
+Vodohinna stancia,en,Vodohinna stancia
+Vodohinna stancia,ru,Водогонная станция
+Vodohinna stancia,uk,Водогінна Станція
+Volodymyra Velykoho,en,Volodymyra Velykoho
+Volodymyra Velykoho,ru,Владимира Великого
+Volodymyra Velykoho,uk,Володимира Великого
+Volynska,en,Volynska
+Volynska,ru,Волынская
+Volynska,uk,Волинська
+Vuletska,en,Vuletska
+Vuletska,ru,Вулецька
+Vuletska,uk,Вулецька
+Vyhovskoho,en,Vyhovskoho
+Vyhovskoho,ru,Выговского
+Vyhovskoho,uk,Виговского
+Vyhovskoho-Liubinska,en,Vyhovskoho-Liubinska
+Vyhovskoho-Liubinska,ru,Выговского-Любинская
+Vyhovskoho-Liubinska,uk,Виговського-Любінська
+Vynnykivske Ozero (Vynnykivske Lake),en,Vynnykivske Lake
+Vynnykivske Ozero (Vynnykivske Lake),ru,Винниковское озеро
+Vynnykivske Ozero (Vynnykivske Lake),uk,Винниківське озеро
+Vynnyky,en,Vynnyky
+Vynnyky,ru,Вынныки
+Vynnyky,uk,Винники
+Vynnyky-Center(Sunday),en,Vynnyky-Center(Sunday)
+Vynnyky-Center(Sunday),ru,Вынныки-Центр (Восресенье)
+Vynnyky-Center(Sunday),uk,Винники-Центр (Неділя)
+Vynnyky-Center,en,Vynnyky-Center
+Vynnyky-Center,ru,Вынныки-Центр
+Vynnyky-Center,uk,Винники-Центр
+Vynnyky-Kropyvnyckoho,en,Vynnyky-Kropyvnyckoho
+Vynnyky-Kropyvnyckoho,ru,Вынныки-Кропывницкого
+Vynnyky-Kropyvnyckoho,uk,Винники-Кропивницького
+Vysochna,en,Vysochna
+Vysochna,ru,Высочна
+Vysochna,uk,Височна
+Yabluneva,en,Yabluneva
+Yabluneva,ru,Яблоневая
+Yabluneva,uk,Яблунева
+Yalovets,en,Yalovets
+Yalovets,ru,Яловец
+Yalovets,uk,Яловець
+Yanivskyi Tsvyntar (Yaniv Cemetry),en,Yaniv Cemetry
+Yanivskyi Tsvyntar (Yaniv Cemetry),ru,Яновское кладбище
+Yanivskyi Tsvyntar (Yaniv Cemetry),uk,Янівський цвинтар
+Yaroshynskoi,en,Yaroshynskoi
+Yaroshynskoi,ru,Ярошинской
+Yaroshynskoi,uk,Ярошинської
+Yaroslava hasheka,en,Yaroslava hasheka
+Yaroslava hasheka,ru,Ярослава Гашека
+Yaroslava hasheka,uk,Ярослава Гашека
+Yaroslava Mudroho,en,Yaroslava Mudroho
+Yaroslava Mudroho,ru,Ярослава Мудрого
+Yaroslava Mudroho,uk,Ярослава Мудрого
+Yatskova,en,Yatskova
+Yatskova,ru,Яцкова
+Yatskova,uk,Яцкова
+Yavornytskoho,en,Yavornytskoho
+Yavornytskoho,ru,Яворницкого
+Yavornytskoho,uk,Яворницького
+Yosypa Slipoho,en,Yosypa Slipoho
+Yosypa Slipoho,ru,Иосифа Слепого
+Yosypa Slipoho,uk,Йосипа Сліпого
+Zabava,en,Zabava
+Zabava,ru,Забава
+Zabava,uk,Забава
+Zalizniaka,en,Zalizniaka
+Zalizniaka,ru,Зализняка
+Zalizniaka,uk,Залізняка
+Zaliznychnyi Vokzal (Railway Station),en,Railway Station
+Zaliznychnyi Vokzal (Railway Station),ru,Железнодорожный вокзал
+Zaliznychnyi Vokzal (Railway Station),uk,Залізничний вокзал
+Zaliznychna poliklinika,en,Zaliznychna poliklinika (Railway Policlinic)
+Zaliznychna poliklinika,ru,Железнодорожная поликлиника
+Zaliznychna poliklinika,uk,Залізнична полікланіка
+Zamarstynivska,en,Zamarstynivska
+Zamarstynivska,ru,Замарстыновская
+Zamarstynivska,uk,Замарстинівська
+Zamarstynivska-Kniahyni Olhy,en,Zamarstynivska-Kniahyni Olhy
+Zamarstynivska-Kniahyni Olhy,ru,Замарстыновская-Княгини Ольги
+Zamarstynivska-Kniahyni Olhy,uk,Замарстинівська-Княгині Ольги
+Zavod  Frezernykh verstativ,en,Zavod  Frezernykh verstativ
+Zavod  Frezernykh verstativ,ru,Завод Фрезерных станков
+Zavod  Frezernykh verstativ,uk,Завод Фрезерних Верстатів
+Zavod Iskra,en,Zavod Iskra
+Zavod Iskra,ru,Завод Искра
+Zavod Iskra,uk,Завод Іскра
+Zbyralna-Sykhiv,en,Zbyralna-Sykhiv
+Zbyralna-Sykhiv,ru,Збыральная-Сыхов
+Zbyralna-Sykhiv,uk,Збиральна-Сихів
+Zelena str.,en,Zelena str.
+Zelena str.,ru,Зеленая
+Zelena str.,uk,Зелена
+Zelena,en,Zelena
+Zelena,ru,Зеленая
+Zelena,uk,Зелена
+Zelena-Luhanska,en,Zelena-Luhanska
+Zelena-Luhanska,ru,Зеленая-Луганская
+Zelena-Luhanska,uk,Зелена-Луганська
+Bohdanivska-Antonycha,en,Bohdanivska-Antonycha
+Bohdanivska-Antonycha,ru,Зеленая-Антоныча
+Bohdanivska-Antonycha,uk,Зелена-Антонича
+Zernova,en,Zernova
+Zernova,ru,Зерновая
+Zernova,uk,Зернова
+Zernova-Hrinchenka,en,Zernova-Hrinchenka
+Zernova-Hrinchenka,ru,Зерновая-Гринченка
+Zernova-Hrinchenka,uk,Зернова-Грінченка
+Zoriana,en,Zoriana
+Zoriana,ru,Звездная
+Zoriana,uk,Зоряна
+Zubrivska,en,Zubrivska
+Zubrivska,ru,Зубровская
+Zubrivska,uk,Зубрівська
+Pryvokzalnyi rynok,en,Pryvokzalnyi rynok
+Pryvokzalnyi rynok,ru,Привокзальный рынок
+Pryvokzalnyi rynok,uk,Привокзальний ринок
+St.Teodor sqr.,en,St.Teodor sqr.
+St.Teodor sqr.,ru,пл. Святого Теодора
+St.Teodor sqr.,uk,пл. Святого Теодора
+Epicenter,en,Epicenter
+Epicenter,ru,Епицентр
+Epicenter,uk,Епіцентр
