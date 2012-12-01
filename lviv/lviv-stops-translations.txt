@@ -71,9 +71,9 @@ Bilohorshcha,uk,Білогорща
 Bohdanivska 161,en,Bogdanivska 161
 Bohdanivska 161,ru,Богдановская 161
 Bohdanivska 161,uk,Богданівська 161
-Bohdana Khmelnyckoho-Center(Sunday),en,Bohdana Khmelnyckoho-Center(Sunday)
-Bohdana Khmelnyckoho-Center(Sunday),ru,Богдана Хмельницкого-Центр (Восресенье)
-Bohdana Khmelnyckoho-Center(Sunday),uk,Богдана Хмельницького-Центр (Неділя)
+Bohdana Khmelnyckoho-Center (Sunday),en,Bohdana Khmelnyckoho-Center (Sunday)
+Bohdana Khmelnyckoho-Center (Sunday),ru,Богдана Хмельницкого-Центр (Восресенье)
+Bohdana Khmelnyckoho-Center (Sunday),uk,Богдана Хмельницького-Центр (Неділя)
 Bohdana Khmelnyckoho,en,Bohdana Khmelnyckoho
 Bohdana Khmelnyckoho,ru,Богдана Хмельницкого
 Bohdana Khmelnyckoho,uk,Богдана Хмельницького
@@ -101,24 +101,24 @@ Briukhovetska,uk,Брюховецька
 BTI,en,BTI
 BTI,ru,БТИ
 BTI,uk,БТІ
-Bus Station №2,en,Bus Station №2
-Bus Station №2,ru,Автостанция № 2
-Bus Station №2,uk,Автостанція №2
+Bus Station #2,en,Bus Station №2
+Bus Station #2,ru,Автостанция № 2
+Bus Station #2,uk,Автостанція №2
 Bus Station,en,Bus Station
 Bus Station,ru,Автовокзал
 Bus Station,uk,Автовокзал
 Bus station-Riashivska,en,Bus station-Riashivska
 Bus station-Riashivska,ru,Автовокзал-Ряшевская
 Bus station-Riashivska,uk,Автовокзал-Ряшівська
-Bus Stations №2,en,Bus Stations №2
-Bus Stations №2,ru,Автобусная Станция № 2
-Bus Stations №2,uk,Автобусна Станція № 2
-Bus Stations №5,en,Bus Stations №5
-Bus Stations №5,ru,Автостанция № 5
-Bus Stations №5,uk,Автостанція № 5
-Bus Stations №6,en,Bus Stations №6
-Bus Stations №6,ru,Автобсная станция №6
-Bus Stations №6,uk,Автобусна станція №6
+Bus Stations #2,en,Bus Stations №2
+Bus Stations #2,ru,Автобусная Станция № 2
+Bus Stations #2,uk,Автобусна Станція № 2
+Bus Stations #5,en,Bus Stations №5
+Bus Stations #5,ru,Автостанция № 5
+Bus Stations #5,uk,Автостанція № 5
+Bus Stations #6,en,Bus Stations №6
+Bus Stations #6,ru,Автобсная станция №6
+Bus Stations #6,uk,Автобусна станція №6
 Business center,en,Business center
 Business center,ru,Бизнес-центр
 Business center,uk,Бізнес-центр
@@ -128,7 +128,7 @@ Car market,uk,Авторинок
 Chekhova,en,Chekhova
 Chekhova,ru,Чехова
 Chekhova,uk,Чехова
-Cemetery (Bilohorshcha),en,Cemetery(Bilogorshcha)
+Cemetery (Bilohorshcha),en,Cemetery (Bilogorshcha)
 Cemetery (Bilohorshcha),uk,Кладовище (Білогорща)
 Cemetery (Bilohorshcha),ru,Кладбище (Белогорща)
 Cemetery,en,Cemetry
@@ -162,17 +162,21 @@ Chervonoi Kalyny,uk,Проспект Червоної Калини
 Chervonoi Kalyny-Bohdana Khmelnyckoho,en,Chervonoi Kalyny-Bohdana Khmelnyckoho
 Chervonoi Kalyny-Bohdana Khmelnyckoho,ru,пр. Красной Калины-Богдана Хмельницкого
 Chervonoi Kalyny-Bohdana Khmelnyckoho,uk,Червоної Калини-Богдана Хмельницького
-Chervonoi Kalyny-Center(Sunday),en,Chervonoi Kalyny-Center(Sunday)
-Chervonoi Kalyny-Center(Sunday),ru,пр. Красной Калины-Центр (Восресенье)
-Chervonoi Kalyny-Center(Sunday),uk,Червоної Калини-Центр (Неділя)
+Chervonoi Kalyny-Center (Sunday),en,Chervonoi Kalyny-Center (Sunday)
+Chervonoi Kalyny-Center (Sunday),ru,пр. Красной Калины-Центр (Восресенье)
+Chervonoi Kalyny-Center (Sunday),uk,Червоної Калини-Центр (Неділя)
 Chervonoi Kalyny-Center,en,Chervonoi Kalyny-Center
 Chervonoi Kalyny-Center,ru,пр. Красной Калины-Центр
 Chervonoi Kalyny-Center,uk,пр.Червоної Калини-Центр
 Chervonoyi Kalyny avenu,en,Chervonoyi Kalyny avenu
 Chervonoi Kalyny avenu,uk,Проспект Червоної Калини
-Chornovola avenu,en,Chornovola avenu
-Chornovola avenu,ru,пр. Чорновола
-Chornovola avenu,uk,пр. Чорновола
+Children's Clinic #4,ru,Детская больница №4
+Children's Clinic #4,uk,Дитяча Лікарня №4
+Chornovola avenue,en,Chornovola avenu
+Chornovola avenue,ru,пр. Чорновола
+Chornovola avenue,uk,пр. Чорновола
+Chornovola,ru,Чорновола
+Chornovola,uk,Чорновола
 Chornovola-Lypynskoho,en,Chornovola-Lypynskoho
 Chornovola-Lypynskoho,ru,Черновола-Липинского
 Chornovola-Lypynskoho,uk,Чорновола-Липинського
@@ -188,6 +192,8 @@ Chyhyrynska,uk,Чигиринська
 Clinic,en,Clinic
 Clinic,ru,Больница скорой помощи
 Clinic,uk,Лікарня Швидкої Допомоги
+Clinic #4,uk,Лікарня №4
+Clinic #4,ru,Больница №4
 College of Communication,en,College of Communication
 College of Communication,ru,Техникум связи
 College of Communication,uk,Технікум зв'язку
@@ -224,9 +230,9 @@ Dunaiska,uk,Дунайська
 Dytiacha Poliklinika (Children's Health Centre),en,Children's Health Centre
 Dytiacha Poliklinika (Children's Health Centre),ru,Детская поликлиника
 Dytiacha Poliklinika (Children's Health Centre),uk,Дитяча поліклініка
-Dytiacha Poliklinika No. 4 (Children's Health Centre No.4),en,Children's Health Centre No.4
-Dytiacha Poliklinika No. 4 (Children's Health Centre No.4),ru,Детская поликлиника № 4
-Dytiacha Poliklinika No. 4 (Children's Health Centre No.4),uk,Дитяча Поліклініка №4
+Dytiacha Poliklinika #4 (Children's Health Centre #4),en,Children's Health Centre No.4
+Dytiacha Poliklinika #4 (Children's Health Centre #4),ru,Детская поликлиника № 4
+Dytiacha Poliklinika #4 (Children's Health Centre #4),uk,Дитяча Поліклініка №4
 Dytiacha Zaliznytsia,en,Dytiacha Zaliznytsia (Children's Railway)
 Dytiacha Zaliznytsia,ru,Детская Железная Дорога
 Dytiacha Zaliznytsia,uk,Дитяча Залізниця
@@ -266,12 +272,14 @@ Haidamatska,uk,Гайдамацька
 Halytska sqr.,en,Halytska sqr.
 Halytska sqr.,ru,Площадь Галицкая
 Halytska sqr.,uk,Площа Галицька
-Halytska(Vynnyky),en,Halytska(Vynnyky)
-Halytska(Vynnyky),ru,Галицкая (Вынныки)
-Halytska(Vynnyky),uk,Галицька (Винники)
+Halytska (Vynnyky),en,Halytska (Vynnyky)
+Halytska (Vynnyky),ru,Галицкая (Вынныки)
+Halytska (Vynnyky),uk,Галицька (Винники)
 Halytske perekhrestia,en,Halytske perekhrestia
 Halytske perekhrestia,ru,Галицкий перекресток
 Halytske perekhrestia,uk,Галицьке Перехрестя
+Hasheka,ru,Гашека
+Hasheka,uk,Гашека
 Heroyiv Krut,en,Heroyiv Krut
 Heroyiv Krut,ru,Героев Крут
 Heroyiv Krut,uk,Героїв Крут
@@ -299,9 +307,9 @@ Horodocka-Center,uk,Городоцька-Центр
 Horodotska,en,Horodotska
 Horodotska,ru,Городоцкая
 Horodotska,uk,Городоцька
-Horodotska-Center(Sunday),en,Horodotska-Center(Sunday)
-Horodotska-Center(Sunday),ru,Городоцкая-Центр (Восресенье)
-Horodotska-Center(Sunday),uk,Городоцька-Центр (неділя)
+Horodotska-Center (Sunday),en,Horodotska-Center (Sunday)
+Horodotska-Center (Sunday),ru,Городоцкая-Центр (Восресенье)
+Horodotska-Center (Sunday),uk,Городоцька-Центр (неділя)
 Horodotska-Kopernyka,en,Horodotska-Kopernyka
 Horodotska-Kopernyka,ru,Городоцкая-Коперника
 Horodotska-Kopernyka,uk,Городоцька-Коперника
@@ -337,9 +345,9 @@ Ivana Franko (Murovane),uk,Івана Франка (Муроване)
 Ivana Vyhovskoho,en,Ivana Vyhovskoho
 Ivana Vyhovskoho,ru,Ивана Выговского
 Ivana Vyhovskoho,uk,Івана Виговського
-Ivasiuka(Vynnyky),en,Ivasiuka(Vynnyky)
-Ivasiuka(Vynnyky),ru,Ивасюка (Винники)
-Ivasiuka(Vynnyky),uk,вул.Івасюка (Винники)
+Ivasiuka (Vynnyky),en,Ivasiuka (Vynnyky)
+Ivasiuka (Vynnyky),ru,Ивасюка (Винники)
+Ivasiuka (Vynnyky),uk,вул.Івасюка (Винники)
 Ivasiuka,en,Ivasiuka
 Ivasiuka,ru,Ивасюка
 Ivasiuka,uk,Івасюка
@@ -371,9 +379,9 @@ King Cross Leopolis,ru,Кинг Кросс Леополис
 King Cross,en,King Cross
 King Cross,ru,ТРЦ Кинг Кросс Леополис
 King Cross,uk,ТРЦ Кінг Кросс Леополіс
-King Сross-Cener(Sunday),en,King Сross-Cener(Sunday)
-King Сross-Cener(Sunday),ru,King Сross-Центр (Восресенье)
-King Сross-Cener(Sunday),uk,King Сross-Центр (Неділя)
+King Сross-Cener (Sunday),en,King Сross-Cener (Sunday)
+King Сross-Cener (Sunday),ru,King Сross-Центр (Восресенье)
+King Сross-Cener (Sunday),uk,King Сross-Центр (Неділя)
 King Сross-Cener,en,King Сross-Cener
 King Сross-Cener,ru,King Cross-Центр
 King Сross-Cener,uk,King Cross-Центр
@@ -487,24 +495,24 @@ Lenona,uk,Ленона
 Levandivska-Shyroka,en,Levandivska-Shyroka
 Levandivska-Shyroka,ru,Левандовская-Широкая
 Levandivska-Shyroka,uk,Левандівська-Широка
-Levytskoho str,en,Levytskoho str
-Levytskoho str,ru,Левицкого
-Levytskoho str,uk,Левицького
-Likarnia No. 5 (Hospital No.5),en,Hospital No.5
-Likarnia No. 5 (Hospital No.5),ru,5-я городская больница
-Likarnia No. 5 (Hospital No.5),uk,5-та міська лікарня
-Likarnia No. 8 (Hospital No.8),en,Hospital No.8
-Likarnia No. 8 (Hospital No.8),ru,Больница № 8
-Likarnia No. 8 (Hospital No.8),uk,Лікарня № 8
+Levytskoho str.,en,Levytskoho str
+Levytskoho str.,ru,Левицкого
+Levytskoho str.,uk,Левицького
+Likarnia #5 (Hospital #5),en,Hospital No.5
+Likarnia #5 (Hospital #5),ru,5-я городская больница
+Likarnia #5 (Hospital #5),uk,5-та міська лікарня
+Likarnia #8 (Hospital #8),en,Hospital No.8
+Likarnia #8 (Hospital #8),ru,Больница №8
+Likarnia #8 (Hospital #8),uk,Лікарня №8
 Linkolna,en,Linkolna
 Linkolna,ru,Авраама Линкольна
 Linkolna,uk,Авраама Лінкольна
 Liubinska,en,Liubinska
 Liubinska,ru,Любинская
 Liubinska,uk,Любінська
-LK ATP №1,en,LK ATP №1
-LK ATP №1,ru,ЛК АТП № 1
-LK ATP №1,uk,ЛК АТП № 1
+LK ATP #1,en,LK ATP №1
+LK ATP #1,ru,ЛК АТП № 1
+LK ATP #1,uk,ЛК АТП № 1
 Lomonosova,en,Lomonosova
 Lomonosova,ru,Ломоносова
 Lomonosova,uk,Ломоносова
@@ -532,6 +540,8 @@ Lychakivska,uk,Личаківська
 Lychakivska-Trakt Hlynianskyi,en,Lychakivska-Trakt Hlynianskyi
 Lychakivska-Trakt Hlynianskyi,ru,Лычаковская-Глинянский тракт
 Lychakivska-Trakt Hlynianskyi,uk,Личаківська-Глинянський тракт
+Lychakivske cemetery,ru,Лычаковское кладбище
+Lychakivske cemetery,uk,Личаківське кладовище
 Lychakivskyi Tsvyntar (Lychakiv Cemetry),en,Lychakiv Cemetry
 Lychakivskyi Tsvyntar (Lychakiv Cemetry),ru,Лычаковское кладбище
 Lychakivskyi Tsvyntar (Lychakiv Cemetry),uk,Личаківський цвинтар
@@ -547,9 +557,8 @@ Lypynskoho-Mykolaichuka,uk,Липинського-Миколайчука
 Lypynskoho-Zamarstynivska,en,Lypynskoho-Zamarstynivska
 Lypynskoho-Zamarstynivska,ru,Липинского-Замарстыновская
 Lypynskoho-Zamarstynivska,uk,Липинського-Замарстинівська
-Lystopadovho Сhynu,en,Lystopadovho Сhynu
-Lystopadovho Сhynu,ru,Листопадового Чина
-Lystopadovho Сhynu,uk,Листопадового Чину
+Lystopadovoho Chynu,ru,Листопадового Чина
+Lystopadovoho Chynu,uk,Листопадового Чину
 Lysynetska,en,Lysynetska
 Lysynetska,ru,Лисеницкая
 Lysynetska,uk,Лисинецька
@@ -681,9 +690,9 @@ New Terminal,uk,Аеропорт (Новий Термінал)
 Nishchynskoho,en,Nishchynskoho
 Nishchynskoho,ru,Нищинского
 Nishchynskoho,uk,Ніщинського
-Nova Vulytsia(Murovane),en,Nova Vulytsia(Murovane)
-Nova Vulytsia(Murovane),ru,Новая улица (Мурованое)
-Nova Vulytsia(Murovane),uk,Нова вулиця (Муроване)
+Nova Vulytsia (Murovane),en,Nova Vulytsia (Murovane)
+Nova Vulytsia (Murovane),ru,Новая улица (Мурованое)
+Nova Vulytsia (Murovane),uk,Нова вулиця (Муроване)
 Novoznesenska,en,Novoznesenska
 Novoznesenska,ru,Новознесенская
 Novoznesenska,uk,Новознесенська
@@ -795,12 +804,12 @@ Pohulianka,uk,Погулянка
 Poliklinika MVS (Policlinic of the Internal Affiars Ministry),en,PPoliclinic of the Internal Affiars Ministry
 Poliklinika MVS (Policlinic of the Internal Affiars Ministry),ru,Поликлиника УМВД
 Poliklinika MVS (Policlinic of the Internal Affiars Ministry),uk,Поліклініка УМВС
-Poliklinika No. 4 (Policlinic No.4),en,Policlinic No.4
-Poliklinika No. 4 (Policlinic No.4),ru,Поликлиника № 4
-Poliklinika No. 4 (Policlinic No.4),uk,Поліклініка №4
-Poliklinika No.5 (Policlinic No.5),en,Policlinic No.5
-Poliklinika No.5 (Policlinic No.5),ru,Поликлиника № 5
-Poliklinika No.5 (Policlinic No.5),uk,Поліклініка № 5
+Poliklinika #4 (Policlinic #4),en,Policlinic No.4
+Poliklinika #4 (Policlinic #4),ru,Поликлиника №4
+Poliklinika #4 (Policlinic #4),uk,Поліклініка №4
+Policlinic #5,en,Policlinic No.5
+Policlinic #5,ru,Поликлиника №5
+Policlinic #5,uk,Поліклініка №5
 Poliklinika,ru,Поликлиника
 Poliklinika,uk,Поліклініка
 Pulmolohichnyi center,en,Pulmolohichnyi center
@@ -863,9 +872,9 @@ Riasne-1,uk,Рясне-1
 Riasne-2,en,Riasne-2
 Riasne-2,ru,Рясное-2
 Riasne-2,uk,Рясне-2
-Riasne-2-Center(Sunday),en,Riasne-2-Center(Sunday)
-Riasne-2-Center(Sunday),ru,Рясне-2-Центр (Восресенье)
-Riasne-2-Center(Sunday),uk,Рясне-2-Центр (Неділя)
+Riasne-2-Center (Sunday),en,Riasne-2-Center (Sunday)
+Riasne-2-Center (Sunday),ru,Рясне-2-Центр (Восресенье)
+Riasne-2-Center (Sunday),uk,Рясне-2-Центр (Неділя)
 Riasne-2-Center,en,Riasne-2-Center
 Riasne-2-Center,ru, Рясне-2-Центр
 Riasne-2-Center,uk,Рясне-2-Центр
@@ -896,9 +905,9 @@ Rukavychka,uk,ТЦ Рукавичка
 Rusalka Dnistrova,en,Rusalka Dnistrova
 Rusalka Dnistrova,ru,Русалка Днистрова
 Rusalka Dnistrova,uk,Русалка Дністрова
-Ruska str,en,Ruska str.
-Ruska str,ru,Русская
-Ruska str,uk,Руська
+Ruska str.,en,Ruska str.
+Ruska str.,ru,Русская
+Ruska str.,uk,Руська
 Rusovykh,en,Rusovykh
 Rusovykh,ru,Русовых
 Rusovykh,uk,Русових
@@ -926,15 +935,15 @@ Sepana Bandery str.,uk,Бандери
 Shchurata,en,Shchurata
 Shchurata,ru,Щурата
 Shchurata,uk,Щурата
-Shevchenka 250-1,en,Shevchenka 250-1
-Shevchenka 250-1,ru,Шевченка 250-1
-Shevchenka 250-1,uk,Шевченка 250-1
+Shevchenka 250/1,en,Shevchenka 250-1
+Shevchenka 250/1,ru,Шевченка 250/1
+Shevchenka 250/1,uk,Шевченка 250/1
 Shevchenka 262,en,Shevchenka 262
 Shevchenka 262,ru,Шевченко 262
 Shevchenka 262,uk,Шевченка 262
-Shevchenka(Vynnyky),en,Shevchenka(Vynnyky)
-Shevchenka(Vynnyky),ru,Шевченко (Вынныкы)
-Shevchenka(Vynnyky),uk,Шевченка (Винники)
+Shevchenka (Vynnyky),en,Shevchenka (Vynnyky)
+Shevchenka (Vynnyky),ru,Шевченко (Вынныкы)
+Shevchenka (Vynnyky),uk,Шевченка (Винники)
 Shevchenka,en,Shevchenka
 Shevchenka,ru,Шевченка
 Shevchenka,uk,Шевченка 
@@ -1064,12 +1073,12 @@ Stryiskyi Park,uk,Стрийський Парк
 Stryiskyi Rynok (Stryisky Market),en,Stryisky Market
 Stryiskyi Rynok (Stryisky Market),ru,Стрыйский рынок
 Stryiskyi Rynok (Stryisky Market),uk,Стрийський ринок
-Styiska-Khutorivka,en,Styiska-Khutorivka
-Styiska-Khutorivka,ru,Стрийская-Хуторивка
-Styiska-Khutorivka,uk,Стрийська-Хуторівка
-Styiska-Naukova,en,Styiska-Naukova
-Styiska-Naukova,ru,Стрийская-Науковая
-Styiska-Naukova,uk,Стрийська-Наукова
+Stryiska-Khutorivka,en,Styiska-Khutorivka
+Stryiska-Khutorivka,ru,Стрийская-Хуторивка
+Stryiska-Khutorivka,uk,Стрийська-Хуторівка
+Stryiska-Naukova,en,Styiska-Naukova
+Stryiska-Naukova,ru,Стрийская-Науковая
+Stryiska-Naukova,uk,Стрийська-Наукова
 Subotivska,en,Subotivska
 Subotivska,ru,Субботовская
 Subotivska,uk,Суботівська
@@ -1154,6 +1163,8 @@ Torhovii tsentr (Trading Centre),uk,Торговий Центр
 Trakt Hlynianskyi,en,Trakt Hlynianskyi
 Trakt Hlynianskyi,ru,Глинянский тракт
 Trakt Hlynianskyi,uk,Глинянський тракт
+Tram Depot #2,ru,Трамвайное депо №2
+Tram Depot #2,uk,Трамвайне депо №2
 Troleibusna,en,Troleibusna
 Troleibusna,ru,Троллейбусная
 Troleibusna,uk,Тролейбусна
@@ -1246,9 +1257,9 @@ Vivsiana,uk,Вівсяна
 Vodohinna,en,Vodohinna
 Vodohinna,ru,Водогонная
 Vodohinna,uk,Водогінна
-Vodohinna stancia,en,Vodohinna stancia
-Vodohinna stancia,ru,Водогонная станция
-Vodohinna stancia,uk,Водогінна Станція
+Vodohinna stantsiia,en,Vodohinna stancia
+Vodohinna stantsiia,ru,Водогонная станция
+Vodohinna stantsiia,uk,Водогінна Станція
 Volodymyra Velykoho,en,Volodymyra Velykoho
 Volodymyra Velykoho,ru,Владимира Великого
 Volodymyra Velykoho,uk,Володимира Великого
@@ -1270,9 +1281,9 @@ Vynnykivske Ozero (Vynnykivske Lake),uk,Винниківське озеро
 Vynnyky,en,Vynnyky
 Vynnyky,ru,Вынныки
 Vynnyky,uk,Винники
-Vynnyky-Center(Sunday),en,Vynnyky-Center(Sunday)
-Vynnyky-Center(Sunday),ru,Вынныки-Центр (Восресенье)
-Vynnyky-Center(Sunday),uk,Винники-Центр (Неділя)
+Vynnyky-Center (Sunday),en,Vynnyky-Center (Sunday)
+Vynnyky-Center (Sunday),ru,Вынныки-Центр (Восресенье)
+Vynnyky-Center (Sunday),uk,Винники-Центр (Неділя)
 Vynnyky-Center,en,Vynnyky-Center
 Vynnyky-Center,ru,Вынныки-Центр
 Vynnyky-Center,uk,Винники-Центр
@@ -1327,9 +1338,9 @@ Zamarstynivska,uk,Замарстинівська
 Zamarstynivska-Kniahyni Olhy,en,Zamarstynivska-Kniahyni Olhy
 Zamarstynivska-Kniahyni Olhy,ru,Замарстыновская-Княгини Ольги
 Zamarstynivska-Kniahyni Olhy,uk,Замарстинівська-Княгині Ольги
-Zavod  Frezernykh verstativ,en,Zavod  Frezernykh verstativ
-Zavod  Frezernykh verstativ,ru,Завод Фрезерных станков
-Zavod  Frezernykh verstativ,uk,Завод Фрезерних Верстатів
+Zavod Frezernykh verstativ,en,Zavod Frezernykh verstativ
+Zavod Frezernykh verstativ,ru,Завод Фрезерных станков
+Zavod Frezernykh verstativ,uk,Завод Фрезерних Верстатів
 Zavod Iskra,en,Zavod Iskra
 Zavod Iskra,ru,Завод Искра
 Zavod Iskra,uk,Завод Іскра

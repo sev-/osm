@@ -4,13 +4,13 @@ stop_id,stop_name,stop_lat,stop_lon
 3,Yalovets,49.835720,24.075438
 4,Shevchenkivskyi Hay,49.838261,24.055574
 5,Shevchenkivskyi Hay,49.838558,24.054485
-6,Bus Stations №6,49.835842,24.070826
+6,Bus Stations #6,49.835842,24.070826
 7,Tserkva Pokrovy,49.83613489104749,24.06755805015564
 8,Drizh zavod,49.833984,24.088404
 9,Kozelnytska,49.816673,24.026756
 10,Panasa Myrnoho,49.813988,24.035564
 11,Karbysheva,49.812901,24.038118
-12,Bus Stations №2,49.864891,24.051315
+12,Bus Stations #2,49.864891,24.051315
 13,BTI,49.864956,24.040956
 14,Beethovena,49.863457,24.032644
 15,Lypynskoho-Zamarstynivska,49.860363,24.027411
@@ -23,7 +23,7 @@ stop_id,stop_name,stop_lat,stop_lon
 22,Pid Dubom,49.850368,24.025564
 23,Demianska,49.80030799514177,24.029948115348816
 24,Zernova,49.846363,24.024717
-25,Chornovola avenu,49.846069,24.025286
+25,Chornovola avenue,49.846069,24.025286
 26,Rizni sqr,49.845547,24.025909
 27,Opera,49.844063,24.025631
 28,Svobody avenue,49.840290,24.027931
@@ -37,10 +37,10 @@ stop_id,stop_name,stop_lat,stop_lon
 36,Dnisterovska,49.817703,24.059437
 37,Torhovii tsentr (Trading Centre),49.813583,24.060402
 38,Navrotskoho,49.811337,24.061174
-39,Bus Stations №5,49.80754,24.06143
+39,Bus Stations #5,49.80754,24.06143
 40,Zelena-Luhanska,49.805927,24.062305
 41,Zelena-Luhanska,49.804909,24.062740
-42,Chornovola avenu,49.846523,24.025682
+42,Chornovola avenue,49.846523,24.025682
 43,Zubrivska,49.801453,24.065954
 44,Sykhivska,49.796974,24.071844
 45,Mall Iskra,49.794537,24.063450
@@ -48,7 +48,7 @@ stop_id,stop_name,stop_lat,stop_lon
 47,Kinoteatr im. Dovzhenka (Dovzhenko Cinema),49.794674,24.057655
 48,Mall VAM,49.792046,24.058245
 49,Chervonoi Kalyny avenu,49.785213,24.059479
-50,Poliklinika No. 4 (Policlinic No.4),49.788567,24.058641
+50,Poliklinika #4 (Policlinic #4),49.788567,24.058641
 51,G.Washingtona,49.815987,24.062675
 52,Perynatalnyi Tsentr (Perinatal Centre),49.816120,24.069340
 53,Torhovii tsentr (Trading Centre),49.814468,24.075872
@@ -130,7 +130,7 @@ stop_id,stop_name,stop_lat,stop_lon
 129,Konovaltsia,49.824390,23.993238
 130,Avtovokzal (Central Bus Station),49.787567,24.017036
 131,Maksymovycha,49.792366,24.016127
-132,Styiska-Naukova,49.801529,24.017712
+132,Stryiska-Naukova,49.801529,24.017712
 133,Tax Administration,49.815102,24.020126
 134,Dytiacha Zaliznytsia,49.820339,24.020180
 135,Akademiya Sukhoputnykh Viysk (Army Academy),49.824711,24.020683
@@ -155,10 +155,10 @@ stop_id,stop_name,stop_lat,stop_lon
 154,Vyhovskoho-Liubinska,49.820145,23.969152
 155,Vyhovskoho-Liubinska,49.820423,23.967779
 156,Staryi Terminal (Old Terminal),49.816833,23.955765
-157,Poliklinika No.5 (Policlinic No.5),49.82582,23.96771
+157,Policlinic #5,49.82582,23.96771
 158,King Cross Leopolis,49.774059,24.012295
 159,Skoryny,49.797649,24.016794
-160,Styiska-Khutorivka,49.802273,24.018238
+160,Stryiska-Khutorivka,49.802273,24.018238
 161,Avtobusnyi zavod (Bus Factory),49.808331,24.019310
 162,Epicentr,49.824936,23.911699
 163,Torhovii tsentr (Trading Centre),49.820953,23.916100
@@ -199,12 +199,12 @@ stop_id,stop_name,stop_lat,stop_lon
 198,Troleibusna,49.803188,24.004448
 199,Troleibusna,49.803364,24.005224
 200,Naukova-Srtyiska,49.802040,24.017309
-201,Styiska-Khutorivka,49.801682,24.018785
+201,Stryiska-Khutorivka,49.801682,24.018785
 202,Dukhovna Seminariya (Seminary),49.799854,24.035351
 203,Dukhovna Seminariya (Seminary),49.800175,24.035769
 204,market Shuvar,49.798870,24.048117
 205,market Shuvar,49.798996,24.048901
-206,Dytiacha Poliklinika No. 4 (Children's Health Centre No.4),49.796425,24.053833
+206,Dytiacha Poliklinika #4 (Children's Health Centre #4),49.796425,24.053833
 207,Mall Arsen,49.795708,24.054308
 208,Trylovskoho,49.787569,24.066163
 209,Kavaleridze,49.792107,24.066034
@@ -303,7 +303,7 @@ stop_id,stop_name,stop_lat,stop_lon
 302,Persenkivka stantion,49.810005,24.030426
 303,Rukavychka,49.807522,24.054024
 304,Pohulianka,49.829021,24.056658
-305,Levytskoho str,49.830341,24.049417
+305,Levytskoho str.,49.830341,24.049417
 306,Lychakivskyi Tsvyntar (Lychakiv Cemetry),49.834229,24.052341
 307,Cemetery (Bilohorshcha),49.845905,23.929054
 308,Bilohorshcha,49.844395,23.937990
@@ -314,13 +314,13 @@ stop_id,stop_name,stop_lat,stop_lon
 314,Zaliznychnyi Vokzal (Railway Station),49.839539,23.995884
 315,Doroshenka str.,49.840176,24.027176
 316,Rynok sqr.,49.841423,24.032169
-317,Ruska str,49.841888,24.034321
+317,Ruska str.,49.841888,24.034321
 318,Tserkva Olhy i Yelyzavety,49.837639,24.005444
-319,Halytska(Vynnyky),49.817940,24.157986
+319,Halytska (Vynnyky),49.817940,24.157986
 320,Velychkovskoho,49.875229,23.932632
 321,Riasne-1,49.868214,23.952276
 322,Hostels,49.870903,24.005331
-323,Bus Stations №2,49.864105,24.052355
+323,Bus Stations #2,49.864105,24.052355
 324,Mall Furshet,49.861889,24.050510
 325,Vysochna,49.858326,24.047625
 326,Beethovena,49.863628,24.033678
@@ -332,19 +332,19 @@ stop_id,stop_name,stop_lat,stop_lon
 334,Tserkva Voznesinnia,49.841740,23.968609
 335,Oleshkivska,49.842079,23.973269
 336,Levandivska-Shyroka,49.843029,23.980499
-337,Lystopadovho chynu,49.840492,24.020662
+337,Lystopadovoho Chynu,49.840492,24.020662
 338,Staryi rynok sqr.,49.846226,24.029198
 339,Staryi rynok sqr.,49.846855,24.028662
 340,Pid Dubom,49.850174,24.026972
 341,Horodnytska,49.858440,24.027067
 342,station Pidzamche,49.852337,24.033199
 343,Promyslova,49.853455,24.041122
-344,Тram Depot №2,49.858330,24.042801
+344,Tram Depot #2,49.858330,24.042801
 345,Factory Svitnok,49.862572,24.044109
 346,Factory Svitnok,49.861874,24.043816
 347,Ovocheva fabryka,49.842014,24.100721
 348,Aviaciina,49.824730,23.939177
-349,Beresteiskoi Unii sqr. ,49.833340,24.001244
+349,Beresteiskoi Unii sqr.,49.833340,24.001244
 350,Krychevskoho,49.819004,23.963810
 351,Krychevskoho,49.819214,23.965065
 352,Sadova,49.822010,23.979248
@@ -354,7 +354,7 @@ stop_id,stop_name,stop_lat,stop_lon
 356,Promyslova,49.854816,24.040913
 357,Mykolaichuka,49.866344,24.044535
 358,Horodnytska,49.864906,24.044518
-359,Тram Depot №2,49.858219,24.042940
+359,Tram Depot #2,49.858219,24.042940
 360,Volynska,49.856522,24.041754
 361,Levytskoho str.,49.830540,24.049225
 362,Lychakivske cemetery,49.833694,24.052063
@@ -366,7 +366,7 @@ stop_id,stop_name,stop_lat,stop_lon
 368,Lviv Politechnic University,49.834396,24.016045
 369,Kyivska,49.832455,24.012047
 370,Kyivska,49.832413,24.011768
-371,Likarnia No. 5 (Hospital No.5),49.830791,24.008844
+371,Likarnia #5 (Hospital #5),49.830791,24.008844
 372,Melnyka,49.830544,24.003014
 373,Zalizniaka,49.828979,24.000433
 374,Zalizniaka,49.828373,23.999645
@@ -398,26 +398,26 @@ stop_id,stop_name,stop_lat,stop_lon
 400,Zelena str.,49.834541,24.034525
 401,Soborna sqr.,49.838142,24.034952
 402,Tserkva Olhy i Yelyzavety,49.836716,24.004236
-403,House of Culture named hnat Khotkevych,49.852314,24.027464
+403,House of Culture named Hnat Khotkevych,49.852314,24.027464
 404,Tatarbunarska,49.854038,23.987076
-405,Stryski park,49.826351,24.034540
-406,Stryski park,49.826820,24.034084
+405,Stryiskyi Park,49.826351,24.034540
+406,Stryiskyi Park,49.826820,24.034084
 407,Shukhevycha,49.836655,24.034840
 408,Krymska,49.823635,24.052177
 409,Krymska,49.822250,24.054592
 410,Dnisterovska,49.817608,24.059801
 411,Mall Arsen,49.813583,24.060144
-412,Meblevyi kombinat,49.811932,24.060787
+412,Meblevyi Kombinat,49.811932,24.060787
 413,Zubrivska,49.80228157013213,24.065334498882294
 414,Sykhivska,49.797001,24.072033
 415,Kavaleridze,49.794415,24.062918
-416,Clinic №4,49.790588,24.059212
+416,Clinic #4,49.790588,24.059212
 417,Chervonoi Kalyny avenu,49.785446,24.058878
-418,old Sykhiv,49.792381,24.074499
+418,Old Sykhiv,49.792381,24.074499
 419,Dytiacha Zaliznytsia,49.820309,24.020451
 420,Tobilevycha,49.835949,24.003141
 421,Stryiskyi Rynok (Stryisky Market),49.829803,24.032484
-422,Shota Rystaveli,49.833927,24.035259
+422,Shota Rustaveli,49.833927,24.035259
 423,Tax Administration,49.814884,24.019678
 424,Maksymovycha,49.791431,24.015432
 425,Skoryny,49.797802,24.017395
@@ -454,7 +454,7 @@ stop_id,stop_name,stop_lat,stop_lon
 456,Poliklinika,49.871376,24.036419
 457,Mazepy,49.869595,24.025454
 458,BTI,49.864887,24.041626
-460,Bus Stations №2,49.865158,24.050875
+460,Bus Stations #2,49.865158,24.050875
 461,Tserkva Anny (St. Anna Church),49.84306807383869,24.014729261398315
 462,G.Washingtona,49.815872,24.063147
 463,Yaroshynskoi,49.822311,24.075024
@@ -462,7 +462,7 @@ stop_id,stop_name,stop_lat,stop_lon
 465,Stryiskyi Rynok (Stryisky Market),49.829437,24.032572
 466,Akademiya Mystetstv (Art Academy),49.824997,24.037207
 467,Panasa Myrnoho,49.813778,24.035780
-468,Torhovyi Tsentr (Trading Centre),49.814106,24.076534
+468,Torhovii tsentr (Trading Centre),49.814106,24.076534
 469,Lyceum named heroes of Kruty,49.826225,24.073019
 470,Shevchenkivskyi Hay,49.838707,24.054411
 471,King Cross Leopolis,49.774780,24.014376
@@ -498,8 +498,8 @@ stop_id,stop_name,stop_lat,stop_lon
 501,Hasheka,49.794548,24.016588
 502,Hasheka,49.794212,24.016027
 503,Shevchenka-Levandivska,49.848412,23.993996
-504,Ivasiuka(Vynnyky),49.816765,24.137199
-505,Ivasiuka(Vynnyky),49.816933,24.136974
+504,Ivasiuka (Vynnyky),49.816765,24.137199
+505,Ivasiuka (Vynnyky),49.816933,24.136974
 506,Bohdanivska,49.840218,24.086185
 507,Bohdanivska,49.840275,24.084888
 508,Konovaltsia,49.834694,24.010098
@@ -519,12 +519,12 @@ stop_id,stop_name,stop_lat,stop_lon
 522,Drizh zavod,49.834038,24.087868
 523,Vynnykivske Ozero (Vynnykivske Lake),49.820583,24.112516
 524,Vesna,49.869129,24.056421
-525,Tsyrk (Сircus),49.840618,24.012970
+525,Tsyrk (Circus),49.840618,24.012970
 526,Yaroslava Mudroho,49.840332,24.011848
 527,Ovochevi bazy,49.823589,23.930840
 528,Ukrposhta,49.822178,23.923271
 529,Zernova,49.822884,23.918690
-530,Torhovyi Tsentr (Trading Centre),49.821587,23.920113
+530,Torhovii tsentr (Trading Centre),49.821587,23.920113
 531,market Pivdenyi,49.813457,23.976696
 532,Puliuia,49.804268,23.993010
 533,Collehe of Technology,49.801044,23.991758
@@ -536,7 +536,7 @@ stop_id,stop_name,stop_lat,stop_lon
 539,Kavaleridze,49.791451,24.067259
 540,Dunaiska,49.816292,24.049191
 541,Vodohinna stantsiia,49.825928,24.045488
-542,Shota Rystaveli,49.834190,24.036118
+542,Shota Rustaveli,49.834190,24.036118
 543,Antonycha,49.785042,24.069681
 544,Stadion Ukrayina (Ukraine Stadium),49.818146,24.043772
 545,Uhorska,49.810516,24.045502
@@ -564,12 +564,12 @@ stop_id,stop_name,stop_lat,stop_lon
 567,Murovane,49.875320,24.098618
 568,Mahazin,49.876060,24.092567
 569,Mahazin,49.875847,24.092470
-570,Ivana Franko(Murovane),49.878250,24.083715
-571,Ivana Franko(Murovane),49.878429,24.083834
-572,Nova Vulytsia(Murovane),49.876743,24.066710
-573,Nova Vulytsia(Murovane),49.876881,24.066710
+570,Ivana Franko (Murovane),49.878250,24.083715
+571,Ivana Franko (Murovane),49.878429,24.083834
+572,Nova Vulytsia (Murovane),49.876743,24.066710
+573,Nova Vulytsia (Murovane),49.876881,24.066710
 574,Bohdana Khmelnyckoho,49.875645,24.062113
-575,Policlinic №5,49.824932,23.967710
+575,Policlinic #5,49.824932,23.967710
 576,At the request,49.781155,24.086409
 577,Lavrivskoho,49.845005,23.932520
 578,Lavrivskoho,49.845100,23.932674
@@ -580,11 +580,11 @@ stop_id,stop_name,stop_lat,stop_lon
 583,Povitiana,49.846130,23.988316
 584,Lyvarna,49.844505,23.983770
 585,Lyvarna,49.844421,23.983877
-586,Trakt Hlynanskyi,49.838226,24.079741
+586,Trakt Hlynianskyi,49.838226,24.079741
 587,Provesin,49.842258,24.103764
 588,Ovocheva fabryka,49.841896,24.100828
-589,Сemetery,49.841225,24.096043
-590,Nishchkinkoho,49.839737,24.066677
+589,Cemetery,49.841225,24.096043
+590,Nishchynskoho,49.839737,24.066677
 591,Kryvchytska doroha,49.844280,24.073908
 592,Clinic,49.874821,24.041241
 593,Persenkivka stantion,49.809246,24.033617
@@ -593,8 +593,8 @@ stop_id,stop_name,stop_lat,stop_lon
 596,Fanernyi zavod,49.864082,23.969463
 597,Riasanska,49.870003,23.965605
 598,Riasanska,49.870174,23.965759
-599,Sotnyka Panasa,49.873981,23.950506
-600,Sotnyka Panasa,49.873840,23.950178
+599,Panasa Sotnyka,49.873981,23.950506
+600,Panasa Sotnyka,49.873840,23.950178
 601,Smolyna,49.877846,23.948267
 602,Smolyna,49.877777,23.948500
 603,Sosnova,49.895004,23.946161
@@ -605,7 +605,7 @@ stop_id,stop_name,stop_lat,stop_lon
 608,Rukavychka,49.80764444,24.054184556
 609,Lypova Aleia,49.82079,24.05576
 610,Prymiskyi Vokzal (Suburban Train Station),49.83619,23.9989
-611,Children's Clinic №4,49.79714,24.05151
+611,Children's Clinic #4,49.79714,24.05151
 612,Kotyka,49.83741,24.05995
 613,Yatskova,49.80888,24.01176
 614,Motozavod (Moto Factory),49.83006,23.96813
@@ -619,12 +619,12 @@ stop_id,stop_name,stop_lat,stop_lon
 622,Holovna Poshta (Central Post Office),49.83685,24.02410
 623,Pekarska,49.83839,24.03532
 624,Topolna,49.87131,24.01808
-625,halytske perekhrestia,49.874265,24.061652
+625,Halytske perekhrestia,49.874265,24.061652
 626,Plastova,49.859445,24.059677
 627,Tychyny,49.868785,24.033963
 628,Tychyny,49.868873,24.034057
-629,Likarnia No. 8 (Hospital No.8),49.811355,24.050520
-630,Likarnia No. 8 (Hospital No.8),49.811217,24.050520
+629,Likarnia #8 (Hospital #8),49.811355,24.050520
+630,Likarnia #8 (Hospital #8),49.811217,24.050520
 631,Dzherelna,49.85053,24.02039
 632,University,49.83999,24.02193
 633,Kozelnytska,49.81809,24.02522

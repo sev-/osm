@@ -57,11 +57,11 @@ $csv->column_names($csv->getline($fh));
 
 while (my $line = $csv->getline_hr($fh)) {
   if (not exists $stopsru{$line->{stop_name}}) {
-	die "No RU stop name for $line->{stop_name}";
+	warn "No RU stop name for $line->{stop_name}";
   }
 
   if (not exists $stopsuk{$line->{stop_name}}) {
-	die "No UK stop name for $line->{stop_name}";
+	warn "No UK stop name for $line->{stop_name}";
   }
 }
 
