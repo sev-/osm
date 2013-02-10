@@ -41,10 +41,29 @@ my @cities = ();
 my $num = 0;
 my $numb = 0;
 
+my $osm;
+my $prevpos = 0;
+
 my $ukrname = shift or die "Usage: $0: ukraine.osm.bz2";
+
+my $ttyr = `tty`;
+chomp $ttyr;
+
+open my $tty, '>', $ttyr or die ("open failure: $!");
 
 my $processor = sub {
 	my $res = 0;
+
+	my $pos = tell $osm->{stream};
+
+	if ($pos - $prevpos >= (1024 * 1024)) {
+	  $prevpos = $pos;
+	  
+	  my $k = int($pos / 1024 / 1024);
+
+	  print $tty "\r${k}M";
+	  flush $tty;
+	}
 
 	if (exists $_[0]->{tag}->{highway}) {
 		$hw = $_[0]->{tag}->{highway};
@@ -68,11 +87,18 @@ my $processor = sub {
 };
 
 print "<osm  version='0.6'>\n";
-Geo::Parse::OSM->parse_file($ukrname, $processor);
+
+$osm = Geo::Parse::OSM->new($ukrname);
+$osm->parse($processor);
+
 print "</osm>\n";
 
 print STDERR "LOG: Modified $num ways\n";
 print STDERR "LOG: Modified $numb buildings\n";
+
+print $tty "\n";
+
+close $tty;
 
 exit;
 
