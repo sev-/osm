@@ -156,7 +156,7 @@ public class CopierAction extends MapMode implements MouseListener {
                 continue;
             }
             PrimitiveData copy = data.makeCopy();
-            copy.clearOsmId();
+            copy.clearOsmMetadata();
             if (data instanceof NodeData) {
                 newNodeIds.put(data.getUniqueId(), copy.getUniqueId());
             } else if (data instanceof WayData) {
@@ -397,11 +397,11 @@ public class CopierAction extends MapMode implements MouseListener {
 
         // conflict resolution is necessary if there are conflicts in the merged tags
         // or if both objects have relation memberships
-        if (keysWithMultipleValues || 
+        if (keysWithMultipleValues ||
                 (!RelationToChildReference.getRelationToChildReferences(source).isEmpty() &&
                  !RelationToChildReference.getRelationToChildReferences(target).isEmpty())) {
             dialog.setVisible(true);
-            if (dialog.isCanceled()) {
+            if (!dialog.isApplied()) {
                 return null;
             }
         }
@@ -415,7 +415,7 @@ public class CopierAction extends MapMode implements MouseListener {
         Node nearest = null;
         // TODO: use meters instead of degrees, but do it fast
         double distance = Double.parseDouble(Main.pref.get("utilsplugin2.replace-geometry.max-distance", "1"));
-        Point2D coor = node.getCoor();
+        LatLon coor = node.getCoor();
 
         for( Node n : nodes ) {
             double d = n.getCoor().distance(coor);
