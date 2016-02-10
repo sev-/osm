@@ -50,7 +50,7 @@ public class CopierAction extends MapMode implements MouseListener {
         super(tr("Copier"), "copier-sml", tr("Copier."), Shortcut.registerShortcut("tools:coper", tr("Tool: {0}", tr("Copier")), KeyEvent.VK_T, Shortcut.DIRECT), mapFrame, getCursor());
     }
 
- 
+
     @Override
     public void enterMode() {
         if (!isEnabled()) {
@@ -71,13 +71,13 @@ public class CopierAction extends MapMode implements MouseListener {
         return ImageProvider.getCursor("crosshair", "copier-sml");
     }
 
- 
+
     @Override
     public void mouseClicked(MouseEvent e) {
         if (!Main.map.mapView.isActiveLayerDrawable()) {
             return;
         }
-   
+
         updateKeyModifiers(e);
 
         if (e.getButton() != MouseEvent.BUTTON1)
@@ -95,7 +95,7 @@ public class CopierAction extends MapMode implements MouseListener {
 
         if (w1 != null) {
             data1.setSelected(w1);
-          
+
             Main.map.mapView.repaint();
         }
 
@@ -300,7 +300,7 @@ public class CopierAction extends MapMode implements MouseListener {
         }
 
         List<Command> commands = new ArrayList<Command>();
-                
+
         // merge tags
         Collection<Command> tagResolutionCommands = getTagConflictResolutionCommands(referenceWay, subjectWay);
         if (tagResolutionCommands == null) {
@@ -308,7 +308,7 @@ public class CopierAction extends MapMode implements MouseListener {
             return null;
         }
         commands.addAll(tagResolutionCommands);
-        
+
         // Prepare a list of nodes that are not used anywhere except in the way
         List<Node> nodePool = getUnimportantNodes(subjectWay);
 
@@ -376,9 +376,9 @@ public class CopierAction extends MapMode implements MouseListener {
         TagCollection tagCol = TagCollection.unionOfAllPrimitives(set);
         Set<String> keys = tagCol.getKeysWithMultipleValues();
         keysWithMultipleValues = !keys.isEmpty();
-            
+
         Collection<OsmPrimitive> primitives = Arrays.asList(source, target);
-        
+
         Set<RelationToChildReference> relationToNodeReferences = RelationToChildReference.getRelationToChildReferences(primitives);
 
         // build the tag collection
@@ -411,7 +411,7 @@ public class CopierAction extends MapMode implements MouseListener {
     protected static Node findNearestNode( Node node, Collection<Node> nodes ) {
         if( nodes.contains(node) )
             return node;
-        
+
         Node nearest = null;
         // TODO: use meters instead of degrees, but do it fast
         double distance = Double.parseDouble(Main.pref.get("utilsplugin2.replace-geometry.max-distance", "1"));
